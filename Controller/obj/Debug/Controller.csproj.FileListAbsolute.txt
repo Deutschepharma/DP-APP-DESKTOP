@@ -5,3 +5,5 @@ Z:\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\Controller\obj\Debug\Controller.dll
 Z:\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\Controller\obj\Debug\Controller.pdb
 Z:\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\Controller\bin\Debug\Entity.dll
 Z:\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\Controller\bin\Debug\Entity.pdb
+Z:\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\Controller\bin\Debug\Controller.dll.CodeAnalysisLog.xml
+Z:\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\Controller\bin\Debug\Controller.dll.lastcodeanalysissucceeded

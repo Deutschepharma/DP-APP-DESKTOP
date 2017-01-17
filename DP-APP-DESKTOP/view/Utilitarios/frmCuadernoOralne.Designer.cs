@@ -30,6 +30,10 @@
         {
             this.cmbProductos = new System.Windows.Forms.ComboBox();
             this.dgvProductos = new System.Windows.Forms.DataGridView();
+            this.CODIGO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NOMBRE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CANTIDAD = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LOTE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtpNacimiento = new System.Windows.Forms.DateTimePicker();
             this.txtNombres = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -48,6 +52,8 @@
             this.txtMaterno = new System.Windows.Forms.TextBox();
             this.txtPaterno = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.checkNO = new System.Windows.Forms.CheckBox();
+            this.checkSI = new System.Windows.Forms.CheckBox();
             this.label16 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -60,22 +66,16 @@
             this.label14 = new System.Windows.Forms.Label();
             this.txtMedico = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btnEliminaGrid = new System.Windows.Forms.Button();
+            this.label18 = new System.Windows.Forms.Label();
+            this.btnAgrega = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
+            this.txtCantidad = new System.Windows.Forms.TextBox();
             this.txtObservaciones = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.txtLoteVenc = new System.Windows.Forms.TextBox();
             this.btnRegistrar = new System.Windows.Forms.Button();
-            this.label18 = new System.Windows.Forms.Label();
-            this.txtCantidad = new System.Windows.Forms.TextBox();
-            this.btnAgrega = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.CODIGO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NOMBRE = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CANTIDAD = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LOTE = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.checkSI = new System.Windows.Forms.CheckBox();
-            this.checkNO = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -84,6 +84,7 @@
             // 
             // cmbProductos
             // 
+            this.cmbProductos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbProductos.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbProductos.FormattingEnabled = true;
             this.cmbProductos.Location = new System.Drawing.Point(137, 17);
@@ -104,8 +105,35 @@
             this.dgvProductos.Location = new System.Drawing.Point(9, 46);
             this.dgvProductos.Name = "dgvProductos";
             this.dgvProductos.ReadOnly = true;
-            this.dgvProductos.Size = new System.Drawing.Size(472, 209);
+            this.dgvProductos.Size = new System.Drawing.Size(475, 209);
             this.dgvProductos.TabIndex = 1;
+            // 
+            // CODIGO
+            // 
+            this.CODIGO.HeaderText = "CODIGO";
+            this.CODIGO.Name = "CODIGO";
+            this.CODIGO.ReadOnly = true;
+            this.CODIGO.Width = 60;
+            // 
+            // NOMBRE
+            // 
+            this.NOMBRE.HeaderText = "NOMBRE";
+            this.NOMBRE.Name = "NOMBRE";
+            this.NOMBRE.ReadOnly = true;
+            this.NOMBRE.Width = 200;
+            // 
+            // CANTIDAD
+            // 
+            this.CANTIDAD.HeaderText = "CANTIDAD";
+            this.CANTIDAD.Name = "CANTIDAD";
+            this.CANTIDAD.ReadOnly = true;
+            this.CANTIDAD.Width = 67;
+            // 
+            // LOTE
+            // 
+            this.LOTE.HeaderText = "LOTE / VENC";
+            this.LOTE.Name = "LOTE";
+            this.LOTE.ReadOnly = true;
             // 
             // dtpNacimiento
             // 
@@ -304,6 +332,30 @@
             this.groupBox2.TabIndex = 17;
             this.groupBox2.TabStop = false;
             // 
+            // checkNO
+            // 
+            this.checkNO.AutoSize = true;
+            this.checkNO.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkNO.Location = new System.Drawing.Point(392, 92);
+            this.checkNO.Name = "checkNO";
+            this.checkNO.Size = new System.Drawing.Size(44, 19);
+            this.checkNO.TabIndex = 18;
+            this.checkNO.Text = "NO";
+            this.checkNO.UseVisualStyleBackColor = true;
+            this.checkNO.CheckedChanged += new System.EventHandler(this.checkNO_CheckedChanged);
+            // 
+            // checkSI
+            // 
+            this.checkSI.AutoSize = true;
+            this.checkSI.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkSI.Location = new System.Drawing.Point(339, 92);
+            this.checkSI.Name = "checkSI";
+            this.checkSI.Size = new System.Drawing.Size(35, 19);
+            this.checkSI.TabIndex = 17;
+            this.checkSI.Text = "SI";
+            this.checkSI.UseVisualStyleBackColor = true;
+            this.checkSI.CheckedChanged += new System.EventHandler(this.checkSI_CheckedChanged);
+            // 
             // label16
             // 
             this.label16.AutoSize = true;
@@ -338,9 +390,11 @@
             // 
             this.txtNroBoleta.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNroBoleta.Location = new System.Drawing.Point(549, 13);
+            this.txtNroBoleta.MaxLength = 15;
             this.txtNroBoleta.Name = "txtNroBoleta";
             this.txtNroBoleta.Size = new System.Drawing.Size(176, 23);
             this.txtNroBoleta.TabIndex = 11;
+            this.txtNroBoleta.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNroBoleta_KeyPress);
             // 
             // label12
             // 
@@ -409,7 +463,7 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.button1);
+            this.groupBox3.Controls.Add(this.btnEliminaGrid);
             this.groupBox3.Controls.Add(this.label18);
             this.groupBox3.Controls.Add(this.btnAgrega);
             this.groupBox3.Controls.Add(this.label5);
@@ -428,23 +482,65 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Productos";
             // 
+            // btnEliminaGrid
+            // 
+            this.btnEliminaGrid.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminaGrid.Location = new System.Drawing.Point(762, 17);
+            this.btnEliminaGrid.Name = "btnEliminaGrid";
+            this.btnEliminaGrid.Size = new System.Drawing.Size(46, 25);
+            this.btnEliminaGrid.TabIndex = 24;
+            this.btnEliminaGrid.Text = "-";
+            this.btnEliminaGrid.UseVisualStyleBackColor = true;
+            this.btnEliminaGrid.Click += new System.EventHandler(this.btnEliminaGrid_Click);
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(554, 22);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(55, 15);
+            this.label18.TabIndex = 23;
+            this.label18.Text = "Cantidad";
+            // 
+            // btnAgrega
+            // 
+            this.btnAgrega.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgrega.Location = new System.Drawing.Point(679, 17);
+            this.btnAgrega.Name = "btnAgrega";
+            this.btnAgrega.Size = new System.Drawing.Size(46, 25);
+            this.btnAgrega.TabIndex = 21;
+            this.btnAgrega.Text = "+";
+            this.btnAgrega.UseVisualStyleBackColor = true;
+            this.btnAgrega.Click += new System.EventHandler(this.btnAgrega_Click);
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(487, 43);
+            this.label5.Location = new System.Drawing.Point(546, 43);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(86, 15);
             this.label5.TabIndex = 20;
             this.label5.Text = "Observaciones";
             // 
+            // txtCantidad
+            // 
+            this.txtCantidad.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCantidad.Location = new System.Drawing.Point(615, 19);
+            this.txtCantidad.MaxLength = 2;
+            this.txtCantidad.Name = "txtCantidad";
+            this.txtCantidad.Size = new System.Drawing.Size(53, 23);
+            this.txtCantidad.TabIndex = 22;
+            this.txtCantidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCantidad_KeyPress);
+            // 
             // txtObservaciones
             // 
             this.txtObservaciones.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtObservaciones.Location = new System.Drawing.Point(487, 62);
+            this.txtObservaciones.Location = new System.Drawing.Point(549, 62);
             this.txtObservaciones.Multiline = true;
             this.txtObservaciones.Name = "txtObservaciones";
-            this.txtObservaciones.Size = new System.Drawing.Size(321, 193);
+            this.txtObservaciones.Size = new System.Drawing.Size(259, 193);
             this.txtObservaciones.TabIndex = 19;
             // 
             // label15
@@ -485,96 +581,6 @@
             this.btnRegistrar.Text = "REGISTRAR";
             this.btnRegistrar.UseVisualStyleBackColor = true;
             this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(554, 22);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(55, 15);
-            this.label18.TabIndex = 23;
-            this.label18.Text = "Cantidad";
-            // 
-            // txtCantidad
-            // 
-            this.txtCantidad.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCantidad.Location = new System.Drawing.Point(615, 19);
-            this.txtCantidad.Name = "txtCantidad";
-            this.txtCantidad.Size = new System.Drawing.Size(53, 23);
-            this.txtCantidad.TabIndex = 22;
-            // 
-            // btnAgrega
-            // 
-            this.btnAgrega.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgrega.Location = new System.Drawing.Point(679, 17);
-            this.btnAgrega.Name = "btnAgrega";
-            this.btnAgrega.Size = new System.Drawing.Size(46, 25);
-            this.btnAgrega.TabIndex = 21;
-            this.btnAgrega.Text = "+";
-            this.btnAgrega.UseVisualStyleBackColor = true;
-            this.btnAgrega.Click += new System.EventHandler(this.btnAgrega_Click);
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(762, 17);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(46, 25);
-            this.button1.TabIndex = 24;
-            this.button1.Text = "-";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // CODIGO
-            // 
-            this.CODIGO.HeaderText = "CODIGO";
-            this.CODIGO.Name = "CODIGO";
-            this.CODIGO.ReadOnly = true;
-            this.CODIGO.Width = 60;
-            // 
-            // NOMBRE
-            // 
-            this.NOMBRE.HeaderText = "NOMBRE";
-            this.NOMBRE.Name = "NOMBRE";
-            this.NOMBRE.ReadOnly = true;
-            this.NOMBRE.Width = 200;
-            // 
-            // CANTIDAD
-            // 
-            this.CANTIDAD.HeaderText = "CANTIDAD";
-            this.CANTIDAD.Name = "CANTIDAD";
-            this.CANTIDAD.ReadOnly = true;
-            this.CANTIDAD.Width = 67;
-            // 
-            // LOTE
-            // 
-            this.LOTE.HeaderText = "LOTE / VENC";
-            this.LOTE.Name = "LOTE";
-            this.LOTE.ReadOnly = true;
-            // 
-            // checkSI
-            // 
-            this.checkSI.AutoSize = true;
-            this.checkSI.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkSI.Location = new System.Drawing.Point(339, 92);
-            this.checkSI.Name = "checkSI";
-            this.checkSI.Size = new System.Drawing.Size(35, 19);
-            this.checkSI.TabIndex = 17;
-            this.checkSI.Text = "SI";
-            this.checkSI.UseVisualStyleBackColor = true;
-            this.checkSI.CheckedChanged += new System.EventHandler(this.checkSI_CheckedChanged);
-            // 
-            // checkNO
-            // 
-            this.checkNO.AutoSize = true;
-            this.checkNO.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkNO.Location = new System.Drawing.Point(392, 92);
-            this.checkNO.Name = "checkNO";
-            this.checkNO.Size = new System.Drawing.Size(44, 19);
-            this.checkNO.TabIndex = 18;
-            this.checkNO.Text = "NO";
-            this.checkNO.UseVisualStyleBackColor = true;
-            this.checkNO.CheckedChanged += new System.EventHandler(this.checkNO_CheckedChanged);
             // 
             // frmCuadernoOralne
             // 
@@ -641,13 +647,13 @@
         private System.Windows.Forms.Label lblNroCuaderno;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.TextBox txtCantidad;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnEliminaGrid;
         private System.Windows.Forms.Button btnAgrega;
+        private System.Windows.Forms.CheckBox checkNO;
+        private System.Windows.Forms.CheckBox checkSI;
         private System.Windows.Forms.DataGridViewTextBoxColumn CODIGO;
         private System.Windows.Forms.DataGridViewTextBoxColumn NOMBRE;
         private System.Windows.Forms.DataGridViewTextBoxColumn CANTIDAD;
         private System.Windows.Forms.DataGridViewTextBoxColumn LOTE;
-        private System.Windows.Forms.CheckBox checkNO;
-        private System.Windows.Forms.CheckBox checkSI;
     }
 }

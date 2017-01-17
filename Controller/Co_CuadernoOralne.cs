@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Entity;
+using System.Windows.Forms;
 
 namespace Controller
 {
@@ -80,6 +81,8 @@ namespace Controller
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.Add("@PRODUCTO_MAESTRO_CODIGO", SqlDbType.Int).Value = c.PRODUCTO_MAESTRO_CODIGO;
                 cmd.Parameters.Add("@LOTE", SqlDbType.VarChar).Value = c.LOTE;
+                cmd.Parameters.Add("@Nro_Cuaderno", SqlDbType.Int).Value = c.Nro_Cuaderno;
+
 
                 try
                 {
@@ -141,7 +144,26 @@ namespace Controller
                 throw new Exception(exx.Message);
             }
         }
+        public static void SoloNumeros(KeyPressEventArgs V)
+        {
+            if (Char.IsDigit(V.KeyChar))
+            {
+                V.Handled = false;
+            }
+            else if (Char.IsSeparator(V.KeyChar))
+            {
+                V.Handled = false;
+            }
+            else if (char.IsControl(V.KeyChar))
+            {
+                V.Handled = false;
+            }
+            else
+            {
+                V.Handled = true;
+            }
 
+        }
 
 
 

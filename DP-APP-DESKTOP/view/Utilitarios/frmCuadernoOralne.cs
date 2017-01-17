@@ -45,25 +45,39 @@ namespace DP_APP_DESKTOP.view
             else
             {
                 dgvProductos.Rows.Add(cmbProductos.SelectedValue.ToString(), cmbProductos.Text, txtCantidad.Text, txtLoteVenc.Text);
+                txtLoteVenc.Text = "";
+                txtCantidad.Text = "";
+                cmbProductos.SelectedIndex = 0;
+                //dgvProductos.Rows.Clear();
+
             }
         }
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
             CuadernoOralne c = new CuadernoOralne();
+            
             Bu_CuadernoOralne co = new Bu_CuadernoOralne();
+            
 
             if (txtNombres.Text == "")
             {
                 MessageBox.Show("NOMBRE ES REQUERIDO");
+                txtNombres.Focus();
             }
             else if (txtPaterno.Text == "")
             {
                 MessageBox.Show("APELLIDO PATERNO ES REQUERIDO");
+                txtPaterno.Focus();
             }
             else if(txtMaterno.Text == "")
             {
                 MessageBox.Show("APELLIDO MATERNO ES REQUERIDO");
+                txtMaterno.Focus();
+            }
+            else if (dgvProductos.Rows.Count==0)
+            {
+                MessageBox.Show("DEBES REGISTRAR PRODUCTOS");
             }
             else
             {
@@ -83,15 +97,57 @@ namespace DP_APP_DESKTOP.view
                 c.CLIENTE_DIRECCION = txtDireccion.Text.ToUpper();
                 c.CLIENTE_EMAIL = txtEmail.Text.ToUpper();
                 c.CLIENTE_FONO = txtFono.Text.ToUpper();
-                c.RECETA_NRO_BOLETA = Convert.ToInt32(txtNroBoleta.Text.ToUpper());
+                if (txtNroBoleta.Text!="")
+                {
+                    c.RECETA_NRO_BOLETA = int.Parse(txtNroBoleta.Text);
+                }
+                else
+                {
+                    c.RECETA_NRO_BOLETA = 0;
+                }
+                
                 c.RECETA_FECHA_COMPRA = Convert.ToDateTime(dtpFechaCompra.Text);
                 c.RECETA_FUNCIONARIO = txtFuncionario.Text.ToUpper();
                 c.RECETA_OBSERVACION = txtObservaciones.Text.ToUpper();
                 c.PRESCRIPTOR_MEDICO = txtMedico.Text.ToUpper();
                 c.PRESCRIPTOR_CENTRO_MEDICO = txtCentroMedico.Text.ToUpper();
+                co.RegistraCuaderno(c);
+                foreach (DataGridViewRow r in dgvProductos.Rows)
+                {
+                    CuadernoOralneProducto p = new CuadernoOralneProducto();
+                    p.PRODUCTO_MAESTRO_CODIGO = Convert.ToInt32(r.Cells["CODIGO"].Value);
+                    p.LOTE = r.Cells["LOTE"].Value.ToString();
+                    p.Nro_Cuaderno = int.Parse(lblNroCuaderno.Text);
+                    co.RegistraCuadernoProducto(p);
+                }
+                limpiarFormulario();
             }
-                
             
+        }
+
+        private void limpiarFormulario()
+        {
+            txtNombres.Text = "";
+            txtPaterno.Text = "";
+            txtMaterno.Text = "";
+            txtDireccion.Text = "";
+            txtEmail.Text = "";
+            txtFono.Text = "";
+            txtMedico.Text = "";
+            txtCentroMedico.Text = "";
+            txtFuncionario.Text = "";
+            txtNroBoleta.Text = "";
+            cmbProductos.SelectedIndex = 0;
+            txtLoteVenc.Text = "";
+            txtCantidad.Text = "";
+            txtObservaciones.Text = "";
+            dgvProductos.Rows.Clear();
+            if (checkNO.Checked || checkSI.Checked)
+            {
+                checkSI.Checked = false;
+                checkNO.Checked = false;
+            }
+            txtNombres.Focus();
         }
 
         private void frmCuadernoOralne_Load(object sender, EventArgs e)
@@ -119,6 +175,29 @@ namespace DP_APP_DESKTOP.view
             if (checkNO.Checked)
             {
                 checkSI.Checked = false;
+            }
+        }
+
+        private void btnEliminaGrid_Click(object sender, EventArgs e)
+        {
+            dgvProductos.Rows.RemoveAt(dgvProductos.CurrentRow.Index);
+        }
+
+        private void txtCantidad_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                e.Handled = true;
+                return;
+            }
+        }
+
+        private void txtNroBoleta_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                e.Handled = true;
+                return;
             }
         }
     }

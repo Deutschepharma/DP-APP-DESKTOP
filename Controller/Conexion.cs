@@ -21,7 +21,7 @@ namespace Controller
                 leer = sr_inv.ReadLine();
                 //Cerrar Objetos
                 sr_inv.Close();
-                fs_inv.Close();
+                //fs_inv.Close();
                 SqlConnection cn = new SqlConnection(@"" + leer + "");
                 return cn;
             }

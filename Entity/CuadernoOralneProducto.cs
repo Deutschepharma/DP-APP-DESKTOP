@@ -10,5 +10,6 @@ namespace Entity
     {
         public int PRODUCTO_MAESTRO_CODIGO { get; set; }
         public string LOTE { get; set; }
+        public int Nro_Cuaderno { get; set; }
     }
 }

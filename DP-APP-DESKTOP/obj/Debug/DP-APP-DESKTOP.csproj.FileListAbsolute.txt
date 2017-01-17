@@ -17,3 +17,9 @@ Z:\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\DP-APP-DESKTOP\obj\Debug\DP_APP_DESK
 Z:\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\DP-APP-DESKTOP\obj\Debug\DP_APP_DESKTOP.view.frmCuadernoOralne.resources
 Z:\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\DP-APP-DESKTOP\bin\Debug\Entity.dll
 Z:\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\DP-APP-DESKTOP\bin\Debug\Entity.pdb
+Z:\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\DP-APP-DESKTOP\bin\Debug\DP-APP-DESKTOP.exe.manifest
+Z:\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\DP-APP-DESKTOP\bin\Debug\DP-APP-DESKTOP.application
+Z:\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\DP-APP-DESKTOP\obj\Debug\DP-APP-DESKTOP.exe.manifest
+Z:\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\DP-APP-DESKTOP\obj\Debug\DP-APP-DESKTOP.application
+Z:\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\DP-APP-DESKTOP\bin\Debug\DP-APP-DESKTOP.exe.CodeAnalysisLog.xml
+Z:\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\DP-APP-DESKTOP\bin\Debug\DP-APP-DESKTOP.exe.lastcodeanalysissucceeded

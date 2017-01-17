@@ -8,14 +8,6 @@ namespace Entity
 {
     public class CuadernoOralne
     {
-        public int tipo_evento { get; set; }
-        public int cliente_rut { get; set; }
-        public int maquina_id { get; set; }
-        public string detalle_eventos { get; set; }
-        public int id_user { get; set; }
-        public int canEventos { get; set; }
-        public string maquina { get; set; }
-
         public string CLIENTE_NOMBRE { get; set; }
         public string CLIENTE_PATERNO { get; set; }
         public string CLIENTE_MATERNO { get; set; }

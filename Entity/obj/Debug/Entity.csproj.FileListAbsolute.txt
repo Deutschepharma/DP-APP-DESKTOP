@@ -1,5 +1,6 @@
 Z:\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\Entity\bin\Debug\Entity.dll
 Z:\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\Entity\bin\Debug\Entity.pdb
-Z:\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\Entity\obj\Debug\Entity.csprojResolveAssemblyReference.cache
 Z:\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\Entity\obj\Debug\Entity.dll
 Z:\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\Entity\obj\Debug\Entity.pdb
+Z:\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\Entity\bin\Debug\Entity.dll.CodeAnalysisLog.xml
+Z:\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\Entity\bin\Debug\Entity.dll.lastcodeanalysissucceeded
