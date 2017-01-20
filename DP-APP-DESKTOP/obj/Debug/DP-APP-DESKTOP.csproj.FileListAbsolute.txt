@@ -21,5 +21,6 @@ Z:\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\DP-APP-DESKTOP\bin\Debug\DP-APP-DESK
 Z:\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\DP-APP-DESKTOP\bin\Debug\DP-APP-DESKTOP.application
 Z:\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\DP-APP-DESKTOP\obj\Debug\DP-APP-DESKTOP.exe.manifest
 Z:\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\DP-APP-DESKTOP\obj\Debug\DP-APP-DESKTOP.application
-Z:\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\DP-APP-DESKTOP\bin\Debug\DP-APP-DESKTOP.exe.CodeAnalysisLog.xml
-Z:\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\DP-APP-DESKTOP\bin\Debug\DP-APP-DESKTOP.exe.lastcodeanalysissucceeded
+Z:\Programacion\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\DP-APP-DESKTOP\bin\Debug\DP-APP-DESKTOP.exe.config
+Z:\Programacion\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\DP-APP-DESKTOP\obj\Debug\DP-APP-DESKTOP.exe
+Z:\Programacion\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\DP-APP-DESKTOP\obj\Debug\DP-APP-DESKTOP.pdb

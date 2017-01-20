@@ -1,0 +1,9 @@
+Z:\Programacion\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\Business\bin\Release\Business.dll
+Z:\Programacion\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\Business\bin\Release\Business.pdb
+Z:\Programacion\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\Business\bin\Release\Controller.dll
+Z:\Programacion\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\Business\bin\Release\Entity.dll
+Z:\Programacion\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\Business\bin\Release\Controller.pdb
+Z:\Programacion\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\Business\bin\Release\Entity.pdb
+Z:\Programacion\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\Business\obj\Release\Business.csprojResolveAssemblyReference.cache
+Z:\Programacion\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\Business\obj\Release\Business.dll
+Z:\Programacion\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\Business\obj\Release\Business.pdb

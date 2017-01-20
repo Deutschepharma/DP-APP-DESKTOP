@@ -1,0 +1,5 @@
+Z:\Programacion\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\Entity\bin\Release\Entity.dll
+Z:\Programacion\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\Entity\bin\Release\Entity.pdb
+Z:\Programacion\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\Entity\obj\Release\Entity.csprojResolveAssemblyReference.cache
+Z:\Programacion\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\Entity\obj\Release\Entity.dll
+Z:\Programacion\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\Entity\obj\Release\Entity.pdb
