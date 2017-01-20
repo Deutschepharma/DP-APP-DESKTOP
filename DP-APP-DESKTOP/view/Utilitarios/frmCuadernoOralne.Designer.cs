@@ -61,7 +61,7 @@
             this.label12 = new System.Windows.Forms.Label();
             this.dtpFechaCompra = new System.Windows.Forms.DateTimePicker();
             this.label13 = new System.Windows.Forms.Label();
-            this.txtFuncionario = new System.Windows.Forms.TextBox();
+            this.txtFarmacia = new System.Windows.Forms.TextBox();
             this.txtCentroMedico = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.txtMedico = new System.Windows.Forms.TextBox();
@@ -76,6 +76,8 @@
             this.label11 = new System.Windows.Forms.Label();
             this.txtLoteVenc = new System.Windows.Forms.TextBox();
             this.btnRegistrar = new System.Windows.Forms.Button();
+            this.label19 = new System.Windows.Forms.Label();
+            this.txtFuncionario = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -312,6 +314,8 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.label19);
+            this.groupBox2.Controls.Add(this.txtFuncionario);
             this.groupBox2.Controls.Add(this.checkNO);
             this.groupBox2.Controls.Add(this.checkSI);
             this.groupBox2.Controls.Add(this.label16);
@@ -321,7 +325,7 @@
             this.groupBox2.Controls.Add(this.label12);
             this.groupBox2.Controls.Add(this.dtpFechaCompra);
             this.groupBox2.Controls.Add(this.label13);
-            this.groupBox2.Controls.Add(this.txtFuncionario);
+            this.groupBox2.Controls.Add(this.txtFarmacia);
             this.groupBox2.Controls.Add(this.txtCentroMedico);
             this.groupBox2.Controls.Add(this.label14);
             this.groupBox2.Controls.Add(this.txtMedico);
@@ -400,11 +404,11 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(6, 68);
+            this.label12.Location = new System.Drawing.Point(440, 71);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(70, 15);
+            this.label12.Size = new System.Drawing.Size(55, 15);
             this.label12.TabIndex = 8;
-            this.label12.Text = "Funcionario";
+            this.label12.Text = "Farmacia";
             // 
             // dtpFechaCompra
             // 
@@ -427,13 +431,13 @@
             this.label13.TabIndex = 7;
             this.label13.Text = "Centro Medico";
             // 
-            // txtFuncionario
+            // txtFarmacia
             // 
-            this.txtFuncionario.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFuncionario.Location = new System.Drawing.Point(137, 65);
-            this.txtFuncionario.Name = "txtFuncionario";
-            this.txtFuncionario.Size = new System.Drawing.Size(299, 23);
-            this.txtFuncionario.TabIndex = 6;
+            this.txtFarmacia.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFarmacia.Location = new System.Drawing.Point(549, 68);
+            this.txtFarmacia.Name = "txtFarmacia";
+            this.txtFarmacia.Size = new System.Drawing.Size(259, 23);
+            this.txtFarmacia.TabIndex = 6;
             // 
             // txtCentroMedico
             // 
@@ -582,6 +586,24 @@
             this.btnRegistrar.UseVisualStyleBackColor = true;
             this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(6, 71);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(70, 15);
+            this.label19.TabIndex = 20;
+            this.label19.Text = "Funcionario";
+            // 
+            // txtFuncionario
+            // 
+            this.txtFuncionario.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFuncionario.Location = new System.Drawing.Point(137, 68);
+            this.txtFuncionario.Name = "txtFuncionario";
+            this.txtFuncionario.Size = new System.Drawing.Size(299, 23);
+            this.txtFuncionario.TabIndex = 19;
+            // 
             // frmCuadernoOralne
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -620,7 +642,7 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.DateTimePicker dtpFechaCompra;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox txtFuncionario;
+        private System.Windows.Forms.TextBox txtFarmacia;
         private System.Windows.Forms.TextBox txtCentroMedico;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox txtMedico;
@@ -655,5 +677,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn NOMBRE;
         private System.Windows.Forms.DataGridViewTextBoxColumn CANTIDAD;
         private System.Windows.Forms.DataGridViewTextBoxColumn LOTE;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.TextBox txtFuncionario;
     }
 }

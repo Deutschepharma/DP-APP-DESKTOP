@@ -30,6 +30,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="itextsharp">
+      <HintPath>C:\DP-APP-DESKTOP\itextsharp\itextsharp.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -42,6 +45,8 @@
   <ItemGroup>
     <Compile Include="CuadernoOralne.cs" />
     <Compile Include="CuadernoOralneProducto.cs" />
+    <Compile Include="GeneraPDF.cs" />
+    <Compile Include="ListasDatos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

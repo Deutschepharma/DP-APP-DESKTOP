@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bu_CuadernoOralne.cs" />
+    <Compile Include="Bu_GeneraPDF.cs" />
     <Compile Include="Bu_Muestras.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

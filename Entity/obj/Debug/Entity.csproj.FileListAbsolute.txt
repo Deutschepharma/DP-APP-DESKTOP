@@ -4,3 +4,10 @@ Z:\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\Entity\obj\Debug\Entity.dll
 Z:\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\Entity\obj\Debug\Entity.pdb
 Z:\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\Entity\bin\Debug\Entity.dll.CodeAnalysisLog.xml
 Z:\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\Entity\bin\Debug\Entity.dll.lastcodeanalysissucceeded
+Z:\Programacion\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\Entity\bin\Debug\Entity.dll
+Z:\Programacion\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\Entity\bin\Debug\Entity.pdb
+Z:\Programacion\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\Entity\obj\Debug\Entity.dll
+Z:\Programacion\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\Entity\obj\Debug\Entity.pdb
+Z:\Programacion\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\Entity\bin\Debug\itextsharp.dll
+Z:\Programacion\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\Entity\bin\Debug\itextsharp.xml
+Z:\Programacion\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\Entity\obj\Debug\Entity.csprojResolveAssemblyReference.cache

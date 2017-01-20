@@ -30,6 +30,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="itextsharp">
+      <HintPath>C:\DP-APP-DESKTOP\itextsharp\itextsharp.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
@@ -45,6 +48,7 @@
     <Compile Include="Conexion.cs" />
     <Compile Include="Co_CuadernoOralne.cs" />
     <Compile Include="Co_Muestras.cs" />
+    <Compile Include="Co_GeneraPDF.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

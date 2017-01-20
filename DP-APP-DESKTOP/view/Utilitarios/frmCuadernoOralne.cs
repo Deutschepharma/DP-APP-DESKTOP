@@ -55,10 +55,10 @@ namespace DP_APP_DESKTOP.view
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
+            
             CuadernoOralne c = new CuadernoOralne();
-            
             Bu_CuadernoOralne co = new Bu_CuadernoOralne();
-            
+            Bu_GeneraPDF pdf = new Bu_GeneraPDF();
 
             if (txtNombres.Text == "")
             {
@@ -70,15 +70,74 @@ namespace DP_APP_DESKTOP.view
                 MessageBox.Show("APELLIDO PATERNO ES REQUERIDO");
                 txtPaterno.Focus();
             }
-            else if(txtMaterno.Text == "")
+            else if (txtMaterno.Text == "")
             {
                 MessageBox.Show("APELLIDO MATERNO ES REQUERIDO");
                 txtMaterno.Focus();
             }
-            else if (dgvProductos.Rows.Count==0)
+            else if (dgvProductos.Rows.Count == 0)
             {
                 MessageBox.Show("DEBES REGISTRAR PRODUCTOS");
             }
+            else
+            {
+            DialogResult resultado;
+            resultado = MessageBox.Show("Desea Grabar y Generar PDF\n de lo Contrario Presione NO para solo Guardar", "", MessageBoxButtons.YesNo);
+            if (resultado == DialogResult.Yes)
+            {
+                c.NRO_CUADERNO = lblNroCuaderno.Text;
+                if (checkSI.Checked)
+                {
+                    c.CLIENTE_AUTORIZA_CONTACTO = 'S';
+                }
+                if (checkNO.Checked)
+                {
+                    c.CLIENTE_AUTORIZA_CONTACTO = 'N';
+                }
+                c.CLIENTE_NOMBRE = txtNombres.Text.ToUpper();
+                c.CLIENTE_PATERNO = txtPaterno.Text.ToUpper();
+                c.CLIENTE_MATERNO = txtMaterno.Text.ToUpper();
+                c.CLIENTE_NACIMIENTO = Convert.ToDateTime(dtpNacimiento.Text);
+                c.CLIENTE_DIRECCION = txtDireccion.Text.ToUpper();
+                c.CLIENTE_EMAIL = txtEmail.Text.ToUpper();
+                c.CLIENTE_FONO = txtFono.Text.ToUpper();
+                if (txtNroBoleta.Text != "")
+                {
+                    c.RECETA_NRO_BOLETA = int.Parse(txtNroBoleta.Text);
+                }
+                else
+                {
+                    c.RECETA_NRO_BOLETA = 0;
+                }
+
+                c.RECETA_FECHA_COMPRA = Convert.ToDateTime(dtpFechaCompra.Text);
+                c.RECETA_FUNCIONARIO = txtFarmacia.Text.ToUpper();
+                c.RECETA_OBSERVACION = txtObservaciones.Text.ToUpper();
+                c.PRESCRIPTOR_MEDICO = txtMedico.Text.ToUpper();
+                c.PRESCRIPTOR_CENTRO_MEDICO = txtCentroMedico.Text.ToUpper();
+                c.PRESCRIPTOR_FARMACIA = txtFarmacia.Text.ToUpper();
+                    //co.RegistraCuaderno(c);
+                    ListasDatos l = new ListasDatos();
+                    l.co.Add(c);
+                    //pdf.GeneraCuaderno(l);
+
+
+                foreach (DataGridViewRow r in dgvProductos.Rows)
+                {
+                    CuadernoOralneProducto p = new CuadernoOralneProducto();
+                    p.PRODUCTO_MAESTRO_CODIGO = Convert.ToInt32(r.Cells["CODIGO"].Value);
+                    p.NOMBRE= r.Cells["NOMBRE"].Value.ToString();
+                    p.LOTE = r.Cells["LOTE"].Value.ToString();
+                    p.Nro_Cuaderno = int.Parse(lblNroCuaderno.Text);
+
+                    p.Cantidad = int.Parse(r.Cells["CANTIDAD"].Value.ToString());
+                    //co.RegistraCuadernoProducto(p);
+                    l.cop.Add(p);
+                }
+                    pdf.GeneraCuaderno(l);
+                    limpiarFormulario();
+
+                }
             else
             {
                 if (checkSI.Checked)
@@ -89,7 +148,7 @@ namespace DP_APP_DESKTOP.view
                 {
                     c.CLIENTE_AUTORIZA_CONTACTO = 'N';
                 }
-                
+
                 c.CLIENTE_NOMBRE = txtNombres.Text.ToUpper();
                 c.CLIENTE_PATERNO = txtPaterno.Text.ToUpper();
                 c.CLIENTE_MATERNO = txtMaterno.Text.ToUpper();
@@ -97,7 +156,7 @@ namespace DP_APP_DESKTOP.view
                 c.CLIENTE_DIRECCION = txtDireccion.Text.ToUpper();
                 c.CLIENTE_EMAIL = txtEmail.Text.ToUpper();
                 c.CLIENTE_FONO = txtFono.Text.ToUpper();
-                if (txtNroBoleta.Text!="")
+                if (txtNroBoleta.Text != "")
                 {
                     c.RECETA_NRO_BOLETA = int.Parse(txtNroBoleta.Text);
                 }
@@ -105,13 +164,15 @@ namespace DP_APP_DESKTOP.view
                 {
                     c.RECETA_NRO_BOLETA = 0;
                 }
-                
+
                 c.RECETA_FECHA_COMPRA = Convert.ToDateTime(dtpFechaCompra.Text);
-                c.RECETA_FUNCIONARIO = txtFuncionario.Text.ToUpper();
+                c.RECETA_FUNCIONARIO = txtFarmacia.Text.ToUpper();
                 c.RECETA_OBSERVACION = txtObservaciones.Text.ToUpper();
                 c.PRESCRIPTOR_MEDICO = txtMedico.Text.ToUpper();
                 c.PRESCRIPTOR_CENTRO_MEDICO = txtCentroMedico.Text.ToUpper();
+
                 co.RegistraCuaderno(c);
+
                 foreach (DataGridViewRow r in dgvProductos.Rows)
                 {
                     CuadernoOralneProducto p = new CuadernoOralneProducto();
@@ -122,8 +183,14 @@ namespace DP_APP_DESKTOP.view
                 }
                 limpiarFormulario();
             }
+        }
+                    
+
+            
+            
             
         }
+
 
         private void limpiarFormulario()
         {
@@ -135,7 +202,7 @@ namespace DP_APP_DESKTOP.view
             txtFono.Text = "";
             txtMedico.Text = "";
             txtCentroMedico.Text = "";
-            txtFuncionario.Text = "";
+            txtFarmacia.Text = "";
             txtNroBoleta.Text = "";
             cmbProductos.SelectedIndex = 0;
             txtLoteVenc.Text = "";

@@ -14,16 +14,16 @@
       </applicationRequestMinimum>
       <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
         <!--
-          Opciones del manifiesto de Control de cuentas de usuario
+          Opciones del manifiesto de UAC
           Si desea cambiar el nivel de Control de cuentas de usuario de Windows, reemplace el 
-          nodo requestedExecutionLevel por alguno de los siguientes.
+          nodo requestedExecutionLevel por uno de los siguientes.
 
         <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
         <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
         <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
 
-         Si desea usar la virtualización de archivos y del Registro para la 
-         compatibilidad con versiones anteriores, elimine el nodo requestedExecutionLevel.
+         Si desea usar Virtualización de archivos y Registro para compatibilidad con 
+         versiones anteriores, elimine el nodo requestedExecutionLevel.
     -->
         <requestedExecutionLevel level="asInvoker" uiAccess="false" />
       </requestedPrivileges>
@@ -49,7 +49,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>NvkuL77Pn/k06gQQfnMAL4dAZLlagt30g0YvbvIVSPs=</dsig:DigestValue>
+        <dsig:DigestValue>f0SasCM2FIjJPOtA8q4X7z8l1PtumwDFS/oRYS9vUHU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -61,7 +61,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>xfU5DnhR4pXsy755n90qfENvxdSElfAS9ZdixMWA/3s=</dsig:DigestValue>
+        <dsig:DigestValue>+YjHYRZzWt7Yv0bwdNyjn01EWiXkSYp8omHzHooIfC8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -73,7 +73,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>UieyG3fM7PAUeURr/IvcgdLmyc7XuKiX4YeQhaKzEsk=</dsig:DigestValue>
+        <dsig:DigestValue>16LNS0aYMF/m1jXXqi4rSN0to26MYD3Rrtdw60QaqXY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -85,7 +85,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>YBPWsse6WNztB0A+8Z9vhzumplWmDv0G7hf3bDogt84=</dsig:DigestValue>
+        <dsig:DigestValue>3dmEOKE5+xN0T4biCKTb/jTagDacqdK794utHufE8Xo=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

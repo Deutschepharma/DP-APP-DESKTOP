@@ -82,6 +82,7 @@ namespace Controller
                 cmd.Parameters.Add("@PRODUCTO_MAESTRO_CODIGO", SqlDbType.Int).Value = c.PRODUCTO_MAESTRO_CODIGO;
                 cmd.Parameters.Add("@LOTE", SqlDbType.VarChar).Value = c.LOTE;
                 cmd.Parameters.Add("@Nro_Cuaderno", SqlDbType.Int).Value = c.Nro_Cuaderno;
+                cmd.Parameters.Add("@Cantidad", SqlDbType.Int).Value = c.Cantidad;
 
 
                 try
