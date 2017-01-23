@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Controller
 {
-    public class Co_Muestras
+    public class Co_Ventas
     {
 
         SqlConnection cn = Conexion.getConexion();
@@ -32,12 +32,12 @@ namespace Controller
             }
             return dt;
         }
-        public DataTable Carga_Muestras(int ano)
+        public DataTable Carga_Ventas(int ano)
         {
             DataTable dt = new DataTable();
             try
             {
-                SqlCommand cmd = new SqlCommand("Sp_Carga_Muestras", cn);
+                SqlCommand cmd = new SqlCommand("Sp_Carga_Ventas", cn);
                 cmd.Parameters.Add("@ano", SqlDbType.Int).Value = ano;
                 //cmd.Parameters.Add("@ddlFlag", SqlDbType.Int).Value = ddlFlag;
                 cmd.CommandType = CommandType.StoredProcedure;

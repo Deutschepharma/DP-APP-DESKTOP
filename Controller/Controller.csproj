@@ -47,6 +47,7 @@
   <ItemGroup>
     <Compile Include="Conexion.cs" />
     <Compile Include="Co_CuadernoOralne.cs" />
+    <Compile Include="Co_Ventas.cs" />
     <Compile Include="Co_Muestras.cs" />
     <Compile Include="Co_GeneraPDF.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

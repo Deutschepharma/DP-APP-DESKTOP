@@ -49,31 +49,31 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>KghlB0fHzBFXyC1b2HEdjBvxwwDqDbp6tucQuKCg6Oo=</dsig:DigestValue>
+        <dsig:DigestValue>PfIsUZwv1AIgpIFS1U+ug2SnArFZON9scPrXNnSQ8/I=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Controller.dll" size="13824">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Controller.dll" size="14848">
       <assemblyIdentity name="Controller" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>iqvHoQFJwwWU93RJuXHNhG+m2+ZuQy0DPqaz6uBxCHc=</dsig:DigestValue>
+        <dsig:DigestValue>EQ3i68ZV2IHmXC0yWokfR1fCjoa/4k37TLGSU+oU83o=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DP-APP-DESKTOP.exe" size="37888">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DP-APP-DESKTOP.exe" size="43008">
       <assemblyIdentity name="DP-APP-DESKTOP" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>q2zxuyELti9HQtipEdc9HH2QsJvqL7RQvhlFg6RsqRs=</dsig:DigestValue>
+        <dsig:DigestValue>/CY14vKRPSbske6lnQOAB8FENXFFxJH5/OnX314OeYw=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -101,13 +101,13 @@
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="DP-APP-DESKTOP.exe.config" size="189">
+  <file name="DP-APP-DESKTOP.exe.config" size="517">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>6N7MliNbVJSIAIPrecIshMbZ7zEoKLr5SQvud4LDUOw=</dsig:DigestValue>
+      <dsig:DigestValue>3qKMxtO0+FJ4XDS5Dy/Ja71oAFQQBFU7Q67lXb/7B2A=</dsig:DigestValue>
     </hash>
   </file>
   <file name="img\Dp-color--177x81.png" size="1875">

@@ -52,7 +52,7 @@ namespace Controller
                 cmd.Parameters.Add("@RECETA_OBSERVACION", SqlDbType.VarChar).Value = c.RECETA_OBSERVACION;
                 cmd.Parameters.Add("@PRESCRIPTOR_MEDICO", SqlDbType.VarChar).Value = c.PRESCRIPTOR_MEDICO;
                 cmd.Parameters.Add("@PRESCRIPTOR_CENTRO_MEDICO", SqlDbType.VarChar).Value = c.PRESCRIPTOR_CENTRO_MEDICO;
-                
+                cmd.Parameters.Add("@PRESCRIPTOR_FARMACIA", SqlDbType.VarChar).Value = c.PRESCRIPTOR_FARMACIA;
                 try
                 {
                     cn.Open();

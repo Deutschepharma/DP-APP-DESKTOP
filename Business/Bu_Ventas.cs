@@ -8,15 +8,15 @@ using System.Data;
 
 namespace Business
 {
-    public class Bu_Muestras
+    public class Bu_Ventas
     {
         public DataTable CargaCombos(int flag, int ddlFlag)
         {
-            return new Co_Muestras().CargarComboBox(flag, ddlFlag);
+            return new Co_Ventas().CargarComboBox(flag, ddlFlag);
         }
-        public DataTable Carga_Muestras(int ano)
+        public DataTable Carga_Ventas(int ano)
         {
-            return new Co_Muestras().Carga_Muestras(ano);
+            return new Co_Ventas().Carga_Ventas(ano);
         }
     }
 }

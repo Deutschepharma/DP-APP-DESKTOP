@@ -19,9 +19,7 @@ namespace Controller
                 FileStream fs_inv = new FileStream(archivoExiste, FileMode.Open);
                 StreamReader sr_inv = new StreamReader(fs_inv);
                 leer = sr_inv.ReadLine();
-                //Cerrar Objetos
                 sr_inv.Close();
-                //fs_inv.Close();
                 SqlConnection cn = new SqlConnection(@"" + leer + "");
                 return cn;
             }

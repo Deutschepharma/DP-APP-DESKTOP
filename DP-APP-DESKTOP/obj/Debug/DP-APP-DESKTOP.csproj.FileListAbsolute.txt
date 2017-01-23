@@ -46,3 +46,4 @@ Z:\Programacion\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\DP-APP-DESKTOP\obj\Debu
 Z:\Programacion\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\DP-APP-DESKTOP\obj\Debug\DP-APP-DESKTOP.application
 Z:\Programacion\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\DP-APP-DESKTOP\bin\Debug\itextsharp.dll
 Z:\Programacion\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\DP-APP-DESKTOP\bin\Debug\itextsharp.xml
+Z:\Programacion\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\DP-APP-DESKTOP\obj\Debug\DP_APP_DESKTOP.frmPruebas.resources

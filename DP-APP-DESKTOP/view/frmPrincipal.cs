@@ -17,12 +17,29 @@ namespace DP_APP_DESKTOP
 {
     public partial class frmPrincipal : Form
     {
-        
+        private int childForNumbre = 0;
         public frmPrincipal()
         {
             InitializeComponent();
         }
-
+        Form llamado = new Form();
+        public void cheCarForm(Form hijo, Form padre)
+        {
+            bool cargado = false;
+            foreach (Form llamado in padre.MdiChildren)
+            {
+                if (llamado.Text==hijo.Text)
+                {
+                    cargado = true;
+                    break;
+                }
+            }
+            if (!cargado)
+            {
+                hijo.MdiParent = padre;
+                hijo.Show();
+            }
+        }
         private void frmPrincipal_FormClosing(object sender, FormClosingEventArgs e)
         {
             DialogResult op;
@@ -63,25 +80,28 @@ namespace DP_APP_DESKTOP
         private void ventasToolStripMenuItem_Click(object sender, EventArgs e)
         {
             view.frmVentas form = new view.frmVentas();
-            form.MdiParent = this;
-            form.Show();
+            cheCarForm(form, this);
         }
 
         private void muestrasToolStripMenuItem_Click(object sender, EventArgs e)
         {
             view.frmMuestras form = new view.frmMuestras();
-            form.MdiParent = this;
-            form.Show();
+            cheCarForm(form, this);
         }
 
         private void cuadernoOralneToolStripMenuItem_Click(object sender, EventArgs e)
         {
             view.frmCuadernoOralne form = new view.frmCuadernoOralne();
-            form.MdiParent = this;
-            form.Show();
+            cheCarForm(form, this);
         }
 
-  
+        private void pruebasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmPruebas form = new frmPruebas();
+            cheCarForm(form, this);
+        }
+
+
 
 
         //public void CargarMenu(Int32 IdMaster, ToolStripMenuItem mnuPadre, MenuStrip Menu)

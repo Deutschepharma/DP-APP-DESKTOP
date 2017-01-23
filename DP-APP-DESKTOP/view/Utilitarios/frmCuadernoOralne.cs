@@ -48,7 +48,6 @@ namespace DP_APP_DESKTOP.view
                 txtLoteVenc.Text = "";
                 txtCantidad.Text = "";
                 cmbProductos.SelectedIndex = 0;
-                //dgvProductos.Rows.Clear();
 
             }
         }
@@ -82,7 +81,7 @@ namespace DP_APP_DESKTOP.view
             else
             {
             DialogResult resultado;
-            resultado = MessageBox.Show("Desea Grabar y Generar PDF\n de lo Contrario Presione NO para solo Guardar", "", MessageBoxButtons.YesNo);
+            resultado = MessageBox.Show("Desea Generar PDF", "", MessageBoxButtons.YesNo);
             if (resultado == DialogResult.Yes)
             {
                 c.NRO_CUADERNO = lblNroCuaderno.Text;
@@ -116,10 +115,9 @@ namespace DP_APP_DESKTOP.view
                 c.PRESCRIPTOR_MEDICO = txtMedico.Text.ToUpper();
                 c.PRESCRIPTOR_CENTRO_MEDICO = txtCentroMedico.Text.ToUpper();
                 c.PRESCRIPTOR_FARMACIA = txtFarmacia.Text.ToUpper();
-                    //co.RegistraCuaderno(c);
-                    ListasDatos l = new ListasDatos();
-                    l.co.Add(c);
-                    //pdf.GeneraCuaderno(l);
+                co.RegistraCuaderno(c);
+                ListasDatos l = new ListasDatos();
+                l.co.Add(c);
 
 
                 foreach (DataGridViewRow r in dgvProductos.Rows)
@@ -131,11 +129,11 @@ namespace DP_APP_DESKTOP.view
                     p.Nro_Cuaderno = int.Parse(lblNroCuaderno.Text);
 
                     p.Cantidad = int.Parse(r.Cells["CANTIDAD"].Value.ToString());
-                    //co.RegistraCuadernoProducto(p);
+                    co.RegistraCuadernoProducto(p);
                     l.cop.Add(p);
                 }
-                    pdf.GeneraCuaderno(l);
-                    limpiarFormulario();
+                pdf.GeneraCuaderno(l);
+                limpiarFormulario();
 
                 }
             else
@@ -170,7 +168,7 @@ namespace DP_APP_DESKTOP.view
                 c.RECETA_OBSERVACION = txtObservaciones.Text.ToUpper();
                 c.PRESCRIPTOR_MEDICO = txtMedico.Text.ToUpper();
                 c.PRESCRIPTOR_CENTRO_MEDICO = txtCentroMedico.Text.ToUpper();
-
+                c.PRESCRIPTOR_FARMACIA = txtFarmacia.Text.ToUpper();
                 co.RegistraCuaderno(c);
 
                 foreach (DataGridViewRow r in dgvProductos.Rows)
@@ -208,6 +206,7 @@ namespace DP_APP_DESKTOP.view
             txtLoteVenc.Text = "";
             txtCantidad.Text = "";
             txtObservaciones.Text = "";
+            txtFuncionario.Text = "";
             dgvProductos.Rows.Clear();
             if (checkNO.Checked || checkSI.Checked)
             {
