@@ -20,3 +20,11 @@ Z:\Programacion\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\Business\obj\Debug\Busi
 Z:\Programacion\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\Business\obj\Debug\Business.pdb
 Z:\Programacion\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\Business\bin\Debug\itextsharp.dll
 Z:\Programacion\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\Business\bin\Debug\itextsharp.xml
+Z:\Programacion\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\Business\bin\Debug\LinqToExcel.dll
+Z:\Programacion\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\Business\bin\Debug\log4net.dll
+Z:\Programacion\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\Business\bin\Debug\Remotion.Data.Linq.dll
+Z:\Programacion\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\Business\bin\Debug\Remotion.dll
+Z:\Programacion\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\Business\bin\Debug\Remotion.Interfaces.dll
+Z:\Programacion\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\Business\bin\Debug\LinqToExcel.xml
+Z:\Programacion\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\Business\bin\Debug\log4net.xml
+Z:\Programacion\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\Business\bin\Debug\Business.dll.config

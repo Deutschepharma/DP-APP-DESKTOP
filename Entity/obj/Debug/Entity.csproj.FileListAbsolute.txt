@@ -11,3 +11,11 @@ Z:\Programacion\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\Entity\obj\Debug\Entity
 Z:\Programacion\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\Entity\bin\Debug\itextsharp.dll
 Z:\Programacion\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\Entity\bin\Debug\itextsharp.xml
 Z:\Programacion\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\Entity\obj\Debug\Entity.csprojResolveAssemblyReference.cache
+Z:\Programacion\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\Entity\bin\Debug\LinqToExcel.dll
+Z:\Programacion\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\Entity\bin\Debug\log4net.dll
+Z:\Programacion\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\Entity\bin\Debug\Remotion.Data.Linq.dll
+Z:\Programacion\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\Entity\bin\Debug\Remotion.dll
+Z:\Programacion\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\Entity\bin\Debug\Remotion.Interfaces.dll
+Z:\Programacion\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\Entity\bin\Debug\LinqToExcel.xml
+Z:\Programacion\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\Entity\bin\Debug\log4net.xml
+Z:\Programacion\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\Entity\bin\Debug\Entity.dll.config
