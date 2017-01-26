@@ -9,11 +9,11 @@ namespace Entity
     public class CargaInventario
     {
         public string bodega { get; set; }
-        public int codigo { get; set; }
+        public string codigo { get; set; }
         public string descripcion { get; set; }
         public string lote { get; set; }
-        public DateTime vencimiento { get; set; }
-        public float unidades { get; set; }
+        public string vencimiento { get; set; }
+        public string unidades { get; set; }
 
     }
 }

@@ -14,5 +14,9 @@ namespace Business
         {
             return new Co_Inventario_Diario().RegistraInventario(c);
         }
+        public int RegistraMatEnv(CargaInventario c)
+        {
+            return new Co_Inventario_Diario().RegistraMatEnv(c);
+        }
     }
 }

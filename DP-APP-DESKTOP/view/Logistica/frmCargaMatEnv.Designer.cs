@@ -1,6 +1,6 @@
 ﻿namespace DP_APP_DESKTOP
 {
-    partial class frmPruebas
+    partial class frmCargaMatEnv
     {
         /// <summary>
         /// Required designer variable.
@@ -63,12 +63,12 @@
             this.dg.Location = new System.Drawing.Point(12, 70);
             this.dg.Name = "dg";
             this.dg.ReadOnly = true;
-            this.dg.Size = new System.Drawing.Size(1260, 529);
+            this.dg.Size = new System.Drawing.Size(1250, 530);
             this.dg.TabIndex = 3;
             // 
             // btnRegistro
             // 
-            this.btnRegistro.Location = new System.Drawing.Point(516, 41);
+            this.btnRegistro.Location = new System.Drawing.Point(516, 13);
             this.btnRegistro.Name = "btnRegistro";
             this.btnRegistro.Size = new System.Drawing.Size(75, 23);
             this.btnRegistro.TabIndex = 4;
@@ -98,7 +98,7 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // frmPruebas
+            // frmCargaMatEnv
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -110,9 +110,9 @@
             this.Controls.Add(this.barStatus);
             this.Controls.Add(this.btnLeerDatos);
             this.MinimizeBox = false;
-            this.Name = "frmPruebas";
+            this.Name = "frmCargaMatEnv";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "frmPruebas";
+            this.Text = "Carga de Material de Envase";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.dg)).EndInit();
             this.ResumeLayout(false);

@@ -12,12 +12,13 @@ using Entity;
 using Business;
 using System.IO;
 
+
 namespace DP_APP_DESKTOP
 {
-    public partial class frmPruebas : Form
+    public partial class frmCargaMatEnv : Form
     {
         List<CargaInventario> inventario = new List<CargaInventario>();
-        public frmPruebas()
+        public frmCargaMatEnv()
         {
             InitializeComponent();
         }
@@ -26,20 +27,15 @@ namespace DP_APP_DESKTOP
         {
             if (txtAbrir.Text!="")
             {
-                //string rutaExcel = Application.StartupPath + "\\Excel\\Importar.xlsx";
                 string rutaExcel = txtAbrir.Text;
-                //se crea libro a partir de la ruta
                 var book = new ExcelQueryFactory(rutaExcel);
-                //consulta linq
-                var res = (from row in book.Worksheet("data")
+                var res = (from row in book.Worksheet("Mat_Env")
                             let item = new CargaInventario
                             {
-                                bodega = row[0].Cast<string>(),
-                                codigo = row[1].Cast<string>(),
-                                descripcion = row[2].Cast<string>(),
-                                lote = row[3].Cast<string>(),
-                                vencimiento = row[4].Cast<string>(),
-                                unidades = row[5].Cast<string>()
+                                codigo = row[0].Cast<string>(),
+                                descripcion = row[1].Cast<string>(),
+                                bodega = row[2].Cast<string>(),
+                                unidades = row[3].Cast<string>()
                             }
                             select item).ToList();
                 book.Dispose();
@@ -53,38 +49,29 @@ namespace DP_APP_DESKTOP
                 foreach (var i in res)
                 {
                     barStatus.PerformStep();
-                    if (i.lote != null)
+                    if (i.codigo != null)
                     {
-                        if (i.lote != "" && i.lote != "0")
+                        if (i.codigo != "")
                         {
-                            if (i.descripcion != "DESCRIPCION")
+                            if (!i.descripcion.StartsWith("DESCRIPCION"))
                             {
-                                if (i.bodega != "BODEGA")
+                                if (!i.bodega.StartsWith("BODEGA"))
                                 {
-                                    if (!i.lote.StartsWith("Lote"))
+                                    if (!i.codigo.StartsWith("Tota"))
                                     {
-                                        if (!i.lote.StartsWith("Página actual"))
-                                        {
-                                            CargaInventario c = new CargaInventario();
-                                            c.bodega = i.bodega;
-                                            c.codigo = i.codigo;
-                                            c.descripcion = i.descripcion;
-                                            c.lote = i.lote;
-                                            c.vencimiento = i.vencimiento;
-                                            c.unidades = i.unidades;
-                                            inventario.Add(c);
-                                        }
-
+                                        CargaInventario c = new CargaInventario();
+                                        c.bodega = i.bodega;
+                                        c.codigo = i.codigo;
+                                        c.descripcion = i.descripcion;
+                                        //c.lote = i.lote;
+                                        //c.vencimiento = i.vencimiento;
+                                        c.unidades = i.unidades;
+                                        inventario.Add(c);
                                     }
                                 }
-
-
                             }
-
                         }
-
                     }
-
                 }
                 dg.DataSource = inventario;
             }
@@ -97,17 +84,14 @@ namespace DP_APP_DESKTOP
 
         private void btnRegistro_Click(object sender, EventArgs e)
         {
-            if (inventario.Count < 0)
+            if (inventario.Count > 0)
             {
-                barStatus.Minimum = 0;
-                barStatus.Maximum = inventario.Count;
-                barStatus.Step = 1;
                 Bu_Inventario_Diario b = new Bu_Inventario_Diario();
                 foreach (CargaInventario c in inventario)
                 {
-                    b.RegistraInventario(c);
-                    barStatus.PerformStep();
+                    b.RegistraMatEnv(c);
                 }
+                MessageBox.Show("Registro Completo");
             }
             else
             {
@@ -126,7 +110,6 @@ namespace DP_APP_DESKTOP
             openFileDialog1.Filter = "xlsx files (*.xlsx)|*.xlsx";
             //openFileDialog1.FilterIndex = 2;
             openFileDialog1.RestoreDirectory = true;
-
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 try

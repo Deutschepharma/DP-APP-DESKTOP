@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using DP_APP_DESKTOP.view;
 using System.Data.SqlClient;
 
 
@@ -79,26 +79,38 @@ namespace DP_APP_DESKTOP
 
         private void ventasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            view.frmVentas form = new view.frmVentas();
-            cheCarForm(form, this);
+            frmVentas venta = new frmVentas();
+            cheCarForm(venta, this);
         }
 
         private void muestrasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            view.frmMuestras form = new view.frmMuestras();
-            cheCarForm(form, this);
+            frmMuestras muestras = new frmMuestras();
+            cheCarForm(muestras, this);
         }
 
         private void cuadernoOralneToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            view.frmCuadernoOralne form = new view.frmCuadernoOralne();
-            cheCarForm(form, this);
+            frmCuadernoOralne cuadernoOralne = new frmCuadernoOralne();
+            cheCarForm(cuadernoOralne, this);
         }
 
         private void pruebasToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmPruebas form = new frmPruebas();
             cheCarForm(form, this);
+        }
+
+        private void cargaDeInventarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCargaMatVenta matVta = new frmCargaMatVenta();
+            cheCarForm(matVta, this);
+        }
+
+        private void cargaDeMaterialEnvasesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCargaMatEnv matEnv = new frmCargaMatEnv();
+            cheCarForm(matEnv, this);
         }
 
 

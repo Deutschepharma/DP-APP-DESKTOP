@@ -105,6 +105,18 @@
     <Compile Include="frmPruebas.Designer.cs">
       <DependentUpon>frmPruebas.cs</DependentUpon>
     </Compile>
+    <Compile Include="view\Logistica\frmCargaMatEnv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\Logistica\frmCargaMatEnv.Designer.cs">
+      <DependentUpon>frmCargaMatEnv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\Logistica\frmCargaMatVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\Logistica\frmCargaMatVenta.Designer.cs">
+      <DependentUpon>frmCargaMatVenta.cs</DependentUpon>
+    </Compile>
     <Compile Include="view\Utilitarios\frmCuadernoOralne.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -146,6 +158,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="view\Logistica\frmCargaMatEnv.resx">
+      <DependentUpon>frmCargaMatEnv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\Logistica\frmCargaMatVenta.resx">
+      <DependentUpon>frmCargaMatVenta.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="view\Utilitarios\frmCuadernoOralne.resx">
       <DependentUpon>frmCuadernoOralne.cs</DependentUpon>
     </EmbeddedResource>
@@ -158,9 +176,6 @@
     <EmbeddedResource Include="view\Proyecciones\frmVentas.resx">
       <DependentUpon>frmVentas.cs</DependentUpon>
     </EmbeddedResource>
-    <Content Include="Excel\Importar.xlsx">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -201,6 +216,7 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

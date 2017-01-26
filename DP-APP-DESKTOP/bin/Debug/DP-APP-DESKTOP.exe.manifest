@@ -49,7 +49,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>HYYIWomwDTA5bR174sFkiwrBhHOMLw76MkvIsrsjNgM=</dsig:DigestValue>
+        <dsig:DigestValue>ga/KdwLIubyeAyqmNLIVa+KNOig3cHi/9xXLbyvLZac=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -61,19 +61,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>UqvjGSVKRyivIvXMBYEwCk1o/gH3jzEXFr4qWAk/5X0=</dsig:DigestValue>
+        <dsig:DigestValue>rdjUBiZaUi6nNo/6hhXe1NgYTpS1I7p0XjsYnpGgiH4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DP-APP-DESKTOP.exe" size="48640">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DP-APP-DESKTOP.exe" size="57856">
       <assemblyIdentity name="DP-APP-DESKTOP" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>G+D3iN4BTXj5prmfJ2GAIcNc+CM3v/aTbRsQb3uThyo=</dsig:DigestValue>
+        <dsig:DigestValue>LfpsOKvDqV4ZDXOpZ3xFjAJdu7l9oWN/BAtX7sEfV7w=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -85,7 +85,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>cVtXCiApMRlTye95IwRToJ3TG/X/wrdAM2SyDo7C+fs=</dsig:DigestValue>
+        <dsig:DigestValue>TDUMi8Ws0p4BGRsFDmQbz+JIwl3xA+qKm87FGrVQ0u0=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -168,15 +168,6 @@
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
       <dsig:DigestValue>Mb0CPgUwBqAjnL2M42tjPUseiOdFK79ma89vj1+7Hug=</dsig:DigestValue>
-    </hash>
-  </file>
-  <file name="Excel\Importar.xlsx" size="302033">
-    <hash>
-      <dsig:Transforms>
-        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-      </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>lMfKLFmqdIAX8FKbXldVYjhX3BVo1H0YsYwkjoyFBPE=</dsig:DigestValue>
     </hash>
   </file>
   <file name="img\Dp-color--177x81.png" size="1875">
