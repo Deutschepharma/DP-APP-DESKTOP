@@ -36,14 +36,14 @@
             this.muestrasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.utilitariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cuadernoOralneToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.logisticaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cargaDeInventarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cargaDeMaterialEnvasesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sistemasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pruebasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lblID = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.logisticaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cargaDeInventarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cargaDeMaterialEnvasesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.msPrincipal.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -90,9 +90,12 @@
             // 
             // proyeccionesToolStripMenuItem
             // 
+            this.proyeccionesToolStripMenuItem.Checked = true;
+            this.proyeccionesToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.proyeccionesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ventasToolStripMenuItem,
             this.muestrasToolStripMenuItem});
+            this.proyeccionesToolStripMenuItem.Enabled = false;
             this.proyeccionesToolStripMenuItem.Name = "proyeccionesToolStripMenuItem";
             this.proyeccionesToolStripMenuItem.Size = new System.Drawing.Size(89, 20);
             this.proyeccionesToolStripMenuItem.Text = "Proyecciones";
@@ -115,21 +118,47 @@
             // 
             this.utilitariosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cuadernoOralneToolStripMenuItem});
+            this.utilitariosToolStripMenuItem.Enabled = false;
             this.utilitariosToolStripMenuItem.Name = "utilitariosToolStripMenuItem";
-            this.utilitariosToolStripMenuItem.Size = new System.Drawing.Size(69, 20);
-            this.utilitariosToolStripMenuItem.Text = "Utilitarios";
+            this.utilitariosToolStripMenuItem.Size = new System.Drawing.Size(73, 20);
+            this.utilitariosToolStripMenuItem.Text = "Marketing";
             // 
             // cuadernoOralneToolStripMenuItem
             // 
             this.cuadernoOralneToolStripMenuItem.Name = "cuadernoOralneToolStripMenuItem";
-            this.cuadernoOralneToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
-            this.cuadernoOralneToolStripMenuItem.Text = "Cuaderno Oralne";
+            this.cuadernoOralneToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.cuadernoOralneToolStripMenuItem.Text = "Beneficio 1+1";
             this.cuadernoOralneToolStripMenuItem.Click += new System.EventHandler(this.cuadernoOralneToolStripMenuItem_Click);
+            // 
+            // logisticaToolStripMenuItem
+            // 
+            this.logisticaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cargaDeInventarioToolStripMenuItem,
+            this.cargaDeMaterialEnvasesToolStripMenuItem});
+            this.logisticaToolStripMenuItem.Enabled = false;
+            this.logisticaToolStripMenuItem.Name = "logisticaToolStripMenuItem";
+            this.logisticaToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
+            this.logisticaToolStripMenuItem.Text = "Logistica";
+            // 
+            // cargaDeInventarioToolStripMenuItem
+            // 
+            this.cargaDeInventarioToolStripMenuItem.Name = "cargaDeInventarioToolStripMenuItem";
+            this.cargaDeInventarioToolStripMenuItem.Size = new System.Drawing.Size(211, 22);
+            this.cargaDeInventarioToolStripMenuItem.Text = "Carga de Material Venta";
+            this.cargaDeInventarioToolStripMenuItem.Click += new System.EventHandler(this.cargaDeInventarioToolStripMenuItem_Click);
+            // 
+            // cargaDeMaterialEnvasesToolStripMenuItem
+            // 
+            this.cargaDeMaterialEnvasesToolStripMenuItem.Name = "cargaDeMaterialEnvasesToolStripMenuItem";
+            this.cargaDeMaterialEnvasesToolStripMenuItem.Size = new System.Drawing.Size(211, 22);
+            this.cargaDeMaterialEnvasesToolStripMenuItem.Text = "Carga de Material Envases";
+            this.cargaDeMaterialEnvasesToolStripMenuItem.Click += new System.EventHandler(this.cargaDeMaterialEnvasesToolStripMenuItem_Click);
             // 
             // sistemasToolStripMenuItem
             // 
             this.sistemasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.pruebasToolStripMenuItem});
+            this.sistemasToolStripMenuItem.Enabled = false;
             this.sistemasToolStripMenuItem.Name = "sistemasToolStripMenuItem";
             this.sistemasToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
             this.sistemasToolStripMenuItem.Text = "Sistemas";
@@ -173,29 +202,6 @@
             this.groupBox1.Size = new System.Drawing.Size(198, 24);
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
-            // 
-            // logisticaToolStripMenuItem
-            // 
-            this.logisticaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.cargaDeInventarioToolStripMenuItem,
-            this.cargaDeMaterialEnvasesToolStripMenuItem});
-            this.logisticaToolStripMenuItem.Name = "logisticaToolStripMenuItem";
-            this.logisticaToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
-            this.logisticaToolStripMenuItem.Text = "Logistica";
-            // 
-            // cargaDeInventarioToolStripMenuItem
-            // 
-            this.cargaDeInventarioToolStripMenuItem.Name = "cargaDeInventarioToolStripMenuItem";
-            this.cargaDeInventarioToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
-            this.cargaDeInventarioToolStripMenuItem.Text = "Carga de Material Venta";
-            this.cargaDeInventarioToolStripMenuItem.Click += new System.EventHandler(this.cargaDeInventarioToolStripMenuItem_Click);
-            // 
-            // cargaDeMaterialEnvasesToolStripMenuItem
-            // 
-            this.cargaDeMaterialEnvasesToolStripMenuItem.Name = "cargaDeMaterialEnvasesToolStripMenuItem";
-            this.cargaDeMaterialEnvasesToolStripMenuItem.Size = new System.Drawing.Size(211, 22);
-            this.cargaDeMaterialEnvasesToolStripMenuItem.Text = "Carga de Material Envases";
-            this.cargaDeMaterialEnvasesToolStripMenuItem.Click += new System.EventHandler(this.cargaDeMaterialEnvasesToolStripMenuItem_Click);
             // 
             // frmPrincipal
             // 

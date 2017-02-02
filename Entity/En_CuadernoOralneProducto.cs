@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entity
 {
-    public class CuadernoOralneProducto
+    public class En_CuadernoOralneProducto
     {
         public int PRODUCTO_MAESTRO_CODIGO { get; set; }
         public string NOMBRE { get; set; }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entity
 {
-    public class CuadernoOralne
+    public class En_CuadernoOralne
     {
         public string NRO_CUADERNO { get; set; }
         public string CLIENTE_NOMBRE { get; set; }
@@ -21,8 +21,11 @@ namespace Entity
         public DateTime RECETA_FECHA_COMPRA { get; set; }
         public string RECETA_FUNCIONARIO { get; set; }
         public string RECETA_OBSERVACION { get; set; }
-        public string PRESCRIPTOR_MEDICO { get; set; }
-        public string PRESCRIPTOR_CENTRO_MEDICO { get; set; }
-        public string PRESCRIPTOR_FARMACIA { get; set; }
+        public int PRESCRIPTOR_MEDICO { get; set; }
+        public int PRESCRIPTOR_CENTRO_MEDICO { get; set; }
+        public int PRESCRIPTOR_FARMACIA { get; set; }
+        public string PRESCRIPTOR_MEDICO_DESCRIPCION { get; set; }
+        public string PRESCRIPTOR_CENTRO_MEDICO_DESCRIPCION { get; set; }
+        public string PRESCRIPTOR_FARMACIA_DESCRIPCION { get; set; }
     }
 }

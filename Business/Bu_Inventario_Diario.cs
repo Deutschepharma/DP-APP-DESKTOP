@@ -10,13 +10,13 @@ namespace Business
 {
     public class Bu_Inventario_Diario
     {
-        public int RegistraInventario(CargaInventario c)
+        public int RegistraInventario(En_CargaMatVta mv)
         {
-            return new Co_Inventario_Diario().RegistraInventario(c);
+            return new Co_Inventario_Diario().RegistraInventario(mv);
         }
-        public int RegistraMatEnv(CargaInventario c)
+        public int RegistraMatEnv(En_CargaMatEnv me)
         {
-            return new Co_Inventario_Diario().RegistraMatEnv(c);
+            return new Co_Inventario_Diario().RegistraMatEnv(me);
         }
     }
 }

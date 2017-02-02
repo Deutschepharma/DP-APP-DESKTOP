@@ -59,7 +59,27 @@ namespace DP_APP_DESKTOP
 
         private void frmPrincipal_Load(object sender, EventArgs e)
         {
-            lblID.Text = frmLogin.id;
+            switch (frmLogin.id)
+            {
+                case "1": //Sistema Administrador General
+                    proyeccionesToolStripMenuItem.Enabled = true;
+                    utilitariosToolStripMenuItem.Enabled = true;
+                    logisticaToolStripMenuItem.Enabled = true;
+                    sistemasToolStripMenuItem.Enabled = true;
+                    break;
+                case "2": //Usuario Standar
+                    utilitariosToolStripMenuItem.Enabled = true;
+                    break;
+                case "3": //Direccion Tecnica
+                    proyeccionesToolStripMenuItem.Enabled = true;
+                    break;
+                case "4": //Logistica
+                    logisticaToolStripMenuItem.Enabled = true;
+                    break;
+                default:
+                    break;
+            }
+            //lblID.Text = frmLogin.id;
             lblUsuario.Text = frmLogin.user;
         }
         

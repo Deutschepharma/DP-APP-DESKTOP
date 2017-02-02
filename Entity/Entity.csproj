@@ -58,12 +58,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CargaInventario.cs" />
-    <Compile Include="CuadernoOralne.cs" />
-    <Compile Include="CuadernoOralneProducto.cs" />
-    <Compile Include="GeneraPDF.cs" />
-    <Compile Include="ListasDatos.cs" />
+    <Compile Include="En_CargaMatEnv.cs" />
+    <Compile Include="En_CargaMatVta.cs" />
+    <Compile Include="En_CuadernoOralne.cs" />
+    <Compile Include="En_CuadernoOralneProducto.cs" />
+    <Compile Include="En_CuadernoRegistraMedico.cs" />
+    <Compile Include="En_GeneraPDF.cs" />
+    <Compile Include="En_ListasDatos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="En_Usuarios.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

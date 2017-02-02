@@ -32,7 +32,7 @@ namespace Controller
             }
             return dt;
         }
-        public int RegistraCuaderno(CuadernoOralne c)
+        public int RegistraCuaderno(En_CuadernoOralne c)
         {
             try
             {
@@ -73,7 +73,7 @@ namespace Controller
                 throw new Exception(exx.Message);
             }
         }
-        public int RegistraCuadernoProducto(CuadernoOralneProducto c)
+        public int RegistraCuadernoProducto(En_CuadernoOralneProducto c)
         {
             try
             {
@@ -83,8 +83,6 @@ namespace Controller
                 cmd.Parameters.Add("@LOTE", SqlDbType.VarChar).Value = c.LOTE;
                 cmd.Parameters.Add("@Nro_Cuaderno", SqlDbType.Int).Value = c.Nro_Cuaderno;
                 cmd.Parameters.Add("@Cantidad", SqlDbType.Int).Value = c.Cantidad;
-
-
                 try
                 {
                     cn.Open();
@@ -109,16 +107,8 @@ namespace Controller
         {
             try
             {
-                
                 SqlCommand cmd = new SqlCommand("Sp_Obtiene_NroCuaderno", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                //cmd.Parameters.Add("@tipo_evento", SqlDbType.Int).Value = e.tipo_evento;
-                ////cmd.Parameters.Add("@usuario_rut", SqlDbType.Int).Value = e.usuario_rut;
-                //cmd.Parameters.Add("@cliente_rut", SqlDbType.Int).Value = e.cliente_rut;
-                //cmd.Parameters.Add("@maquina_id", SqlDbType.Int).Value = e.maquina_id;
-                //cmd.Parameters.Add("@detalle_evento", SqlDbType.VarChar).Value = e.detalle_eventos;
-                //cmd.Parameters.Add("@id_user", SqlDbType.Int).Value = e.id_user;
-
                 SqlParameter NroEvento = new SqlParameter("@NRO_CUADERNO", 0);
                 NroEvento.Direction = ParameterDirection.Output;
                 cmd.Parameters.Add(NroEvento);
@@ -145,25 +135,86 @@ namespace Controller
                 throw new Exception(exx.Message);
             }
         }
-        public static void SoloNumeros(KeyPressEventArgs V)
-        {
-            if (Char.IsDigit(V.KeyChar))
-            {
-                V.Handled = false;
-            }
-            else if (Char.IsSeparator(V.KeyChar))
-            {
-                V.Handled = false;
-            }
-            else if (char.IsControl(V.KeyChar))
-            {
-                V.Handled = false;
-            }
-            else
-            {
-                V.Handled = true;
-            }
+        //public static void SoloNumeros(KeyPressEventArgs V)
+        //{
+        //    if (Char.IsDigit(V.KeyChar))
+        //    {
+        //        V.Handled = false;
+        //    }
+        //    else if (Char.IsSeparator(V.KeyChar))
+        //    {
+        //        V.Handled = false;
+        //    }
+        //    else if (char.IsControl(V.KeyChar))
+        //    {
+        //        V.Handled = false;
+        //    }
+        //    else
+        //    {
+        //        V.Handled = true;
+        //    }
 
+        //}
+        //registro de Nuevo Medico
+        //public DataTable CuadernoBuscaMedicoRut(int rut)
+        //{
+        //    DataTable dt = new DataTable();
+        //    try
+        //    {
+        //        SqlCommand cmd = new SqlCommand("Sp_Carga_Combo_Box", cn);
+        //        cmd.Parameters.Add("@flag", SqlDbType.Int).Value = flag;
+        //        cmd.Parameters.Add("@ddlFlag", SqlDbType.Int).Value = ddlFlag;
+        //        cmd.CommandType = CommandType.StoredProcedure;
+        //        SqlDataAdapter da = new SqlDataAdapter(cmd);
+        //        da.Fill(dt);
+        //    }
+        //    catch (Exception e)
+        //    {
+        //        throw new Exception(e.Message);
+        //    }
+        //    return dt;
+        //}
+        public int CuadernoRegistraMedico(En_CuadernoRegistraMedico r)
+        {
+            try
+            {
+                SqlCommand cmd = new SqlCommand("Sp_Cuaderno_Registro_Medico", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add("@rut", SqlDbType.Int).Value = r.rut;
+                cmd.Parameters.Add("@dv", SqlDbType.Char).Value = r.dv;
+                cmd.Parameters.Add("@nombre", SqlDbType.VarChar).Value = r.nombre;
+                cmd.Parameters.Add("@paterno", SqlDbType.VarChar).Value = r.paterno;
+                cmd.Parameters.Add("@materno", SqlDbType.VarChar).Value = r.materno;
+                cmd.Parameters.Add("@especialidad", SqlDbType.VarChar).Value = r.especialidad;
+                cmd.Parameters.Add("@nacimiento", SqlDbType.Date).Value = r.nacimiento;
+                cmd.Parameters.Add("@email", SqlDbType.VarChar).Value = r.email;
+                cmd.Parameters.Add("@fono", SqlDbType.VarChar).Value = r.fono;
+
+                SqlParameter log = new SqlParameter("@log", 0);
+                log.Direction = ParameterDirection.Output;
+                cmd.Parameters.Add(log);
+
+                try
+                {
+                    cn.Open();
+                    cmd.ExecuteNonQuery();
+                    int error = Int32.Parse(cmd.Parameters["@log"].Value.ToString());
+                    return error;
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception(ex.Message);
+                }
+                finally
+                {
+                    cn.Close();
+                    cmd.Dispose();
+                }
+            }
+            catch (Exception exx)
+            {
+                throw new Exception(exx.Message);
+            }
         }
 
 

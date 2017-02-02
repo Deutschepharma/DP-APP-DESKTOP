@@ -21,7 +21,7 @@ namespace Controller
         string lblCuaderno, nombre, paterno, materno, nacimiento, direccion, email, autoriza,
                  fono, farmacia, boleta, compra, funcionario, observacion, medico, centro_medico;
 
-        public bool GeneraCuaderno(ListasDatos l)
+        public bool GeneraCuaderno(En_ListasDatos l)
         {
             string archivoExiste = "C:\\DP-APP-DESKTOP\\ruta.ini";
             string path;
@@ -32,7 +32,7 @@ namespace Controller
             fs_inv.Close();
             string C = @"" + path + "";
 
-            foreach (CuadernoOralne c in l.co)
+            foreach (En_CuadernoOralne c in l.co)
             {
                 lblCuaderno = c.NRO_CUADERNO;
                 nombre = c.CLIENTE_NOMBRE;
@@ -46,9 +46,9 @@ namespace Controller
                 compra = c.RECETA_FECHA_COMPRA.ToString();
                 funcionario = c.RECETA_FUNCIONARIO;
                 observacion = c.RECETA_OBSERVACION;
-                medico = c.PRESCRIPTOR_MEDICO;
-                centro_medico = c.PRESCRIPTOR_CENTRO_MEDICO;
-                farmacia = c.PRESCRIPTOR_FARMACIA;
+                medico = c.PRESCRIPTOR_MEDICO_DESCRIPCION;
+                centro_medico = c.PRESCRIPTOR_CENTRO_MEDICO_DESCRIPCION;
+                farmacia = c.PRESCRIPTOR_FARMACIA_DESCRIPCION;
                 if (c.CLIENTE_AUTORIZA_CONTACTO=='S')
                 {
                     autoriza = "SI";
@@ -109,7 +109,7 @@ namespace Controller
                     celda.HorizontalAlignment = 1;
                     celda.Padding = 3;
                 }
-                foreach (CuadernoOralneProducto p in l.cop)
+                foreach (En_CuadernoOralneProducto p in l.cop)
                 {
                     unaTabla.AddCell(new Paragraph("" + p.PRODUCTO_MAESTRO_CODIGO + "", FontFactory.GetFont("Console", 7)));
                     unaTabla.AddCell(new Paragraph("" + p.NOMBRE + "", FontFactory.GetFont("Console", 7)));
@@ -131,8 +131,9 @@ namespace Controller
             datos.Add("NUMERO BOLETA : " + boleta + "\n");
             datos.Add("FECHA COMPRA   : " + compra + "\n");
             datos.Add("FUNCIONARIO       : " + funcionario + "\n");
-            datos.Add("AUTORIZA CONTACTO CON INFORMACIÓN RELACIONADA AL PRODUCTO : " + autoriza + "\n\n");
-            datos.Add("OBSERVACIONES : " + observacion);
+            
+            datos.Add("OBSERVACIONES : " + observacion+ "\n\n\n\n\n\n\n\n\n\n");
+            datos.Add("AUTORIZA CONTACTO CON INFORMACIÓN RELACIONADA AL PRODUCTO : " + autoriza + "             ______________________________");
             document.Add(datos);
             document.Close();
 

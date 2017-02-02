@@ -11,7 +11,7 @@ namespace Business
     public class Bu_GeneraPDF
     {
       
-        public bool GeneraCuaderno(ListasDatos l)
+        public bool GeneraCuaderno(En_ListasDatos l)
         {
             return new Co_GeneraPDF().GeneraCuaderno(l);
         }

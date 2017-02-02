@@ -17,7 +17,7 @@ namespace DP_APP_DESKTOP
 {
     public partial class frmCargaMatVenta : Form
     {
-        List<CargaInventario> inventario = new List<CargaInventario>();
+        List<En_CargaMatVta> inventario = new List<En_CargaMatVta>();
         public frmCargaMatVenta()
         {
             InitializeComponent();
@@ -33,7 +33,7 @@ namespace DP_APP_DESKTOP
                 var book = new ExcelQueryFactory(rutaExcel);
                 //consulta linq
                 var res = (from row in book.Worksheet("Mat_Venta")
-                            let item = new CargaInventario
+                            let item = new En_CargaMatVta
                             {
                                 bodega = row[0].Cast<string>(),
                                 codigo = row[1].Cast<string>(),
@@ -69,7 +69,7 @@ namespace DP_APP_DESKTOP
                                         {
                                             if (!i.lote.StartsWith("Página actual"))
                                             {
-                                                CargaInventario c = new CargaInventario();
+                                                En_CargaMatVta c = new En_CargaMatVta();
                                                 c.bodega = i.bodega;
                                                 c.codigo = i.codigo;
                                                 c.descripcion = i.descripcion;
@@ -99,7 +99,7 @@ namespace DP_APP_DESKTOP
             if (inventario.Count > 0)
             {
                 Bu_Inventario_Diario b = new Bu_Inventario_Diario();
-                foreach (CargaInventario c in inventario)
+                foreach (En_CargaMatVta c in inventario)
                 {
                     b.RegistraInventario(c);
                 }

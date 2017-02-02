@@ -13,7 +13,7 @@ using System.Diagnostics;
 
 namespace Entity
 {
-    public class GeneraPDF
+    public class En_GeneraPDF
     {
         public string rutProveedor { get; set; }
         public string fechaOC { get; set; }

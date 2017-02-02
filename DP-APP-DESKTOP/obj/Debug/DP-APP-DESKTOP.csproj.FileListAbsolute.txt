@@ -56,3 +56,8 @@ Z:\Programacion\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\DP-APP-DESKTOP\bin\Debu
 Z:\Programacion\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\DP-APP-DESKTOP\bin\Debug\log4net.xml
 Z:\Programacion\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\DP-APP-DESKTOP\obj\Debug\DP_APP_DESKTOP.frmCargaMatEnv.resources
 Z:\Programacion\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\DP-APP-DESKTOP\obj\Debug\DP_APP_DESKTOP.frmCargaMatVenta.resources
+Z:\Programacion\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\DP-APP-DESKTOP\obj\Debug\DP_APP_DESKTOP.view.Utilitarios.frmCreaMedico.resources
+Z:\Programacion\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\DP-APP-DESKTOP\obj\Debug\DP_APP_DESKTOP.view.Marketing.frmCreaFarmacia.resources
+Z:\Programacion\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\DP-APP-DESKTOP\obj\Debug\DP_APP_DESKTOP.view.Marketing.frmCreaInstitucion.resources
+Z:\Programacion\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\DP-APP-DESKTOP\bin\Debug\Utilities.dll
+Z:\Programacion\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\DP-APP-DESKTOP\bin\Debug\Utilities.pdb

@@ -12,12 +12,11 @@ using Entity;
 using Business;
 using System.IO;
 
-
 namespace DP_APP_DESKTOP
 {
     public partial class frmCargaMatEnv : Form
     {
-        List<CargaInventario> inventario = new List<CargaInventario>();
+        List<En_CargaMatEnv> inventario = new List<En_CargaMatEnv>();
         public frmCargaMatEnv()
         {
             InitializeComponent();
@@ -30,7 +29,7 @@ namespace DP_APP_DESKTOP
                 string rutaExcel = txtAbrir.Text;
                 var book = new ExcelQueryFactory(rutaExcel);
                 var res = (from row in book.Worksheet("Mat_Env")
-                            let item = new CargaInventario
+                            let item = new En_CargaMatEnv
                             {
                                 codigo = row[0].Cast<string>(),
                                 descripcion = row[1].Cast<string>(),
@@ -53,21 +52,16 @@ namespace DP_APP_DESKTOP
                     {
                         if (i.codigo != "")
                         {
-                            if (!i.descripcion.StartsWith("DESCRIPCION"))
+                            if (i.codigo!="0")
                             {
                                 if (!i.bodega.StartsWith("BODEGA"))
                                 {
-                                    if (!i.codigo.StartsWith("Tota"))
-                                    {
-                                        CargaInventario c = new CargaInventario();
-                                        c.bodega = i.bodega;
-                                        c.codigo = i.codigo;
-                                        c.descripcion = i.descripcion;
-                                        //c.lote = i.lote;
-                                        //c.vencimiento = i.vencimiento;
-                                        c.unidades = i.unidades;
-                                        inventario.Add(c);
-                                    }
+                                    En_CargaMatEnv me = new En_CargaMatEnv();
+                                    me.bodega = i.bodega;
+                                    me.codigo = i.codigo;
+                                    me.descripcion = i.descripcion;
+                                    me.unidades = i.unidades;
+                                    inventario.Add(me);
                                 }
                             }
                         }
@@ -87,7 +81,7 @@ namespace DP_APP_DESKTOP
             if (inventario.Count > 0)
             {
                 Bu_Inventario_Diario b = new Bu_Inventario_Diario();
-                foreach (CargaInventario c in inventario)
+                foreach (En_CargaMatEnv c in inventario)
                 {
                     b.RegistraMatEnv(c);
                 }

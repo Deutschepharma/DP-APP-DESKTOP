@@ -117,10 +117,34 @@
     <Compile Include="view\Logistica\frmCargaMatVenta.Designer.cs">
       <DependentUpon>frmCargaMatVenta.cs</DependentUpon>
     </Compile>
-    <Compile Include="view\Utilitarios\frmCuadernoOralne.cs">
+    <Compile Include="view\Marketing\frmCreaFarmacia.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="view\Utilitarios\frmCuadernoOralne.Designer.cs">
+    <Compile Include="view\Marketing\frmCreaFarmacia.Designer.cs">
+      <DependentUpon>frmCreaFarmacia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\Marketing\frmCreaInstitucion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\Marketing\frmCreaInstitucion.Designer.cs">
+      <DependentUpon>frmCreaInstitucion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\Marketing\frmCreaMedico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\Marketing\frmCreaMedico.Designer.cs">
+      <DependentUpon>frmCreaMedico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\Marketing\frmCuadernoEspecialidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\Marketing\frmCuadernoEspecialidad.Designer.cs">
+      <DependentUpon>frmCuadernoEspecialidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\Marketing\frmCuadernoOralne.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\Marketing\frmCuadernoOralne.Designer.cs">
       <DependentUpon>frmCuadernoOralne.cs</DependentUpon>
     </Compile>
     <Compile Include="view\Proyecciones\frmMuestras.cs">
@@ -164,7 +188,16 @@
     <EmbeddedResource Include="view\Logistica\frmCargaMatVenta.resx">
       <DependentUpon>frmCargaMatVenta.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="view\Utilitarios\frmCuadernoOralne.resx">
+    <EmbeddedResource Include="view\Marketing\frmCreaFarmacia.resx">
+      <DependentUpon>frmCreaFarmacia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\Marketing\frmCreaInstitucion.resx">
+      <DependentUpon>frmCreaInstitucion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\Marketing\frmCreaMedico.resx">
+      <DependentUpon>frmCreaMedico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\Marketing\frmCuadernoOralne.resx">
       <DependentUpon>frmCuadernoOralne.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\Proyecciones\frmMuestras.resx">
@@ -198,6 +231,10 @@
     <ProjectReference Include="..\Entity\Entity.csproj">
       <Project>{49f8eb47-f27e-4cd4-aa77-f251f1d7346b}</Project>
       <Name>Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Utilities\Utilities.csproj">
+      <Project>{c0a6c45d-395f-468e-9eb8-a7c6e4691582}</Project>
+      <Name>Utilities</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
