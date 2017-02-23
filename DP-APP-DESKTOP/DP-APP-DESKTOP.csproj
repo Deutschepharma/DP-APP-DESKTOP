@@ -99,10 +99,16 @@
     <Compile Include="frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmPruebas.cs">
+    <Compile Include="view\Sistemas\frmDesbloqueaUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmPruebas.Designer.cs">
+    <Compile Include="view\Sistemas\frmDesbloqueaUsuarios.Designer.cs">
+      <DependentUpon>frmDesbloqueaUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\Sistemas\frmPruebas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\Sistemas\frmPruebas.Designer.cs">
       <DependentUpon>frmPruebas.cs</DependentUpon>
     </Compile>
     <Compile Include="view\Logistica\frmCargaMatEnv.cs">
@@ -167,10 +173,19 @@
     <Compile Include="view\Proyecciones\frmVentas.Designer.cs">
       <DependentUpon>frmVentas.cs</DependentUpon>
     </Compile>
+    <Compile Include="view\Utilidades\frmCambiaClave.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\Utilidades\frmCambiaClave.Designer.cs">
+      <DependentUpon>frmCambiaClave.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmPruebas.resx">
+    <EmbeddedResource Include="view\Sistemas\frmDesbloqueaUsuarios.resx">
+      <DependentUpon>frmDesbloqueaUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\Sistemas\frmPruebas.resx">
       <DependentUpon>frmPruebas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -197,6 +212,9 @@
     <EmbeddedResource Include="view\Marketing\frmCreaMedico.resx">
       <DependentUpon>frmCreaMedico.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="view\Marketing\frmCuadernoEspecialidad.resx">
+      <DependentUpon>frmCuadernoEspecialidad.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="view\Marketing\frmCuadernoOralne.resx">
       <DependentUpon>frmCuadernoOralne.cs</DependentUpon>
     </EmbeddedResource>
@@ -208,6 +226,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="view\Proyecciones\frmVentas.resx">
       <DependentUpon>frmVentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\Utilidades\frmCambiaClave.resx">
+      <DependentUpon>frmCambiaClave.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

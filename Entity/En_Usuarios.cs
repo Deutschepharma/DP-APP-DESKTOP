@@ -8,6 +8,7 @@ namespace Entity
 {
     public class En_Usuarios
     {
+        public int id { get; set; }
         public string us { get; set; }
         public string pw { get; set; }
         public string nombre { get; set; }

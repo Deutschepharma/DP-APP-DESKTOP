@@ -89,7 +89,8 @@
             // 
             // cmbProductos
             // 
-            this.cmbProductos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbProductos.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.cmbProductos.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cmbProductos.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbProductos.FormattingEnabled = true;
             this.cmbProductos.Location = new System.Drawing.Point(137, 20);
@@ -377,6 +378,8 @@
             // 
             // cmbFarmacia
             // 
+            this.cmbFarmacia.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.cmbFarmacia.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cmbFarmacia.FormattingEnabled = true;
             this.cmbFarmacia.Location = new System.Drawing.Point(632, 71);
             this.cmbFarmacia.Name = "cmbFarmacia";
@@ -385,6 +388,8 @@
             // 
             // cmbInstitucion
             // 
+            this.cmbInstitucion.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.cmbInstitucion.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cmbInstitucion.FormattingEnabled = true;
             this.cmbInstitucion.Location = new System.Drawing.Point(134, 39);
             this.cmbInstitucion.Name = "cmbInstitucion";
@@ -393,6 +398,8 @@
             // 
             // cmbMedico
             // 
+            this.cmbMedico.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.cmbMedico.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cmbMedico.FormattingEnabled = true;
             this.cmbMedico.Location = new System.Drawing.Point(134, 13);
             this.cmbMedico.Name = "cmbMedico";

@@ -44,6 +44,9 @@
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lblID = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.utilidadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cambiarClaveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.desbloqueaUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.msPrincipal.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -81,6 +84,7 @@
             this.utilitariosToolStripMenuItem,
             this.logisticaToolStripMenuItem,
             this.sistemasToolStripMenuItem,
+            this.utilidadesToolStripMenuItem,
             this.salirToolStripMenuItem});
             this.msPrincipal.Location = new System.Drawing.Point(0, 0);
             this.msPrincipal.Name = "msPrincipal";
@@ -126,7 +130,7 @@
             // cuadernoOralneToolStripMenuItem
             // 
             this.cuadernoOralneToolStripMenuItem.Name = "cuadernoOralneToolStripMenuItem";
-            this.cuadernoOralneToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.cuadernoOralneToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
             this.cuadernoOralneToolStripMenuItem.Text = "Beneficio 1+1";
             this.cuadernoOralneToolStripMenuItem.Click += new System.EventHandler(this.cuadernoOralneToolStripMenuItem_Click);
             // 
@@ -157,7 +161,8 @@
             // sistemasToolStripMenuItem
             // 
             this.sistemasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.pruebasToolStripMenuItem});
+            this.pruebasToolStripMenuItem,
+            this.desbloqueaUsuariosToolStripMenuItem});
             this.sistemasToolStripMenuItem.Enabled = false;
             this.sistemasToolStripMenuItem.Name = "sistemasToolStripMenuItem";
             this.sistemasToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
@@ -203,6 +208,28 @@
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
             // 
+            // utilidadesToolStripMenuItem
+            // 
+            this.utilidadesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cambiarClaveToolStripMenuItem});
+            this.utilidadesToolStripMenuItem.Name = "utilidadesToolStripMenuItem";
+            this.utilidadesToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
+            this.utilidadesToolStripMenuItem.Text = "Utilidades";
+            // 
+            // cambiarClaveToolStripMenuItem
+            // 
+            this.cambiarClaveToolStripMenuItem.Name = "cambiarClaveToolStripMenuItem";
+            this.cambiarClaveToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.cambiarClaveToolStripMenuItem.Text = "Cambiar Clave";
+            this.cambiarClaveToolStripMenuItem.Click += new System.EventHandler(this.cambiarClaveToolStripMenuItem_Click);
+            // 
+            // desbloqueaUsuariosToolStripMenuItem
+            // 
+            this.desbloqueaUsuariosToolStripMenuItem.Name = "desbloqueaUsuariosToolStripMenuItem";
+            this.desbloqueaUsuariosToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
+            this.desbloqueaUsuariosToolStripMenuItem.Text = "Desbloquea Usuarios";
+            this.desbloqueaUsuariosToolStripMenuItem.Click += new System.EventHandler(this.desbloqueaUsuariosToolStripMenuItem_Click);
+            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -245,6 +272,9 @@
         private System.Windows.Forms.ToolStripMenuItem logisticaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cargaDeInventarioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cargaDeMaterialEnvasesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem utilidadesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cambiarClaveToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem desbloqueaUsuariosToolStripMenuItem;
     }
 }
 

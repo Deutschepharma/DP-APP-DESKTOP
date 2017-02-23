@@ -46,5 +46,76 @@ namespace Controller
             }
             return dt;
         }
+        public int UsuarioCambiaEstado(int id, int estado)
+        {
+            try
+            {
+                SqlCommand cmd = new SqlCommand("Sp_Usuario_Cambia_Estado", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add("@id", SqlDbType.Int).Value = id;
+                cmd.Parameters.Add("@estado", SqlDbType.Int).Value = estado;
+                SqlParameter log = new SqlParameter("@log", 0);
+                log.Direction = ParameterDirection.Output;
+                cmd.Parameters.Add(log);
+
+                try
+                {
+                    cn.Open();
+                    cmd.ExecuteNonQuery();
+                    int error = Int32.Parse(cmd.Parameters["@log"].Value.ToString());
+                    return error;
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception(ex.Message);
+                }
+                finally
+                {
+                    cn.Close();
+                    cmd.Dispose();
+                }
+            }
+            catch (Exception exx)
+            {
+                throw new Exception(exx.Message);
+            }
+        }
+        public int UsuarioCambiaClave(int id, string clave)
+        {
+            try
+            {
+                SqlCommand cmd = new SqlCommand("Sp_Usuario_Cambia_Clave", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add("@id", SqlDbType.Int).Value = id;
+                cmd.Parameters.Add("@clave", SqlDbType.VarChar).Value = clave;
+
+                SqlParameter log = new SqlParameter("@log", 0);
+                log.Direction = ParameterDirection.Output;
+                cmd.Parameters.Add(log);
+
+                try
+                {
+                    cn.Open();
+                    cmd.ExecuteNonQuery();
+                    int error = Int32.Parse(cmd.Parameters["@log"].Value.ToString());
+                    return error;
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception(ex.Message);
+                }
+                finally
+                {
+                    cn.Close();
+                    cmd.Dispose();
+                }
+            }
+            catch (Exception exx)
+            {
+                throw new Exception(exx.Message);
+            }
+        }
+
+
     }
 }

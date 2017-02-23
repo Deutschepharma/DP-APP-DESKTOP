@@ -19,7 +19,15 @@ namespace Business
         {
             return new Co_Usuarios().Busca_Usuario(us, pw);
         }
-        
+        public int UsuarioCambiaEstado(int id, int estado)
+        {
+            return new Co_Usuarios().UsuarioCambiaEstado(id, estado);
+        }
+        public int UsuarioCambiaClave(int id, string clave)
+        {
+            return new Co_Usuarios().UsuarioCambiaClave(id, clave);
+        }
+
 
     }
 }

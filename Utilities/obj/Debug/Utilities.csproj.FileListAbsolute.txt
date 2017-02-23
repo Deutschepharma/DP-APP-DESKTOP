@@ -1,5 +1,4 @@
 Z:\Programacion\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\Utilities\bin\Debug\Utilities.dll
 Z:\Programacion\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\Utilities\bin\Debug\Utilities.pdb
-Z:\Programacion\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\Utilities\obj\Debug\Utilities.csprojResolveAssemblyReference.cache
 Z:\Programacion\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\Utilities\obj\Debug\Utilities.dll
 Z:\Programacion\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\Utilities\obj\Debug\Utilities.pdb

@@ -38,6 +38,7 @@ namespace Controller
             {
                 SqlCommand cmd = new SqlCommand("Sp_Registra_Cuaderno_Oralne", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add("@CUADERNO_NRO", SqlDbType.Int).Value = int.Parse(c.NRO_CUADERNO);
                 cmd.Parameters.Add("@CLIENTE_NOMBRE", SqlDbType.VarChar).Value = c.CLIENTE_NOMBRE;
                 cmd.Parameters.Add("@CLIENTE_PATERNO", SqlDbType.VarChar).Value = c.CLIENTE_PATERNO;
                 cmd.Parameters.Add("@CLIENTE_MATERNO", SqlDbType.VarChar).Value = c.CLIENTE_MATERNO;
@@ -216,9 +217,111 @@ namespace Controller
                 throw new Exception(exx.Message);
             }
         }
+        public int CuadernoRegistraEspecialidad(string cod, string descripcion)
+        {
+            try
+            {
+                SqlCommand cmd = new SqlCommand("Sp_Registra_Cuaderno_Especialidad_Medica", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add("@cod", SqlDbType.VarChar).Value = cod;
+                cmd.Parameters.Add("@descripcion", SqlDbType.VarChar).Value = descripcion;
 
+                SqlParameter log = new SqlParameter("@log", 0);
+                log.Direction = ParameterDirection.Output;
+                cmd.Parameters.Add(log);
 
+                try
+                {
+                    cn.Open();
+                    cmd.ExecuteNonQuery();
+                    int error = Int32.Parse(cmd.Parameters["@log"].Value.ToString());
+                    return error;
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception(ex.Message);
+                }
+                finally
+                {
+                    cn.Close();
+                    cmd.Dispose();
+                }
+            }
+            catch (Exception exx)
+            {
+                throw new Exception(exx.Message);
+            }
+        }
+        public int CuadernoRegistraInstitucion(string nombre, string direccion, string fono)
+        {
+            try
+            {
+                SqlCommand cmd = new SqlCommand("Sp_Registra_Cuaderno_Institucion", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add("@nombre", SqlDbType.VarChar).Value = nombre;
+                cmd.Parameters.Add("@direccion", SqlDbType.VarChar).Value = direccion;
+                cmd.Parameters.Add("@telefono", SqlDbType.VarChar).Value = fono;
 
+                SqlParameter log = new SqlParameter("@log", 0);
+                log.Direction = ParameterDirection.Output;
+                cmd.Parameters.Add(log);
+
+                try
+                {
+                    cn.Open();
+                    cmd.ExecuteNonQuery();
+                    int error = Int32.Parse(cmd.Parameters["@log"].Value.ToString());
+                    return error;
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception(ex.Message);
+                }
+                finally
+                {
+                    cn.Close();
+                    cmd.Dispose();
+                }
+            }
+            catch (Exception exx)
+            {
+                throw new Exception(exx.Message);
+            }
+        }
+        public int CuadernoRegistraFarmacia(string nombre)
+        {
+            try
+            {
+                SqlCommand cmd = new SqlCommand("Sp_Registra_Cuaderno_Farmacia", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add("@nombre", SqlDbType.VarChar).Value = nombre;
+
+                SqlParameter log = new SqlParameter("@log", 0);
+                log.Direction = ParameterDirection.Output;
+                cmd.Parameters.Add(log);
+
+                try
+                {
+                    cn.Open();
+                    cmd.ExecuteNonQuery();
+                    int error = Int32.Parse(cmd.Parameters["@log"].Value.ToString());
+                    return error;
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception(ex.Message);
+                }
+                finally
+                {
+                    cn.Close();
+                    cmd.Dispose();
+                }
+            }
+            catch (Exception exx)
+            {
+                throw new Exception(exx.Message);
+            }
+        }
 
     }
 }

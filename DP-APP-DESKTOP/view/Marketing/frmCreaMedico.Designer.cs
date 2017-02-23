@@ -31,7 +31,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtRut = new System.Windows.Forms.TextBox();
-            this.txtDv = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.btnRegistrar = new System.Windows.Forms.Button();
@@ -45,7 +44,6 @@
             this.txtFono = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             this.cmbEspecialidad = new System.Windows.Forms.ComboBox();
             this.btnNuevaEspecialidad = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -74,21 +72,10 @@
             // 
             this.txtRut.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRut.Location = new System.Drawing.Point(136, 13);
-            this.txtRut.MaxLength = 8;
+            this.txtRut.MaxLength = 10;
             this.txtRut.Name = "txtRut";
-            this.txtRut.Size = new System.Drawing.Size(196, 23);
+            this.txtRut.Size = new System.Drawing.Size(250, 23);
             this.txtRut.TabIndex = 2;
-            this.txtRut.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtRut_KeyPress);
-            // 
-            // txtDv
-            // 
-            this.txtDv.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDv.Location = new System.Drawing.Point(355, 13);
-            this.txtDv.MaxLength = 1;
-            this.txtDv.Name = "txtDv";
-            this.txtDv.Size = new System.Drawing.Size(31, 23);
-            this.txtDv.TabIndex = 3;
-            this.txtDv.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDv_KeyPress);
             // 
             // txtNombre
             // 
@@ -216,16 +203,6 @@
             this.label8.TabIndex = 18;
             this.label8.Text = "Fecha Nacimiento";
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(338, 13);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(11, 15);
-            this.label9.TabIndex = 19;
-            this.label9.Text = "-";
-            // 
             // cmbEspecialidad
             // 
             this.cmbEspecialidad.FormattingEnabled = true;
@@ -252,7 +229,6 @@
             this.ClientSize = new System.Drawing.Size(425, 266);
             this.Controls.Add(this.btnNuevaEspecialidad);
             this.Controls.Add(this.cmbEspecialidad);
-            this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txtFono);
             this.Controls.Add(this.label7);
@@ -266,7 +242,6 @@
             this.Controls.Add(this.btnRegistrar);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtNombre);
-            this.Controls.Add(this.txtDv);
             this.Controls.Add(this.txtRut);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -283,7 +258,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtRut;
-        private System.Windows.Forms.TextBox txtDv;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnRegistrar;
@@ -297,7 +271,6 @@
         private System.Windows.Forms.TextBox txtFono;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.ComboBox cmbEspecialidad;
         private System.Windows.Forms.Button btnNuevaEspecialidad;
     }

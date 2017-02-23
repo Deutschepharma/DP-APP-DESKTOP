@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Entity;
+using Utilities;
 
 
 namespace DP_APP_DESKTOP.view.Utilitarios
@@ -25,8 +26,8 @@ namespace DP_APP_DESKTOP.view.Utilitarios
             Bu_CuadernoOralne box = new Bu_CuadernoOralne();
             DataTable dt = box.CargaCombos(flag, cmbFlag);
             cb.DataSource = dt;
-            cb.DisplayMember = "nombre";
-            cb.ValueMember = "id";
+            cb.DisplayMember = "Nombre";
+            cb.ValueMember = "Codigo";
             cb.AutoCompleteCustomSource = Autocomplete(dt);
             cb.AutoCompleteMode = AutoCompleteMode.Suggest;
             cb.AutoCompleteSource = AutoCompleteSource.CustomSource;
@@ -37,49 +38,54 @@ namespace DP_APP_DESKTOP.view.Utilitarios
             AutoCompleteStringCollection coleccion = new AutoCompleteStringCollection();
             foreach (DataRow row in dt.Rows)
             {
-                coleccion.Add(Convert.ToString(row["nombre"]));
+                coleccion.Add(Convert.ToString(row["Nombre"]));
             }
             return coleccion;
         }
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
+            Ut_ValidaRut u = new Ut_ValidaRut();
             Bu_CuadernoOralne bu = new Bu_CuadernoOralne();
             En_CuadernoRegistraMedico m = new En_CuadernoRegistraMedico();
-            m.rut = int.Parse(txtRut.Text.Trim());
-            m.dv = char.Parse(txtDv.Text.Trim().ToUpper());
-            m.nombre = txtNombre.Text.Trim().ToUpper();
-            m.paterno = txtPaterno.Text.Trim().ToUpper();
-            m.materno = txtMaterno.Text.Trim().ToUpper();
-            m.especialidad = cmbEspecialidad.Text;
-            m.nacimiento = DateTime.Parse(dtNacimiento.Text);
-            m.email = txtEmail.Text.Trim().ToUpper();
-            m.fono = txtFono.Text.Trim().ToUpper();
-
-            if (bu.CuadernoRegistraMedico(m)==1)
+            if (txtNombre.Text.Trim().ToUpper()!=""&&txtPaterno.Text.Trim().ToUpper() != ""&&txtMaterno.Text.Trim().ToUpper() != "" &&cmbEspecialidad.Text!="")
             {
-                MessageBox.Show("Medico registrado con Exito");
-                Dispose();
-                respuesta = true;
-                //limpiar();
+                if (u.validarRut(txtRut.Text.Trim().ToUpper()))
+                {
+                    m.rut = u.dni;
+                    m.dv = u.digi;
+                    m.nombre = txtNombre.Text.Trim().ToUpper();
+                    m.paterno = txtPaterno.Text.Trim().ToUpper();
+                    m.materno = txtMaterno.Text.Trim().ToUpper();
+                    m.especialidad = cmbEspecialidad.Text;
+                    m.nacimiento = DateTime.Parse(dtNacimiento.Text);
+                    m.email = txtEmail.Text.Trim().ToUpper();
+                    m.fono = txtFono.Text.Trim().ToUpper();
+
+                    if (bu.CuadernoRegistraMedico(m) == 1)
+                    {
+                        MessageBox.Show("Medico registrado con Exito");
+                        Dispose();
+                        respuesta = true;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Medico Existe Porfavor Valide Rut!!!");
+                        txtRut.Focus();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Rut Invalido!!!");
+                    txtRut.Focus();
+                }
             }
             else
             {
-                MessageBox.Show("Medico Existe Porfavor Valide Rut!!!");
-                txtRut.Focus();
+                MessageBox.Show("Para Registrar un Medico a lo menos\ndebe Registrar Nombre Apellidos y Especialidad");
             }
+            
         }
 
-        private void limpiar()
-        {
-            txtRut.Text = "";
-            txtDv.Text = "";
-            txtNombre.Text = "";
-            txtPaterno.Text = "";
-            txtMaterno.Text = "";
-            cmbEspecialidad.Text = "";
-
-
-        }
 
         private void btnNuevaEspecialidad_Click(object sender, EventArgs e)
         {
@@ -95,24 +101,6 @@ namespace DP_APP_DESKTOP.view.Utilitarios
         private void frmCreaMedico_Load(object sender, EventArgs e)
         {
             CargaAutoCompletar(cmbEspecialidad, 7, 0);
-        }
-
-        private void txtRut_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
-            {
-                e.Handled = true;
-                return;
-            }
-        }
-
-        private void txtDv_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
-            {
-                e.Handled = true;
-                return;
-            }
         }
 
         private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)

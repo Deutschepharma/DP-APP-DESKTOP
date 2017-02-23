@@ -1,15 +1,11 @@
 ﻿
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using DP_APP_DESKTOP.view;
-using System.Data.SqlClient;
+using DP_APP_DESKTOP.view.Marketing;
+using DP_APP_DESKTOP.view.Sistemas;
+using DP_APP_DESKTOP.view.Utilidades;
+using Business;
 
 
 
@@ -17,7 +13,7 @@ namespace DP_APP_DESKTOP
 {
     public partial class frmPrincipal : Form
     {
-        private int childForNumbre = 0;
+        //private int childForNumbre = 0;
         public frmPrincipal()
         {
             InitializeComponent();
@@ -42,24 +38,28 @@ namespace DP_APP_DESKTOP
         }
         private void frmPrincipal_FormClosing(object sender, FormClosingEventArgs e)
         {
-            DialogResult op;
-            op = MessageBox.Show("Realmente ¿desea salir de la aplicación?", "", MessageBoxButtons.YesNo);
-            if (op == DialogResult.Yes)
-            {
-                //SqlCommand update = new SqlCommand("update USUARIOS set conectado = '0' where usuario ='" + lblUsuario.Text + "'", cn);
-                //cn.Open();
-                //update.ExecuteNonQuery();
-                System.Environment.Exit(1);
-            }
-            else
-            {
-                e.Cancel = true;
-            }
+            Bu_Usuarios u = new Bu_Usuarios();
+            u.UsuarioCambiaEstado(frmLogin.id, 4);
+            Application.Exit();
+
+            //DialogResult op;
+            //op = MessageBox.Show("Realmente ¿desea salir de la aplicación?", "", MessageBoxButtons.YesNo);
+            //if (op == DialogResult.Yes)
+            //{
+            //    Bu_Usuarios u = new Bu_Usuarios();
+            //    u.UsuarioCambiaEstado(frmLogin.id, 4);
+            //    Application.Exit();
+                
+            //}
+            //else
+            //{
+            //    e.Cancel = true;
+            //}
         }
 
         private void frmPrincipal_Load(object sender, EventArgs e)
         {
-            switch (frmLogin.id)
+            switch (frmLogin.tipo)
             {
                 case "1": //Sistema Administrador General
                     proyeccionesToolStripMenuItem.Enabled = true;
@@ -76,27 +76,50 @@ namespace DP_APP_DESKTOP
                 case "4": //Logistica
                     logisticaToolStripMenuItem.Enabled = true;
                     break;
+                case "5":
+
+                    break;
                 default:
                     break;
             }
-            //lblID.Text = frmLogin.id;
             lblUsuario.Text = frmLogin.user;
         }
-        
-
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            DialogResult resultado;
-            resultado = MessageBox.Show("Realmente ¿desea salir de la aplicación?", "", MessageBoxButtons.YesNo);
-            if (resultado == DialogResult.Yes)
-            {
-                //SqlCommand update = new SqlCommand("update USUARIOS set conectado = '0' where usuario ='" + lblUsuario.Text + "'", cn);
-                //cn.Open();
-                //update.ExecuteNonQuery();
-                System.Environment.Exit(1);
-            }
+            Bu_Usuarios u = new Bu_Usuarios();
+            u.UsuarioCambiaEstado(frmLogin.id, 4);
+            Application.Exit();
+            //DialogResult resultado;
+            //resultado = MessageBox.Show("Realmente ¿desea salir de la aplicación?", "", MessageBoxButtons.YesNo);
+            //if (resultado == DialogResult.Yes)
+            //{
+            //    Bu_Usuarios u = new Bu_Usuarios();
+            //    u.UsuarioCambiaEstado(frmLogin.id, 4);
+            //    Application.Exit();
+
+            //    //System.Environment.Exit(1);
+            //}
         }
 
+
+        //Logistica
+        private void cargaDeInventarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCargaMatVenta matVta = new frmCargaMatVenta();
+            cheCarForm(matVta, this);
+        }
+        private void cargaDeMaterialEnvasesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCargaMatEnv matEnv = new frmCargaMatEnv();
+            cheCarForm(matEnv, this);
+        }
+        //Marketing
+        private void cuadernoOralneToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCuadernoOralne cuadernoOralne = new frmCuadernoOralne();
+            cheCarForm(cuadernoOralne, this);
+        }
+        //Proyecciones
         private void ventasToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmVentas venta = new frmVentas();
@@ -108,30 +131,27 @@ namespace DP_APP_DESKTOP
             frmMuestras muestras = new frmMuestras();
             cheCarForm(muestras, this);
         }
-
-        private void cuadernoOralneToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frmCuadernoOralne cuadernoOralne = new frmCuadernoOralne();
-            cheCarForm(cuadernoOralne, this);
-        }
-
+        //Sistemas
         private void pruebasToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmPruebas form = new frmPruebas();
             cheCarForm(form, this);
         }
-
-        private void cargaDeInventarioToolStripMenuItem_Click(object sender, EventArgs e)
+        private void desbloqueaUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmCargaMatVenta matVta = new frmCargaMatVenta();
-            cheCarForm(matVta, this);
+            frmDesbloqueaUsuarios f = new frmDesbloqueaUsuarios();
+            cheCarForm(f, this);
+        }
+        //Utilidades
+        private void cambiarClaveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCambiaClave f = new frmCambiaClave();
+            cheCarForm(f, this);
         }
 
-        private void cargaDeMaterialEnvasesToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frmCargaMatEnv matEnv = new frmCargaMatEnv();
-            cheCarForm(matEnv, this);
-        }
+
+
+        
 
 
 

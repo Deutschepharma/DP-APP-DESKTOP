@@ -27,34 +27,37 @@ namespace DP_APP_DESKTOP.view
             cb.ValueMember = "Codigo";
         }
 
-        private void CargaAutoCompletar(ComboBox cb, int flag, int cmbFlag)
-        {
-            Bu_CuadernoOralne box = new Bu_CuadernoOralne();
-            DataTable dt = box.CargaCombos(flag, cmbFlag);
-            cb.DataSource = dt;
-            cb.DisplayMember = "nombre";
-            cb.ValueMember = "id";
-            cb.AutoCompleteCustomSource = Autocomplete(dt);
-            cb.AutoCompleteMode = AutoCompleteMode.Suggest;
-            cb.AutoCompleteSource = AutoCompleteSource.CustomSource;
-        }
-        public static AutoCompleteStringCollection Autocomplete(DataTable data)
-        {
-            DataTable dt = data;
-            AutoCompleteStringCollection coleccion = new AutoCompleteStringCollection();
-            foreach (DataRow row in dt.Rows)
-            {
-                coleccion.Add(Convert.ToString(row["nombre"]));
-            }
-            return coleccion;
-        }
+        //private void CargaAutoCompletar(ComboBox cb, int flag, int cmbFlag)
+        //{
+        //    Bu_CuadernoOralne box = new Bu_CuadernoOralne();
+        //    DataTable dt = box.CargaCombos(flag, cmbFlag);
+        //    cb.DataSource = dt;
+        //    cb.DisplayMember = "nombre";
+        //    cb.ValueMember = "id";
+        //    cb.AutoCompleteCustomSource = Autocomplete(dt);
+        //    cb.AutoCompleteMode = AutoCompleteMode.Suggest;
+        //    cb.AutoCompleteSource = AutoCompleteSource.CustomSource;
+        //}
+        //public static AutoCompleteStringCollection Autocomplete(DataTable data)
+        //{
+        //    DataTable dt = data;
+        //    AutoCompleteStringCollection coleccion = new AutoCompleteStringCollection();
+        //    foreach (DataRow row in dt.Rows)
+        //    {
+        //        coleccion.Add(Convert.ToString(row["nombre"]));
+        //    }
+        //    return coleccion;
+        //}
 
         private void frmCuadernoOralne_Load(object sender, EventArgs e)
         {
             CargaBox(cmbProductos, 2, 0);
-            CargaAutoCompletar(cmbFarmacia, 4, 0);
-            CargaAutoCompletar(cmbMedico, 5, 0);
-            CargaAutoCompletar(cmbInstitucion, 6, 0);
+            CargaBox(cmbMedico, 5, 0);
+            CargaBox(cmbFarmacia, 4, 0);
+            CargaBox(cmbInstitucion, 6, 0);
+            //CargaAutoCompletar(cmbFarmacia, 4, 0);
+            ////CargaAutoCompletar(cmbMedico, 5, 0);
+            //CargaAutoCompletar(cmbInstitucion, 6, 0);
             CargaNroCuaderno();
             txtNombres.Focus();
         }
@@ -113,14 +116,7 @@ namespace DP_APP_DESKTOP.view
                 else
                 {
                     c.NRO_CUADERNO = lblNroCuaderno.Text;
-                    if (checkSI.Checked)
-                    {
-                        c.CLIENTE_AUTORIZA_CONTACTO = 'S';
-                    }
-                    if (checkNO.Checked)
-                    {
-                        c.CLIENTE_AUTORIZA_CONTACTO = 'N';
-                    }
+                    c.CLIENTE_AUTORIZA_CONTACTO = 'S';
                     c.CLIENTE_NOMBRE = txtNombres.Text.ToUpper();
                     c.CLIENTE_PATERNO = txtPaterno.Text.ToUpper();
                     c.CLIENTE_MATERNO = txtMaterno.Text.ToUpper();
@@ -150,7 +146,6 @@ namespace DP_APP_DESKTOP.view
                     En_ListasDatos l = new En_ListasDatos();
                     l.co.Add(c);
 
-
                     foreach (DataGridViewRow r in dgvProductos.Rows)
                     {
                         En_CuadernoOralneProducto p = new En_CuadernoOralneProducto();
@@ -158,7 +153,6 @@ namespace DP_APP_DESKTOP.view
                         p.NOMBRE = r.Cells["NOMBRE"].Value.ToString();
                         p.LOTE = r.Cells["LOTE"].Value.ToString();
                         p.Nro_Cuaderno = int.Parse(lblNroCuaderno.Text);
-
                         p.Cantidad = int.Parse(r.Cells["CANTIDAD"].Value.ToString());
                         co.RegistraCuadernoProducto(p);
                         l.cop.Add(p);
@@ -192,15 +186,8 @@ namespace DP_APP_DESKTOP.view
                 }
                 else
                 {
-                    if (checkSI.Checked)
-                    {
-                        c.CLIENTE_AUTORIZA_CONTACTO = 'S';
-                    }
-                    if (checkNO.Checked)
-                    {
-                        c.CLIENTE_AUTORIZA_CONTACTO = 'N';
-                    }
-
+                    c.NRO_CUADERNO = lblNroCuaderno.Text;
+                    c.CLIENTE_AUTORIZA_CONTACTO = 'N';
                     c.CLIENTE_NOMBRE = txtNombres.Text.ToUpper();
                     c.CLIENTE_PATERNO = txtPaterno.Text.ToUpper();
                     c.CLIENTE_MATERNO = txtMaterno.Text.ToUpper();
@@ -236,12 +223,14 @@ namespace DP_APP_DESKTOP.view
                 }
                 limpiarFormulario();
             }
-
             else 
             {
                 MessageBox.Show("Debes Seleccionar una Opcion de Autoriza contacto");
                 checkSI.Focus();
             }
+
+
+
         }
         private void limpiarFormulario()
         {
@@ -267,6 +256,7 @@ namespace DP_APP_DESKTOP.view
                 checkNO.Checked = false;
             }
             txtNombres.Focus();
+            Dispose();
         }
 
         private void CargaNroCuaderno()
@@ -320,9 +310,8 @@ namespace DP_APP_DESKTOP.view
             f.ShowDialog(this);
             if (f.respuesta)
             {
-                CargaAutoCompletar(cmbMedico, 5, 0);
+                CargaBox(cmbMedico, 5, 0);
             }
-            
 
         }
 
@@ -332,7 +321,7 @@ namespace DP_APP_DESKTOP.view
             f.ShowDialog(this);
             if (f.respuesta)
             {
-                CargaAutoCompletar(cmbInstitucion, 6, 0);
+                CargaBox(cmbInstitucion, 6, 0);
             }
         }
 
@@ -342,7 +331,7 @@ namespace DP_APP_DESKTOP.view
             f.ShowDialog(this);
             if (f.respuesta)
             {
-                CargaAutoCompletar(cmbFarmacia, 4, 0);
+                CargaBox(cmbFarmacia, 4, 0);
             }
         }
     }

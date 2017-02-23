@@ -32,6 +32,17 @@ namespace Business
         {
             return new Co_CuadernoOralne().CuadernoRegistraMedico(r);
         }
-
+        public int CuadernoRegistraEspecialidad(string cod, string descripcion)
+        {
+            return new Co_CuadernoOralne().CuadernoRegistraEspecialidad(cod, descripcion);
+        }
+        public int CuadernoRegistraInstitucion(string nombre, string direccion, string fono)
+        {
+            return new Co_CuadernoOralne().CuadernoRegistraInstitucion(nombre, direccion, fono);
+        }
+        public int CuadernoRegistraFarmacia(string nombre)
+        {
+            return new Co_CuadernoOralne().CuadernoRegistraFarmacia(nombre);
+        }
     }
 }
