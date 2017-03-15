@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCuadernoOralne));
             this.cmbProductos = new System.Windows.Forms.ComboBox();
             this.dgvProductos = new System.Windows.Forms.DataGridView();
             this.CODIGO = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -346,33 +347,33 @@
             // btnCrearFarmacia
             // 
             this.btnCrearFarmacia.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCrearFarmacia.Location = new System.Drawing.Point(897, 69);
+            this.btnCrearFarmacia.Location = new System.Drawing.Point(823, 69);
             this.btnCrearFarmacia.Name = "btnCrearFarmacia";
-            this.btnCrearFarmacia.Size = new System.Drawing.Size(46, 25);
+            this.btnCrearFarmacia.Size = new System.Drawing.Size(120, 25);
             this.btnCrearFarmacia.TabIndex = 27;
-            this.btnCrearFarmacia.Text = "+";
+            this.btnCrearFarmacia.Text = "Registra Farmacia";
             this.btnCrearFarmacia.UseVisualStyleBackColor = true;
             this.btnCrearFarmacia.Click += new System.EventHandler(this.btnCrearFarmacia_Click);
             // 
             // btnCrearInstitucion
             // 
             this.btnCrearInstitucion.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCrearInstitucion.Location = new System.Drawing.Point(471, 39);
+            this.btnCrearInstitucion.Location = new System.Drawing.Point(438, 40);
             this.btnCrearInstitucion.Name = "btnCrearInstitucion";
-            this.btnCrearInstitucion.Size = new System.Drawing.Size(46, 25);
+            this.btnCrearInstitucion.Size = new System.Drawing.Size(138, 25);
             this.btnCrearInstitucion.TabIndex = 26;
-            this.btnCrearInstitucion.Text = "+";
+            this.btnCrearInstitucion.Text = "Registra Institución";
             this.btnCrearInstitucion.UseVisualStyleBackColor = true;
             this.btnCrearInstitucion.Click += new System.EventHandler(this.btnCrearInstitucion_Click);
             // 
             // btnCrearMedico
             // 
             this.btnCrearMedico.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCrearMedico.Location = new System.Drawing.Point(471, 11);
+            this.btnCrearMedico.Location = new System.Drawing.Point(438, 12);
             this.btnCrearMedico.Name = "btnCrearMedico";
-            this.btnCrearMedico.Size = new System.Drawing.Size(46, 25);
+            this.btnCrearMedico.Size = new System.Drawing.Size(138, 25);
             this.btnCrearMedico.TabIndex = 25;
-            this.btnCrearMedico.Text = "+";
+            this.btnCrearMedico.Text = "Registra Medico";
             this.btnCrearMedico.UseVisualStyleBackColor = true;
             this.btnCrearMedico.Click += new System.EventHandler(this.btnCrearMedico_Click);
             // 
@@ -381,7 +382,7 @@
             this.cmbFarmacia.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.cmbFarmacia.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cmbFarmacia.FormattingEnabled = true;
-            this.cmbFarmacia.Location = new System.Drawing.Point(632, 71);
+            this.cmbFarmacia.Location = new System.Drawing.Point(558, 71);
             this.cmbFarmacia.Name = "cmbFarmacia";
             this.cmbFarmacia.Size = new System.Drawing.Size(259, 23);
             this.cmbFarmacia.TabIndex = 23;
@@ -393,7 +394,7 @@
             this.cmbInstitucion.FormattingEnabled = true;
             this.cmbInstitucion.Location = new System.Drawing.Point(134, 39);
             this.cmbInstitucion.Name = "cmbInstitucion";
-            this.cmbInstitucion.Size = new System.Drawing.Size(331, 23);
+            this.cmbInstitucion.Size = new System.Drawing.Size(298, 23);
             this.cmbInstitucion.TabIndex = 22;
             // 
             // cmbMedico
@@ -403,7 +404,7 @@
             this.cmbMedico.FormattingEnabled = true;
             this.cmbMedico.Location = new System.Drawing.Point(134, 13);
             this.cmbMedico.Name = "cmbMedico";
-            this.cmbMedico.Size = new System.Drawing.Size(331, 23);
+            this.cmbMedico.Size = new System.Drawing.Size(298, 23);
             this.cmbMedico.TabIndex = 21;
             // 
             // label19
@@ -421,7 +422,7 @@
             this.txtFuncionario.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFuncionario.Location = new System.Drawing.Point(134, 68);
             this.txtFuncionario.Name = "txtFuncionario";
-            this.txtFuncionario.Size = new System.Drawing.Size(331, 23);
+            this.txtFuncionario.Size = new System.Drawing.Size(298, 23);
             this.txtFuncionario.TabIndex = 19;
             // 
             // checkNO
@@ -462,7 +463,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(530, 45);
+            this.label9.Location = new System.Drawing.Point(582, 45);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(101, 15);
             this.label9.TabIndex = 15;
@@ -472,7 +473,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(523, 19);
+            this.label10.Location = new System.Drawing.Point(575, 19);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(108, 15);
             this.label10.TabIndex = 12;
@@ -481,10 +482,10 @@
             // txtNroBoleta
             // 
             this.txtNroBoleta.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNroBoleta.Location = new System.Drawing.Point(632, 16);
+            this.txtNroBoleta.Location = new System.Drawing.Point(684, 16);
             this.txtNroBoleta.MaxLength = 15;
             this.txtNroBoleta.Name = "txtNroBoleta";
-            this.txtNroBoleta.Size = new System.Drawing.Size(259, 23);
+            this.txtNroBoleta.Size = new System.Drawing.Size(135, 23);
             this.txtNroBoleta.TabIndex = 11;
             this.txtNroBoleta.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNroBoleta_KeyPress);
             // 
@@ -492,7 +493,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(576, 74);
+            this.label12.Location = new System.Drawing.Point(502, 74);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(55, 15);
             this.label12.TabIndex = 8;
@@ -502,10 +503,10 @@
             // 
             this.dtpFechaCompra.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFechaCompra.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaCompra.Location = new System.Drawing.Point(632, 42);
+            this.dtpFechaCompra.Location = new System.Drawing.Point(684, 42);
             this.dtpFechaCompra.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
             this.dtpFechaCompra.Name = "dtpFechaCompra";
-            this.dtpFechaCompra.Size = new System.Drawing.Size(259, 23);
+            this.dtpFechaCompra.Size = new System.Drawing.Size(133, 23);
             this.dtpFechaCompra.TabIndex = 2;
             this.dtpFechaCompra.Value = new System.DateTime(2017, 1, 12, 0, 0, 0, 0);
             // 
@@ -553,11 +554,11 @@
             // btnEliminaGrid
             // 
             this.btnEliminaGrid.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminaGrid.Location = new System.Drawing.Point(490, 89);
+            this.btnEliminaGrid.Location = new System.Drawing.Point(795, 54);
             this.btnEliminaGrid.Name = "btnEliminaGrid";
-            this.btnEliminaGrid.Size = new System.Drawing.Size(46, 25);
+            this.btnEliminaGrid.Size = new System.Drawing.Size(118, 25);
             this.btnEliminaGrid.TabIndex = 24;
-            this.btnEliminaGrid.Text = "-";
+            this.btnEliminaGrid.Text = "Quitar Producto";
             this.btnEliminaGrid.UseVisualStyleBackColor = true;
             this.btnEliminaGrid.Click += new System.EventHandler(this.btnEliminaGrid_Click);
             // 
@@ -574,11 +575,11 @@
             // btnAgrega
             // 
             this.btnAgrega.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgrega.Location = new System.Drawing.Point(490, 58);
+            this.btnAgrega.Location = new System.Drawing.Point(795, 18);
             this.btnAgrega.Name = "btnAgrega";
-            this.btnAgrega.Size = new System.Drawing.Size(46, 25);
+            this.btnAgrega.Size = new System.Drawing.Size(118, 25);
             this.btnAgrega.TabIndex = 21;
-            this.btnAgrega.Text = "+";
+            this.btnAgrega.Text = "Agregar Producto";
             this.btnAgrega.UseVisualStyleBackColor = true;
             this.btnAgrega.Click += new System.EventHandler(this.btnAgrega_Click);
             // 
@@ -586,7 +587,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(857, 99);
+            this.label5.Location = new System.Drawing.Point(490, 64);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(86, 15);
             this.label5.TabIndex = 20;
@@ -605,10 +606,10 @@
             // txtObservaciones
             // 
             this.txtObservaciones.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtObservaciones.Location = new System.Drawing.Point(490, 117);
+            this.txtObservaciones.Location = new System.Drawing.Point(490, 85);
             this.txtObservaciones.Multiline = true;
             this.txtObservaciones.Name = "txtObservaciones";
-            this.txtObservaciones.Size = new System.Drawing.Size(453, 146);
+            this.txtObservaciones.Size = new System.Drawing.Size(453, 178);
             this.txtObservaciones.TabIndex = 19;
             // 
             // label15
@@ -641,12 +642,12 @@
             // 
             // btnRegistrar
             // 
-            this.btnRegistrar.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegistrar.Location = new System.Drawing.Point(860, 528);
+            this.btnRegistrar.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegistrar.Location = new System.Drawing.Point(739, 528);
             this.btnRegistrar.Name = "btnRegistrar";
-            this.btnRegistrar.Size = new System.Drawing.Size(105, 32);
+            this.btnRegistrar.Size = new System.Drawing.Size(226, 32);
             this.btnRegistrar.TabIndex = 22;
-            this.btnRegistrar.Text = "REGISTRAR";
+            this.btnRegistrar.Text = "GRABAR CUADERNO";
             this.btnRegistrar.UseVisualStyleBackColor = true;
             this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
@@ -659,6 +660,7 @@
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmCuadernoOralne";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Cuardeno Oralne";

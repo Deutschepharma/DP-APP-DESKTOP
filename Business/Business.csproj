@@ -58,6 +58,7 @@
     <Compile Include="Bu_CuadernoOralne.cs" />
     <Compile Include="Bu_GeneraPDF.cs" />
     <Compile Include="Bu_Inventario_Diario.cs" />
+    <Compile Include="Bu_Menus.cs" />
     <Compile Include="Bu_Usuarios.cs" />
     <Compile Include="Bu_Ventas.cs" />
     <Compile Include="Bu_Muestras.cs" />

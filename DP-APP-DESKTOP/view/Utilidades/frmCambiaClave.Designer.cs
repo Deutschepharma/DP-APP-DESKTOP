@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCambiaClave));
             this.label1 = new System.Windows.Forms.Label();
             this.txtClave = new System.Windows.Forms.TextBox();
             this.txtClaveRep = new System.Windows.Forms.TextBox();
@@ -89,6 +90,7 @@
             this.Controls.Add(this.txtClaveRep);
             this.Controls.Add(this.txtClave);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmCambiaClave";
             this.Text = "frmCambiaClave";
             this.ResumeLayout(false);

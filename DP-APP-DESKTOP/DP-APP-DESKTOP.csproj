@@ -64,6 +64,9 @@
   <PropertyGroup>
     <SignAssembly>false</SignAssembly>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>deutschepharma.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="LinqToExcel, Version=1.10.1.0, Culture=neutral, PublicKeyToken=9c8ea65a58f03f1f, processorArchitecture=x86">
       <HintPath>..\packages\LinqToExcel.1.10.1\lib\LinqToExcel.dll</HintPath>
@@ -98,6 +101,12 @@
     </Compile>
     <Compile Include="frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\Sistemas\frmAsignaMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\Sistemas\frmAsignaMenu.Designer.cs">
+      <DependentUpon>frmAsignaMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="view\Sistemas\frmDesbloqueaUsuarios.cs">
       <SubType>Form</SubType>
@@ -173,6 +182,18 @@
     <Compile Include="view\Proyecciones\frmVentas.Designer.cs">
       <DependentUpon>frmVentas.cs</DependentUpon>
     </Compile>
+    <Compile Include="view\Sistemas\frmRegistraNuevoMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\Sistemas\frmRegistraNuevoMenu.Designer.cs">
+      <DependentUpon>frmRegistraNuevoMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\Sistemas\frmRegistraUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\Sistemas\frmRegistraUsuario.Designer.cs">
+      <DependentUpon>frmRegistraUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="view\Utilidades\frmCambiaClave.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -181,6 +202,9 @@
     </Compile>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\Sistemas\frmAsignaMenu.resx">
+      <DependentUpon>frmAsignaMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\Sistemas\frmDesbloqueaUsuarios.resx">
       <DependentUpon>frmDesbloqueaUsuarios.cs</DependentUpon>
@@ -227,6 +251,9 @@
     <EmbeddedResource Include="view\Proyecciones\frmVentas.resx">
       <DependentUpon>frmVentas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="view\Sistemas\frmRegistraUsuario.resx">
+      <DependentUpon>frmRegistraUsuario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="view\Utilidades\frmCambiaClave.resx">
       <DependentUpon>frmCambiaClave.cs</DependentUpon>
     </EmbeddedResource>
@@ -259,6 +286,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="deutschepharma.ico" />
+    <Content Include="img\deutschepharma.ico" />
     <Content Include="img\Dp-color--177x81.png" />
     <Content Include="img\logo-dp-127x28.png" />
   </ItemGroup>

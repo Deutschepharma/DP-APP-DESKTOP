@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCargaMatEnv));
             this.btnLeerDatos = new System.Windows.Forms.Button();
             this.barStatus = new System.Windows.Forms.ProgressBar();
             this.dg = new System.Windows.Forms.DataGridView();
@@ -109,6 +110,7 @@
             this.Controls.Add(this.dg);
             this.Controls.Add(this.barStatus);
             this.Controls.Add(this.btnLeerDatos);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimizeBox = false;
             this.Name = "frmCargaMatEnv";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;

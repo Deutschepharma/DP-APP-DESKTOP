@@ -63,6 +63,7 @@
     <Compile Include="Conexion.cs" />
     <Compile Include="Co_CuadernoOralne.cs" />
     <Compile Include="Co_Inventario_Diario.cs" />
+    <Compile Include="Co_Menus.cs" />
     <Compile Include="Co_Usuarios.cs" />
     <Compile Include="Co_Ventas.cs" />
     <Compile Include="Co_Muestras.cs" />

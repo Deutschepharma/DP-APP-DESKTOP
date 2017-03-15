@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCuadernoEspecialidad));
             this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtCodigo = new System.Windows.Forms.TextBox();
@@ -94,6 +95,7 @@
             this.Controls.Add(this.txtCodigo);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.btnRegistrar);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmCuadernoEspecialidad";
             this.Text = "frmCuadernoEspecialidad";
             this.ResumeLayout(false);

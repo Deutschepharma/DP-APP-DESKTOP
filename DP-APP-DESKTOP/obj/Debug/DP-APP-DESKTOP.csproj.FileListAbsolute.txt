@@ -64,3 +64,5 @@ Z:\Programacion\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\DP-APP-DESKTOP\obj\Debu
 Z:\Programacion\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\DP-APP-DESKTOP\obj\Debug\DP-APP-DESKTOP.application
 Z:\Programacion\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\DP-APP-DESKTOP\obj\Debug\DP-APP-DESKTOP.exe
 Z:\Programacion\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\DP-APP-DESKTOP\obj\Debug\DP-APP-DESKTOP.pdb
+Z:\Programacion\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\DP-APP-DESKTOP\obj\Debug\DP_APP_DESKTOP.view.Sistemas.frmAsignaMenu.resources
+Z:\Programacion\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\DP-APP-DESKTOP\obj\Debug\DP_APP_DESKTOP.view.Sistemas.frmRegistraUsuario.resources

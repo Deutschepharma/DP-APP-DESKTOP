@@ -21,6 +21,6 @@ Z:\Programacion\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\Controller\bin\Debug\En
 Z:\Programacion\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\Controller\bin\Debug\itextsharp.xml
 Z:\Programacion\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\Controller\bin\Debug\LinqToExcel.xml
 Z:\Programacion\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\Controller\bin\Debug\log4net.xml
-Z:\Programacion\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\Controller\obj\Debug\Controller.csprojResolveAssemblyReference.cache
 Z:\Programacion\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\Controller\obj\Debug\Controller.dll
 Z:\Programacion\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\Controller\obj\Debug\Controller.pdb
+Z:\Programacion\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\Controller\obj\Debug\Controller.csprojResolveAssemblyReference.cache

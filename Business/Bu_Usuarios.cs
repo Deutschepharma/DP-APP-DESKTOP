@@ -27,6 +27,19 @@ namespace Business
         {
             return new Co_Usuarios().UsuarioCambiaClave(id, clave);
         }
+        public DataTable CargaUsuariosEstados()
+        {
+            return new Co_Usuarios().CargaUsuariosEstados();
+        }
+        public int UsuarioDesbloquea(int id)
+        {
+            return new Co_Usuarios().UsuarioDesbloquea(id);
+        }
+        public DataTable CargarComboBox(int flag, int ddlFlag)
+        {
+            return new Co_Usuarios().CargarComboBox(flag, ddlFlag);
+        }
+
 
 
     }

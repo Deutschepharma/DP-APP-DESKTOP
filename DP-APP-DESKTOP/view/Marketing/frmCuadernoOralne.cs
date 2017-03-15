@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Business;
 using Entity;
+using Utilities;
 
 namespace DP_APP_DESKTOP.view
 {
@@ -92,7 +93,8 @@ namespace DP_APP_DESKTOP.view
             {
                 En_CuadernoOralne c = new En_CuadernoOralne();
                 Bu_CuadernoOralne co = new Bu_CuadernoOralne();
-                Bu_GeneraPDF pdf = new Bu_GeneraPDF();
+                Ut_GeneraPDF pdf = new Ut_GeneraPDF();
+                //Bu_GeneraPDF pdf = new Bu_GeneraPDF();
 
                 if (txtNombres.Text == "")
                 {

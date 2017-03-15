@@ -65,6 +65,7 @@
     <Compile Include="En_CuadernoRegistraMedico.cs" />
     <Compile Include="En_GeneraPDF.cs" />
     <Compile Include="En_ListasDatos.cs" />
+    <Compile Include="En_Menus.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="En_Usuarios.cs" />
   </ItemGroup>

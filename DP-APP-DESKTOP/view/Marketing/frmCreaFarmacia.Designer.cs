@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCreaFarmacia));
             this.btnRegistrar = new System.Windows.Forms.Button();
             this.txtFarmacia = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -70,6 +71,7 @@
             this.Controls.Add(this.btnRegistrar);
             this.Controls.Add(this.txtFarmacia);
             this.Controls.Add(this.label2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmCreaFarmacia";
             this.Text = "Crea Nueva Farmacia";
             this.ResumeLayout(false);

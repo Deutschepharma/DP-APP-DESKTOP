@@ -18,3 +18,4 @@ Z:\Programacion\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\Entity\bin\Debug\LinqTo
 Z:\Programacion\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\Entity\bin\Debug\log4net.xml
 Z:\Programacion\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\Entity\obj\Debug\Entity.dll
 Z:\Programacion\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\Entity\obj\Debug\Entity.pdb
+Z:\Programacion\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\Entity\obj\Debug\Entity.csprojResolveAssemblyReference.cache

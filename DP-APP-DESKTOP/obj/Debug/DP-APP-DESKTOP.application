@@ -7,14 +7,14 @@
     <framework targetVersion="4.5.2" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="DP-APP-DESKTOP.exe.manifest" size="10930">
+    <dependentAssembly dependencyType="install" codebase="DP-APP-DESKTOP.exe.manifest" size="11826">
       <assemblyIdentity name="DP-APP-DESKTOP.exe" version="1.0.1.5" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="x86" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>aum7me0Pdg5NiHbTwaseHYTsJbg3drxPagvUW6dGqjc=</dsig:DigestValue>
+        <dsig:DigestValue>yH4/Rg//tytSEVvO7W3YvaCJCHFUyf2FXQ2hrZKxcss=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

@@ -115,6 +115,77 @@ namespace Controller
                 throw new Exception(exx.Message);
             }
         }
+        public DataTable CargaUsuariosEstados()
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                SqlCommand cmd = new SqlCommand("Sp_Carga_Estados_Usuarios", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+            return dt;
+        }
+        public int UsuarioDesbloquea(int id)
+        {
+            try
+            {
+                SqlCommand cmd = new SqlCommand("Sp_Usuario_Desbloquea", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add("@id", SqlDbType.Int).Value = id;
+                SqlParameter log = new SqlParameter("@log", 0);
+                log.Direction = ParameterDirection.Output;
+                cmd.Parameters.Add(log);
+
+                try
+                {
+                    cn.Open();
+                    cmd.ExecuteNonQuery();
+                    int error = Int32.Parse(cmd.Parameters["@log"].Value.ToString());
+                    return error;
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception(ex.Message);
+                }
+                finally
+                {
+                    cn.Close();
+                    cmd.Dispose();
+                }
+            }
+            catch (Exception exx)
+            {
+                throw new Exception(exx.Message);
+            }
+
+        }
+        //Cargara los Combos que se usen de usaurio
+        public DataTable CargarComboBox(int flag, int ddlFlag)
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                SqlCommand cmd = new SqlCommand("Sp_Carga_Combo_Box", cn);
+                cmd.Parameters.Add("@flag", SqlDbType.Int).Value = flag;
+                cmd.Parameters.Add("@ddlFlag", SqlDbType.Int).Value = ddlFlag;
+                cmd.CommandType = CommandType.StoredProcedure;
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+            return dt;
+        }
+
+
 
 
     }

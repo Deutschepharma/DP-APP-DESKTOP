@@ -14,5 +14,6 @@ namespace Entity
         public string nombre { get; set; }
         public int tipo_us { get; set; }
         public char estado_usuario_id { get; set; }
+        public string estado_usuario_descripcion { get; set; }
     }
 }
