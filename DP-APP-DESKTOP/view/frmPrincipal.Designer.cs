@@ -51,6 +51,7 @@
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lblID = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.registraMenuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.msPrincipal.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -111,14 +112,14 @@
             // ventasToolStripMenuItem
             // 
             this.ventasToolStripMenuItem.Name = "ventasToolStripMenuItem";
-            this.ventasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.ventasToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
             this.ventasToolStripMenuItem.Text = "Ventas";
             this.ventasToolStripMenuItem.Click += new System.EventHandler(this.ventasToolStripMenuItem_Click);
             // 
             // muestrasToolStripMenuItem
             // 
             this.muestrasToolStripMenuItem.Name = "muestrasToolStripMenuItem";
-            this.muestrasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.muestrasToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
             this.muestrasToolStripMenuItem.Text = "Muestras";
             this.muestrasToolStripMenuItem.Click += new System.EventHandler(this.muestrasToolStripMenuItem_Click);
             // 
@@ -172,7 +173,8 @@
             this.pruebasToolStripMenuItem,
             this.desbloqueaUsuariosToolStripMenuItem,
             this.asignaMenuToolStripMenuItem,
-            this.registraUsuarioToolStripMenuItem});
+            this.registraUsuarioToolStripMenuItem,
+            this.registraMenuToolStripMenuItem});
             this.sistemasToolStripMenuItem.Name = "sistemasToolStripMenuItem";
             this.sistemasToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
             this.sistemasToolStripMenuItem.Text = "Sistemas";
@@ -253,6 +255,13 @@
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
             // 
+            // registraMenuToolStripMenuItem
+            // 
+            this.registraMenuToolStripMenuItem.Name = "registraMenuToolStripMenuItem";
+            this.registraMenuToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
+            this.registraMenuToolStripMenuItem.Text = "Registra Menu";
+            this.registraMenuToolStripMenuItem.Click += new System.EventHandler(this.registraMenuToolStripMenuItem_Click);
+            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -302,6 +311,7 @@
         private System.Windows.Forms.ToolStripMenuItem recursosHumanosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem asignaMenuToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem registraUsuarioToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem registraMenuToolStripMenuItem;
     }
 }
 

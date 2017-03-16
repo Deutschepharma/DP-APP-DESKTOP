@@ -27,5 +27,9 @@ namespace Business
         {
             return new Co_Menus().Lista_Todos_Menus();
         }
+        public int MenuRegistraNuevo(En_Menus m)
+        {
+            return new Co_Menus().MenuRegistraNuevo(m);
+        }
     }
 }

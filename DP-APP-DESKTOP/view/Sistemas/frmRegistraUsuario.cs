@@ -45,7 +45,7 @@ namespace DP_APP_DESKTOP.view.Sistemas
                 DataTable dt = me.Lista_Todos_Menus();
                 foreach (DataRow i in dt.Rows)
                 {
-                    int mnu = int.Parse(i["MENU_SISTEMA_ID"].ToString());
+                    int mnu = int.Parse(i["ID"].ToString());
                     
                     bu.UsuarioRegistraListadoMenus(mnu,k);
                 }
@@ -67,43 +67,43 @@ namespace DP_APP_DESKTOP.view.Sistemas
         {
             CargaBox(cmbTipoUser, 9, 0);
         }
-        private void CargaUsuarios()
-        {
-            Bu_Usuarios bu = new Bu_Usuarios();
+        //private void CargaUsuarios()
+        //{
+        //    Bu_Usuarios bu = new Bu_Usuarios();
 
-            foreach (DataRow dt in bu.CargaUsuarios().Rows)
-            {
-                En_Usuarios us = new En_Usuarios();
-                us.id = int.Parse(dt["id"].ToString());
-                us.us = dt["us"].ToString();
-                us.pw = dt["pw"].ToString();
-                us.nombre = dt["nombre"].ToString();
-                us.tipo_us = int.Parse(dt["tipo_usuario_id"].ToString());
-                us.estado_usuario_id = char.Parse(dt["estado_usuario_id"].ToString());
-                usuarios.Add(us);
-            }
-        }
-        private bool BuscarRegistros(string us)
-        {
-            bool ok = false;
-            var query = from user in usuarios
-                        where user.us == us
-                        select user;
-            foreach (var i in query)
-            {
-                if (i.us == txtUs.Text.Trim().ToUpper())
-                {
-                    MessageBox.Show("Usuario Existe Valide");
-                }
-                else
-                {
-                    ok = true;
-                }
+        //    foreach (DataRow dt in bu.CargaUsuarios().Rows)
+        //    {
+        //        En_Usuarios us = new En_Usuarios();
+        //        us.id = int.Parse(dt["id"].ToString());
+        //        us.us = dt["us"].ToString();
+        //        us.pw = dt["pw"].ToString();
+        //        us.nombre = dt["nombre"].ToString();
+        //        us.tipo_us = int.Parse(dt["tipo_usuario_id"].ToString());
+        //        us.estado_usuario_id = char.Parse(dt["estado_usuario_id"].ToString());
+        //        usuarios.Add(us);
+        //    }
+        //}
+        //private bool BuscarRegistros(string us)
+        //{
+        //    bool ok = false;
+        //    var query = from user in usuarios
+        //                where user.us == us
+        //                select user;
+        //    foreach (var i in query)
+        //    {
+        //        if (i.us == txtUs.Text.Trim().ToUpper())
+        //        {
+        //            MessageBox.Show("Usuario Existe Valide");
+        //        }
+        //        else
+        //        {
+        //            ok = true;
+        //        }
 
-            }
-            return ok;
+        //    }
+        //    return ok;
 
-        }
+        //}
 
 
     }

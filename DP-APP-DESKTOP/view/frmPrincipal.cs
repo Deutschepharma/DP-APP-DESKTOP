@@ -182,6 +182,11 @@ namespace DP_APP_DESKTOP
             frmRegistraUsuario form = new frmRegistraUsuario();
             cheCarForm(form, this);
         }
+        private void registraMenuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmRegistraNuevoMenu f = new frmRegistraNuevoMenu();
+            cheCarForm(f, this);
+        }
 
         //Utilidades
         private void cambiarClaveToolStripMenuItem_Click(object sender, EventArgs e)
@@ -190,7 +195,6 @@ namespace DP_APP_DESKTOP
             cheCarForm(f, this);
         }
 
-
-
+        
     }
 }

@@ -96,7 +96,40 @@ namespace Controller
             }
             return dt;
         }
+        public int MenuRegistraNuevo(En_Menus m)
+        {
+            try
+            {
+                SqlCommand cmd = new SqlCommand("Sp_Menu_Registra_Nuevo", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add("@mnu_string", SqlDbType.VarChar).Value = m.mnu_string;
+                cmd.Parameters.Add("@mnu_descripcion", SqlDbType.VarChar).Value = m.descripcion;
+                SqlParameter log = new SqlParameter("@log", 0);
+                log.Direction = ParameterDirection.Output;
+                cmd.Parameters.Add(log);
 
+                try
+                {
+                    cn.Open();
+                    cmd.ExecuteNonQuery();
+                    int error = Int32.Parse(cmd.Parameters["@log"].Value.ToString());
+                    return error;
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception(ex.Message);
+                }
+                finally
+                {
+                    cn.Close();
+                    cmd.Dispose();
+                }
+            }
+            catch (Exception exx)
+            {
+                throw new Exception(exx.Message);
+            }
+        }
 
 
 

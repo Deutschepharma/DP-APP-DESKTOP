@@ -10,7 +10,7 @@ namespace Entity
     {
         public int id { get; set; }
         public string mnu_string { get; set; }
-        public int descripcion { get; set; }
+        public string descripcion { get; set; }
         public bool estado { get; set; }
     }
 }
