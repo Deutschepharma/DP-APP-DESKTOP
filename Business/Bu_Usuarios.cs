@@ -39,7 +39,14 @@ namespace Business
         {
             return new Co_Usuarios().CargarComboBox(flag, ddlFlag);
         }
-
+        public int UsuarioRegistraNuevo(En_Usuarios u)
+        {
+            return new Co_Usuarios().UsuarioRegistraNuevo(u);
+        }
+        public int UsuarioRegistraListadoMenus(int id_menu, int id_usu)
+        {
+            return new Co_Usuarios().UsuarioRegistraListadoMenus(id_menu, id_usu);
+        }
 
 
     }

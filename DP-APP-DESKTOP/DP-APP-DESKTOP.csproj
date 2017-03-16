@@ -251,6 +251,9 @@
     <EmbeddedResource Include="view\Proyecciones\frmVentas.resx">
       <DependentUpon>frmVentas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="view\Sistemas\frmRegistraNuevoMenu.resx">
+      <DependentUpon>frmRegistraNuevoMenu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="view\Sistemas\frmRegistraUsuario.resx">
       <DependentUpon>frmRegistraUsuario.cs</DependentUpon>
     </EmbeddedResource>

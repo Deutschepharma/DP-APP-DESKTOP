@@ -184,7 +184,73 @@ namespace Controller
             }
             return dt;
         }
+        public int UsuarioRegistraNuevo(En_Usuarios u)
+        {
+            try
+            {
+                SqlCommand cmd = new SqlCommand("Sp_Usuario_Registra_Nuevo", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add("@nombre", SqlDbType.VarChar).Value = u.nombre;
+                cmd.Parameters.Add("@apellido", SqlDbType.VarChar).Value = u.apellido;
+                cmd.Parameters.Add("@us", SqlDbType.VarChar).Value = u.us;
+                cmd.Parameters.Add("@tipo_user", SqlDbType.Int).Value = u.tipo_us;
 
+                SqlParameter log = new SqlParameter("@log", 0);
+                log.Direction = ParameterDirection.Output;
+                cmd.Parameters.Add(log);
+
+                try
+                {
+                    cn.Open();
+                    cmd.ExecuteNonQuery();
+                    int error = Int32.Parse(cmd.Parameters["@log"].Value.ToString());
+                    return error;
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception(ex.Message);
+                }
+                finally
+                {
+                    cn.Close();
+                    cmd.Dispose();
+                }
+            }
+            catch (Exception exx)
+            {
+                throw new Exception(exx.Message);
+            }
+        }
+        public int UsuarioRegistraListadoMenus(int id_menu, int id_usu)//modificar
+        {
+            try
+            {
+                SqlCommand cmd = new SqlCommand("Sp_Usuario_Registra_Listado_Menu", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add("@id_menu", SqlDbType.Int).Value = id_menu;
+                cmd.Parameters.Add("@id_usu", SqlDbType.Int).Value = id_usu;
+
+                try
+                {
+                    cn.Open();
+                    return cmd.ExecuteNonQuery(); 
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception(ex.Message);
+                }
+                finally
+                {
+                    cn.Close();
+                    cmd.Dispose();
+                }
+            }
+            catch (Exception exx)
+            {
+                throw new Exception(exx.Message);
+            }
+        }
+       
 
 
 

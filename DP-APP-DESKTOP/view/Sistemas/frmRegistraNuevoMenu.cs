@@ -16,5 +16,15 @@ namespace DP_APP_DESKTOP.view.Sistemas
         {
             InitializeComponent();
         }
+
+        private void frmRegistraNuevoMenu_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnGuardad_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

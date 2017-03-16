@@ -23,13 +23,27 @@ namespace DP_APP_DESKTOP.view.Sistemas
         private void btnDesbloquear_Click(object sender, EventArgs e)
         {
             u = new Bu_Usuarios();
-            u.UsuarioDesbloquea(dgEstados.CurrentRow.Index);
+            foreach (DataRowView l in lsUsuarios.SelectedItems)
+            {
+                u.UsuarioDesbloquea(int.Parse(l[0].ToString()));
+            }
+            CargaUsuariosBloqueados();
         }
 
         private void frmDesbloqueaUsuarios_Load(object sender, EventArgs e)
         {
+            CargaUsuariosBloqueados();
+            
+
+        }
+
+        private void CargaUsuariosBloqueados()
+        {
             u = new Bu_Usuarios();
-            dgEstados.DataSource = u.CargaUsuariosEstados();
+            lsUsuarios.SelectionMode = SelectionMode.MultiExtended;
+            lsUsuarios.DataSource = u.CargaUsuariosEstados();
+            lsUsuarios.DisplayMember = "DESCRIPCION";
+            lsUsuarios.ValueMember = "ID";
         }
     }
 }

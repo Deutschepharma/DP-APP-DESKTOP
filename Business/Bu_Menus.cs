@@ -23,5 +23,9 @@ namespace Business
         {
             return new Co_Menus().Asigna_Menu(usuario_id, menu_sistema, estado_id);
         }
+        public DataTable Lista_Todos_Menus()
+        {
+            return new Co_Menus().Lista_Todos_Menus();
+        }
     }
 }

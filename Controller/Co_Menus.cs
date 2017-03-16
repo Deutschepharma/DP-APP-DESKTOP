@@ -80,7 +80,22 @@ namespace Controller
                 throw new Exception(exx.Message);
             }
         }
-
+        public DataTable Lista_Todos_Menus()
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                SqlCommand cmd = new SqlCommand("Sp_Carga_Lista_Menus", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+            return dt;
+        }
 
 
 

@@ -38,8 +38,8 @@ namespace DP_APP_DESKTOP.view.Sistemas
                 }
                 else
                 {
-                    listarMenuSi(int.Parse(cmbUsuarios.SelectedIndex.ToString()), true);
-                    listarMenuNo(int.Parse(cmbUsuarios.SelectedIndex.ToString()), false);
+                    listarMenuSi(int.Parse(cmbUsuarios.SelectedValue.ToString()), true);
+                    listarMenuNo(int.Parse(cmbUsuarios.SelectedValue.ToString()), false);
                 }
 
             }
@@ -79,8 +79,8 @@ namespace DP_APP_DESKTOP.view.Sistemas
             {
                 b.Asigna_Menu(int.Parse(cmbUsuarios.SelectedIndex.ToString()), int.Parse(l[0].ToString()), true);
             }
-            listarMenuSi(int.Parse(cmbUsuarios.SelectedIndex.ToString()), true);
-            listarMenuNo(int.Parse(cmbUsuarios.SelectedIndex.ToString()), false);
+            listarMenuSi(int.Parse(cmbUsuarios.SelectedValue.ToString()), true);
+            listarMenuNo(int.Parse(cmbUsuarios.SelectedValue.ToString()), false);
         }
 
         private void btnQuitar_Click(object sender, EventArgs e)
@@ -90,8 +90,8 @@ namespace DP_APP_DESKTOP.view.Sistemas
             {
                 b.Asigna_Menu(int.Parse(cmbUsuarios.SelectedIndex.ToString()), int.Parse(l[0].ToString()), false);
             }
-            listarMenuSi(int.Parse(cmbUsuarios.SelectedIndex.ToString()), true);
-            listarMenuNo(int.Parse(cmbUsuarios.SelectedIndex.ToString()), false);
+            listarMenuSi(int.Parse(cmbUsuarios.SelectedValue.ToString()), true);
+            listarMenuNo(int.Parse(cmbUsuarios.SelectedValue.ToString()), false);
         }
     }
 }
