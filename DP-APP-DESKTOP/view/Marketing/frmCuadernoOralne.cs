@@ -122,7 +122,8 @@ namespace DP_APP_DESKTOP.view
                     c.CLIENTE_NOMBRE = txtNombres.Text.ToUpper();
                     c.CLIENTE_PATERNO = txtPaterno.Text.ToUpper();
                     c.CLIENTE_MATERNO = txtMaterno.Text.ToUpper();
-                    c.CLIENTE_NACIMIENTO = Convert.ToDateTime(dtpNacimiento.Text);
+                    DateTime nacimiento = dtpNacimiento.Value.Date;
+                    c.CLIENTE_NACIMIENTO = nacimiento;
                     c.CLIENTE_DIRECCION = txtDireccion.Text.ToUpper();
                     c.CLIENTE_EMAIL = txtEmail.Text.ToUpper();
                     c.CLIENTE_FONO = txtFono.Text.ToUpper();
@@ -134,8 +135,8 @@ namespace DP_APP_DESKTOP.view
                     {
                         c.RECETA_NRO_BOLETA = 0;
                     }
-
-                    c.RECETA_FECHA_COMPRA = Convert.ToDateTime(dtpFechaCompra.Text);
+                    DateTime fecha_compra = dtpFechaCompra.Value.Date;
+                    c.RECETA_FECHA_COMPRA = fecha_compra;
                     c.RECETA_FUNCIONARIO = txtFuncionario.Text.ToUpper();
                     c.RECETA_OBSERVACION = txtObservaciones.Text.ToUpper();
                     c.PRESCRIPTOR_MEDICO = int.Parse(cmbMedico.SelectedValue.ToString());
@@ -144,6 +145,7 @@ namespace DP_APP_DESKTOP.view
                     c.PRESCRIPTOR_MEDICO_DESCRIPCION = cmbMedico.Text.ToString();
                     c.PRESCRIPTOR_CENTRO_MEDICO_DESCRIPCION = cmbInstitucion.Text.ToString();
                     c.PRESCRIPTOR_FARMACIA_DESCRIPCION = cmbFarmacia.Text.ToString();
+                    c.CUADERNO_USUARIO_ID = frmLogin.id;
                     co.RegistraCuaderno(c);
                     En_ListasDatos l = new En_ListasDatos();
                     l.co.Add(c);
@@ -193,7 +195,8 @@ namespace DP_APP_DESKTOP.view
                     c.CLIENTE_NOMBRE = txtNombres.Text.ToUpper();
                     c.CLIENTE_PATERNO = txtPaterno.Text.ToUpper();
                     c.CLIENTE_MATERNO = txtMaterno.Text.ToUpper();
-                    c.CLIENTE_NACIMIENTO = Convert.ToDateTime(dtpNacimiento.Text);
+                    DateTime nacimiento = dtpNacimiento.Value.Date;
+                    c.CLIENTE_NACIMIENTO = nacimiento;
                     c.CLIENTE_DIRECCION = txtDireccion.Text.ToUpper();
                     c.CLIENTE_EMAIL = txtEmail.Text.ToUpper();
                     c.CLIENTE_FONO = txtFono.Text.ToUpper();
@@ -206,12 +209,14 @@ namespace DP_APP_DESKTOP.view
                         c.RECETA_NRO_BOLETA = 0;
                     }
 
-                    c.RECETA_FECHA_COMPRA = Convert.ToDateTime(dtpFechaCompra.Text);
+                    DateTime fecha_compra = dtpFechaCompra.Value.Date;
+                    c.RECETA_FECHA_COMPRA = fecha_compra;
                     c.RECETA_FUNCIONARIO = txtFuncionario.Text.ToUpper();
                     c.RECETA_OBSERVACION = txtObservaciones.Text.ToUpper();
                     c.PRESCRIPTOR_MEDICO = int.Parse(cmbMedico.SelectedValue.ToString());
                     c.PRESCRIPTOR_CENTRO_MEDICO = int.Parse(cmbInstitucion.SelectedValue.ToString());
                     c.PRESCRIPTOR_FARMACIA = int.Parse(cmbFarmacia.SelectedValue.ToString());
+                    c.CUADERNO_USUARIO_ID = frmLogin.id;
                     co.RegistraCuaderno(c);
 
                     foreach (DataGridViewRow r in dgvProductos.Rows)

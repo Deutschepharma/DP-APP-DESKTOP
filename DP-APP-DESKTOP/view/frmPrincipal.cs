@@ -48,40 +48,6 @@ namespace DP_APP_DESKTOP
         {
             CargaEstadosMenu(frmLogin.id);
             
-
-            //switch (frmLogin.tipo)
-            //{
-            //    case "1": //Sistema Administrador General
-            //        proyeccionesToolStripMenuItem.Enabled = true;
-            //        utilitariosToolStripMenuItem.Enabled = true;
-            //        logisticaToolStripMenuItem.Enabled = true;
-            //        sistemasToolStripMenuItem.Enabled = true;
-            //        recursosHumanosToolStripMenuItem.Enabled = true;
-            //        break;
-            //    case "2": //Usuario Standar
-            //        utilitariosToolStripMenuItem.Enabled = true;
-            //        break;
-            //    case "3": //Direccion Tecnica
-            //        proyeccionesToolStripMenuItem.Enabled = true;
-            //        utilitariosToolStripMenuItem.Enabled = true;
-            //        break;
-            //    case "4": //Logistica
-            //        logisticaToolStripMenuItem.Enabled = true;
-            //        utilitariosToolStripMenuItem.Enabled = true;
-            //        break;
-            //    case "5": //Gerencia
-            //        proyeccionesToolStripMenuItem.Enabled = true;
-            //        utilitariosToolStripMenuItem.Enabled = true;
-            //        logisticaToolStripMenuItem.Enabled = true;
-            //        recursosHumanosToolStripMenuItem.Enabled = true;
-            //        break;
-            //    case "6": //Administración
-            //        utilitariosToolStripMenuItem.Enabled = true;
-            //        recursosHumanosToolStripMenuItem.Enabled = true;
-            //        break;
-            //    default:
-            //        break;
-            //}
             lblUsuario.Text = frmLogin.user;
         }
         private IEnumerable<ToolStripMenuItem> GetItems(ToolStripMenuItem item)

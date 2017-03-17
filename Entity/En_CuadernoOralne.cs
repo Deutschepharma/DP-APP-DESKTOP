@@ -27,5 +27,6 @@ namespace Entity
         public string PRESCRIPTOR_MEDICO_DESCRIPCION { get; set; }
         public string PRESCRIPTOR_CENTRO_MEDICO_DESCRIPCION { get; set; }
         public string PRESCRIPTOR_FARMACIA_DESCRIPCION { get; set; }
+        public int CUADERNO_USUARIO_ID { get; set; }
     }
 }

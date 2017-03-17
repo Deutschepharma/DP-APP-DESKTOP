@@ -24,7 +24,8 @@ namespace Utilities
 
         public bool GeneraCuaderno(En_ListasDatos l)
         {
-            DateTime hoy = new DateTime();
+            
+            
             //hoy = "dd-MM-yyyy";
             string archivoExiste = "C:\\DP-APP-DESKTOP\\ruta.ini";
             string path;
@@ -41,12 +42,12 @@ namespace Utilities
                 nombre = c.CLIENTE_NOMBRE;
                 paterno = c.CLIENTE_PATERNO;
                 materno = c.CLIENTE_MATERNO;
-                nacimiento = c.CLIENTE_NACIMIENTO.ToString();
+                nacimiento = c.CLIENTE_NACIMIENTO.ToString("d");
                 direccion = c.CLIENTE_DIRECCION;
                 email = c.CLIENTE_EMAIL;
                 fono = c.CLIENTE_FONO;
                 boleta = c.RECETA_NRO_BOLETA.ToString();
-                compra = c.RECETA_FECHA_COMPRA.ToString();
+                compra = c.RECETA_FECHA_COMPRA.ToString("d");
                 funcionario = c.RECETA_FUNCIONARIO;
                 observacion = c.RECETA_OBSERVACION;
                 medico = c.PRESCRIPTOR_MEDICO_DESCRIPCION;
@@ -85,8 +86,16 @@ namespace Utilities
             Titulo.Alignment = Element.ALIGN_RIGHT;
             Titulo.Font = FontFactory.GetFont("Console", 10);
             Titulo.Add("Cuaderno N° " + lblCuaderno+"\n");
-            Titulo.Add(hoy.Date.ToString());
             document.Add(Titulo);
+
+            
+            Paragraph Fecha = new Paragraph();
+            Fecha.Alignment = Element.ALIGN_RIGHT;
+            Fecha.Font = FontFactory.GetFont("Console", 9);
+            DateTime hoy = DateTime.Today;
+            //Fecha.Add(hoy.Date.ToString("dd-MM-yyyy"+"\n"));
+            Fecha.Add(hoy.Date.ToString("D"));
+            document.Add(Fecha);
 
             Paragraph cliente = new Paragraph();
             cliente.Alignment = Element.ALIGN_LEFT;

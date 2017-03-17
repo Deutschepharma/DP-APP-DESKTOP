@@ -54,6 +54,7 @@ namespace Controller
                 cmd.Parameters.Add("@PRESCRIPTOR_MEDICO", SqlDbType.VarChar).Value = c.PRESCRIPTOR_MEDICO;
                 cmd.Parameters.Add("@PRESCRIPTOR_CENTRO_MEDICO", SqlDbType.VarChar).Value = c.PRESCRIPTOR_CENTRO_MEDICO;
                 cmd.Parameters.Add("@PRESCRIPTOR_FARMACIA", SqlDbType.VarChar).Value = c.PRESCRIPTOR_FARMACIA;
+                cmd.Parameters.Add("@CUADERNO_USUARIO_ID", SqlDbType.Int).Value = c.CUADERNO_USUARIO_ID;
                 try
                 {
                     cn.Open();

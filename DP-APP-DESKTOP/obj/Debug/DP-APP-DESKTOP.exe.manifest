@@ -50,7 +50,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Tr0wCI2x/D8N/iBoIHlkc4yhKW0IpnM5jXPwcyyL6mk=</dsig:DigestValue>
+        <dsig:DigestValue>IhL34xMkE4p9x50e7mBc44l+RfTJOkfDD1YSrb/61rQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -62,7 +62,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>zq6tcfU3Z0koVKUgnjXvU5vF0nc4/zWs8Y1Ge60FLfI=</dsig:DigestValue>
+        <dsig:DigestValue>k8OUtrKiSwgpbVEdrg8JAI8OKHNApgX796SbSl/kC+o=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -74,19 +74,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>x8LKHgrYaCqIIU0vpPaQTMD7ERgpmAr7pispYtbEbyo=</dsig:DigestValue>
+        <dsig:DigestValue>Ahrxg/bRHq8l/Ktx1MEwBFc/Se9t5KXZEwWJgbbqm+E=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Entity.dll" size="15872">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Entity.dll" size="16384">
       <assemblyIdentity name="Entity" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>1j3Q9ZgEU7WFODDH0SdjUplRSHAHS08nFGJZscfTe/Q=</dsig:DigestValue>
+        <dsig:DigestValue>6F/VZt3nKdeRJaFUAUzNABiHCnPLR21pQttOAyMtzxE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -170,7 +170,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>MIXs8ll9DDvNHiBpG3wW8U0K5oC6DH1JeB1w6wQql4g=</dsig:DigestValue>
+        <dsig:DigestValue>yIIJNIUnA8BLSdCghPH1OZ0oDzs7NvgsnroR0pbNoqs=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

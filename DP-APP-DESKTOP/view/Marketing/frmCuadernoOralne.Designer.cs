@@ -151,7 +151,7 @@
             this.dtpNacimiento.Name = "dtpNacimiento";
             this.dtpNacimiento.Size = new System.Drawing.Size(332, 23);
             this.dtpNacimiento.TabIndex = 2;
-            this.dtpNacimiento.Value = new System.DateTime(2017, 1, 12, 0, 0, 0, 0);
+            this.dtpNacimiento.Value = new System.DateTime(2017, 3, 17, 0, 0, 0, 0);
             // 
             // txtNombres
             // 
@@ -508,7 +508,7 @@
             this.dtpFechaCompra.Name = "dtpFechaCompra";
             this.dtpFechaCompra.Size = new System.Drawing.Size(133, 23);
             this.dtpFechaCompra.TabIndex = 2;
-            this.dtpFechaCompra.Value = new System.DateTime(2017, 1, 12, 0, 0, 0, 0);
+            this.dtpFechaCompra.Value = new System.DateTime(2017, 3, 17, 0, 0, 0, 0);
             // 
             // label13
             // 
