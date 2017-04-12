@@ -102,6 +102,12 @@
     <Compile Include="frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="view\Marketing\frmReportesCuaderno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\Marketing\frmReportesCuaderno.Designer.cs">
+      <DependentUpon>frmReportesCuaderno.cs</DependentUpon>
+    </Compile>
     <Compile Include="view\Sistemas\frmAsignaMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,11 +120,23 @@
     <Compile Include="view\Sistemas\frmDesbloqueaUsuarios.Designer.cs">
       <DependentUpon>frmDesbloqueaUsuarios.cs</DependentUpon>
     </Compile>
-    <Compile Include="view\Sistemas\frmPruebas.cs">
+    <Compile Include="view\Sistemas\Impresora\frmImpresoraConsumo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="view\Sistemas\frmPruebas.Designer.cs">
-      <DependentUpon>frmPruebas.cs</DependentUpon>
+    <Compile Include="view\Sistemas\Impresora\frmImpresoraConsumo.Designer.cs">
+      <DependentUpon>frmImpresoraConsumo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\Sistemas\Impresora\frmImpresoraInsumo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\Sistemas\Impresora\frmImpresoraInsumo.Designer.cs">
+      <DependentUpon>frmImpresoraInsumo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\Sistemas\Impresora\frmImpresoras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\Sistemas\Impresora\frmImpresoras.Designer.cs">
+      <DependentUpon>frmImpresoras.cs</DependentUpon>
     </Compile>
     <Compile Include="view\Logistica\frmCargaMatEnv.cs">
       <SubType>Form</SubType>
@@ -203,14 +221,17 @@
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="view\Marketing\frmReportesCuaderno.resx">
+      <DependentUpon>frmReportesCuaderno.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="view\Sistemas\frmAsignaMenu.resx">
       <DependentUpon>frmAsignaMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\Sistemas\frmDesbloqueaUsuarios.resx">
       <DependentUpon>frmDesbloqueaUsuarios.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="view\Sistemas\frmPruebas.resx">
-      <DependentUpon>frmPruebas.cs</DependentUpon>
+    <EmbeddedResource Include="view\Sistemas\Impresora\frmImpresoras.resx">
+      <DependentUpon>frmImpresoras.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

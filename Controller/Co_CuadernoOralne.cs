@@ -137,45 +137,6 @@ namespace Controller
                 throw new Exception(exx.Message);
             }
         }
-        //public static void SoloNumeros(KeyPressEventArgs V)
-        //{
-        //    if (Char.IsDigit(V.KeyChar))
-        //    {
-        //        V.Handled = false;
-        //    }
-        //    else if (Char.IsSeparator(V.KeyChar))
-        //    {
-        //        V.Handled = false;
-        //    }
-        //    else if (char.IsControl(V.KeyChar))
-        //    {
-        //        V.Handled = false;
-        //    }
-        //    else
-        //    {
-        //        V.Handled = true;
-        //    }
-
-        //}
-        //registro de Nuevo Medico
-        //public DataTable CuadernoBuscaMedicoRut(int rut)
-        //{
-        //    DataTable dt = new DataTable();
-        //    try
-        //    {
-        //        SqlCommand cmd = new SqlCommand("Sp_Carga_Combo_Box", cn);
-        //        cmd.Parameters.Add("@flag", SqlDbType.Int).Value = flag;
-        //        cmd.Parameters.Add("@ddlFlag", SqlDbType.Int).Value = ddlFlag;
-        //        cmd.CommandType = CommandType.StoredProcedure;
-        //        SqlDataAdapter da = new SqlDataAdapter(cmd);
-        //        da.Fill(dt);
-        //    }
-        //    catch (Exception e)
-        //    {
-        //        throw new Exception(e.Message);
-        //    }
-        //    return dt;
-        //}
         public int CuadernoRegistraMedico(En_CuadernoRegistraMedico r)
         {
             try
@@ -323,6 +284,97 @@ namespace Controller
                 throw new Exception(exx.Message);
             }
         }
+
+        //reportes de cuaderno oralne
+        public DataTable ListarCuadernos()
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                SqlCommand cmd = new SqlCommand("Sp_Marketing_Listar_Registros", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+            return dt;
+        }
+        public DataTable ListarProductos_NroCuaderno(int cod)
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                SqlCommand cmd = new SqlCommand("Sp_Marketing_Listar_Productos_NroCuaderno", cn);
+                cmd.Parameters.Add("@nroCuaderno", SqlDbType.Int).Value = cod;
+                cmd.CommandType = CommandType.StoredProcedure;
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+            return dt;
+      
+        }
+        public DataTable ListarCuaderno_Fecha(string fecDesde, string fecHasta)
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                SqlCommand cmd = new SqlCommand("Sp_Marketing_Listar_Cuaderno_Fecha", cn);
+                cmd.Parameters.Add("@fecDesde", SqlDbType.VarChar).Value = fecDesde;
+                cmd.Parameters.Add("@fecHasta", SqlDbType.VarChar).Value = fecHasta;
+                cmd.CommandType = CommandType.StoredProcedure;
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+            return dt;
+
+        }
+        public DataTable ListarCuadernos_Medico(int val)
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                SqlCommand cmd = new SqlCommand("Sp_Marketing_Listar_Registros_Medico", cn);
+                cmd.Parameters.Add("@val", SqlDbType.Int).Value = val;
+                cmd.CommandType = CommandType.StoredProcedure;
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+            return dt;
+        }
+        public DataTable ExportarData_Medico(int val)
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                SqlCommand cmd = new SqlCommand("Sp_Marketing_Exportar_Data_Medico", cn);
+                cmd.Parameters.Add("@val", SqlDbType.Int).Value = val;
+                //cmd.Parameters.Add("@rutMedico", SqlDbType.Int).Value = rutMedico;
+                cmd.CommandType = CommandType.StoredProcedure;
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+            return dt;
+        }
+
 
     }
 }

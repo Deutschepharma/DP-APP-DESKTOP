@@ -81,8 +81,8 @@ namespace DP_APP_DESKTOP
                                 id = i.id;
                                 tipo = i.tipo_us.ToString();
                                 user = i.nombre;
-                                Bu_Usuarios u = new Bu_Usuarios();
-                                u.UsuarioCambiaEstado(i.id, 1);
+                                //Bu_Usuarios u = new Bu_Usuarios();
+                                //u.UsuarioCambiaEstado(i.id, 1);
                                 frm.Show();
                                 this.Hide();
                                 us = "";

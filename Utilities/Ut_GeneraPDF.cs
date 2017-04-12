@@ -114,8 +114,8 @@ namespace Utilities
                 unaTabla.SetWidthPercentage(new float[] { 80, 300, 80, 80 }, PageSize.LETTER);
                 unaTabla.AddCell(new Paragraph("CODIGO", FontFactory.GetFont("Console", 7)));
                 unaTabla.AddCell(new Paragraph("NOMBRE", FontFactory.GetFont("Console", 7)));
-                unaTabla.AddCell(new Paragraph("CANTIDAD", FontFactory.GetFont("Console", 7)));
                 unaTabla.AddCell(new Paragraph("VENC / LOTE", FontFactory.GetFont("Console", 7)));
+                unaTabla.AddCell(new Paragraph("CANTIDAD", FontFactory.GetFont("Console", 7)));
                 foreach (PdfPCell celda in unaTabla.Rows[0].GetCells())
                 {
                     celda.BackgroundColor = BaseColor.LIGHT_GRAY;

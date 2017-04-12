@@ -4,6 +4,7 @@ using System.Windows.Forms;
 using DP_APP_DESKTOP.view;
 using DP_APP_DESKTOP.view.Marketing;
 using DP_APP_DESKTOP.view.Sistemas;
+using DP_APP_DESKTOP.view.Sistemas.Impresora;
 using DP_APP_DESKTOP.view.Utilidades;
 using Business;
 using Entity;
@@ -39,15 +40,14 @@ namespace DP_APP_DESKTOP
         }
         private void frmPrincipal_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Bu_Usuarios u = new Bu_Usuarios();
-            u.UsuarioCambiaEstado(frmLogin.id, 4);
+            //Bu_Usuarios u = new Bu_Usuarios();
+            //u.UsuarioCambiaEstado(frmLogin.id, 4);
             Application.Exit();
         }
         
         private void frmPrincipal_Load(object sender, EventArgs e)
         {
             CargaEstadosMenu(frmLogin.id);
-            
             lblUsuario.Text = frmLogin.user;
         }
         private IEnumerable<ToolStripMenuItem> GetItems(ToolStripMenuItem item)
@@ -92,8 +92,8 @@ namespace DP_APP_DESKTOP
 
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Bu_Usuarios u = new Bu_Usuarios();
-            u.UsuarioCambiaEstado(frmLogin.id, 4);
+            //Bu_Usuarios u = new Bu_Usuarios();
+            //u.UsuarioCambiaEstado(frmLogin.id, 4);
             Application.Exit();
         }
         //Logistica
@@ -114,7 +114,11 @@ namespace DP_APP_DESKTOP
             frmCuadernoOralne cuadernoOralne = new frmCuadernoOralne();
             cheCarForm(cuadernoOralne, this);
         }
-
+        private void reportesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmReportesCuaderno f = new frmReportesCuaderno();
+            cheCarForm(f, this);
+        }
         //Dirección Técnica
         private void ventasToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -128,11 +132,6 @@ namespace DP_APP_DESKTOP
         }
 
         //Sistemas
-        private void pruebasToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frmPruebas form = new frmPruebas();
-            cheCarForm(form, this);
-        }
         private void desbloqueaUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmDesbloqueaUsuarios f = new frmDesbloqueaUsuarios();
@@ -153,13 +152,31 @@ namespace DP_APP_DESKTOP
             frmRegistraNuevoMenu f = new frmRegistraNuevoMenu();
             cheCarForm(f, this);
         }
+        //Sistemas //Impresoras
+            private void registroDeImpresoraToolStripMenuItem_Click(object sender, EventArgs e)
+            {
+                frmImpresoras f = new frmImpresoras();
+                cheCarForm(f, this);
+            }
+            private void insumosDeImpresorasToolStripMenuItem_Click(object sender, EventArgs e)
+            {
+                frmImpresoraConsumo f = new frmImpresoraConsumo();
+                cheCarForm(f, this);
+            }
 
+            private void registroConsumoToolStripMenuItem_Click(object sender, EventArgs e)
+            {
+                frmImpresoraConsumo f = new frmImpresoraConsumo();
+                cheCarForm(f, this);
+            }
         //Utilidades
         private void cambiarClaveToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmCambiaClave f = new frmCambiaClave();
             cheCarForm(f, this);
         }
+
+        
 
         
     }

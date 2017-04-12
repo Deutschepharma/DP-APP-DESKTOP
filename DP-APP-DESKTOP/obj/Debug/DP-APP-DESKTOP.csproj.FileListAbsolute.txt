@@ -24,7 +24,6 @@ Z:\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\DP-APP-DESKTOP\obj\Debug\DP-APP-DESK
 Z:\Programacion\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\DP-APP-DESKTOP\obj\Debug\DP-APP-DESKTOP.csprojResolveAssemblyReference.cache
 Z:\Programacion\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\DP-APP-DESKTOP\obj\Debug\DP_APP_DESKTOP.frmLogin.resources
 Z:\Programacion\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\DP-APP-DESKTOP\obj\Debug\DP_APP_DESKTOP.view.Sistemas.frmDesbloqueaUsuarios.resources
-Z:\Programacion\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\DP-APP-DESKTOP\obj\Debug\DP_APP_DESKTOP.frmPruebas.resources
 Z:\Programacion\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\DP-APP-DESKTOP\obj\Debug\DP_APP_DESKTOP.Properties.Resources.resources
 Z:\Programacion\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\DP-APP-DESKTOP\obj\Debug\DP_APP_DESKTOP.frmCargaMatEnv.resources
 Z:\Programacion\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\DP-APP-DESKTOP\obj\Debug\DP_APP_DESKTOP.frmCargaMatVenta.resources
@@ -67,3 +66,5 @@ Z:\Programacion\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\DP-APP-DESKTOP\obj\Debu
 Z:\Programacion\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\DP-APP-DESKTOP\obj\Debug\DP_APP_DESKTOP.view.Sistemas.frmAsignaMenu.resources
 Z:\Programacion\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\DP-APP-DESKTOP\obj\Debug\DP_APP_DESKTOP.view.Sistemas.frmRegistraUsuario.resources
 Z:\Programacion\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\DP-APP-DESKTOP\obj\Debug\DP_APP_DESKTOP.view.Sistemas.frmRegistraNuevoMenu.resources
+Z:\Programacion\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\DP-APP-DESKTOP\obj\Debug\DP_APP_DESKTOP.view.Marketing.frmReportesCuaderno.resources
+Z:\Programacion\VisualStudio\Proyectos_DP\DP-APP-DESKTOP\DP-APP-DESKTOP\obj\Debug\DP_APP_DESKTOP.view.Sistemas.frmImpresoras.resources

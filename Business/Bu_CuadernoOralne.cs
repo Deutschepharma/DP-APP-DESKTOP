@@ -44,5 +44,26 @@ namespace Business
         {
             return new Co_CuadernoOralne().CuadernoRegistraFarmacia(nombre);
         }
+        //reportes de cuaderno oralne
+        public DataTable ListarCuadernos()
+        {
+            return new Co_CuadernoOralne().ListarCuadernos();
+        }
+        public DataTable ListarProductos_NroCuaderno(int cod)
+        {
+            return new Co_CuadernoOralne().ListarProductos_NroCuaderno(cod);
+        }
+        public DataTable ListarCuaderno_Fecha(string fecDesde, string fecHasta)
+        {
+            return new Co_CuadernoOralne().ListarCuaderno_Fecha(fecDesde, fecHasta);
+        }
+        public DataTable ListarCuadernos_Medico(int val)
+        {
+            return new Co_CuadernoOralne().ListarCuadernos_Medico(val);
+        }
+        public DataTable ExportarData_Medico(int val)
+        {
+            return new Co_CuadernoOralne().ExportarData_Medico(val);
+        }
     }
 }
