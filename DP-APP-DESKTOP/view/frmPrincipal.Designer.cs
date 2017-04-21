@@ -44,8 +44,8 @@
             this.recursosHumanosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sistemasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.desbloqueaUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.asignaMenuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registraUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.asignaMenuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registraMenuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.impresorasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registroDeImpresoraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -56,6 +56,7 @@
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lblID = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.importaDatosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.msPrincipal.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -116,14 +117,14 @@
             // ventasToolStripMenuItem
             // 
             this.ventasToolStripMenuItem.Name = "ventasToolStripMenuItem";
-            this.ventasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.ventasToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
             this.ventasToolStripMenuItem.Text = "Ventas";
             this.ventasToolStripMenuItem.Click += new System.EventHandler(this.ventasToolStripMenuItem_Click);
             // 
             // muestrasToolStripMenuItem
             // 
             this.muestrasToolStripMenuItem.Name = "muestrasToolStripMenuItem";
-            this.muestrasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.muestrasToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
             this.muestrasToolStripMenuItem.Text = "Muestras";
             this.muestrasToolStripMenuItem.Click += new System.EventHandler(this.muestrasToolStripMenuItem_Click);
             // 
@@ -186,7 +187,8 @@
             this.registraUsuarioToolStripMenuItem,
             this.asignaMenuToolStripMenuItem,
             this.registraMenuToolStripMenuItem,
-            this.impresorasToolStripMenuItem});
+            this.impresorasToolStripMenuItem,
+            this.importaDatosToolStripMenuItem});
             this.sistemasToolStripMenuItem.Name = "sistemasToolStripMenuItem";
             this.sistemasToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
             this.sistemasToolStripMenuItem.Text = "Sistemas";
@@ -198,19 +200,19 @@
             this.desbloqueaUsuariosToolStripMenuItem.Text = "Desbloquea Usuarios";
             this.desbloqueaUsuariosToolStripMenuItem.Click += new System.EventHandler(this.desbloqueaUsuariosToolStripMenuItem_Click);
             // 
-            // asignaMenuToolStripMenuItem
-            // 
-            this.asignaMenuToolStripMenuItem.Name = "asignaMenuToolStripMenuItem";
-            this.asignaMenuToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
-            this.asignaMenuToolStripMenuItem.Text = "Asigna Menú";
-            this.asignaMenuToolStripMenuItem.Click += new System.EventHandler(this.asignaMenuToolStripMenuItem_Click);
-            // 
             // registraUsuarioToolStripMenuItem
             // 
             this.registraUsuarioToolStripMenuItem.Name = "registraUsuarioToolStripMenuItem";
             this.registraUsuarioToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
             this.registraUsuarioToolStripMenuItem.Text = "Registra Usuario";
             this.registraUsuarioToolStripMenuItem.Click += new System.EventHandler(this.registraUsuarioToolStripMenuItem_Click);
+            // 
+            // asignaMenuToolStripMenuItem
+            // 
+            this.asignaMenuToolStripMenuItem.Name = "asignaMenuToolStripMenuItem";
+            this.asignaMenuToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
+            this.asignaMenuToolStripMenuItem.Text = "Asigna Menú";
+            this.asignaMenuToolStripMenuItem.Click += new System.EventHandler(this.asignaMenuToolStripMenuItem_Click);
             // 
             // registraMenuToolStripMenuItem
             // 
@@ -261,7 +263,7 @@
             // cambiarClaveToolStripMenuItem
             // 
             this.cambiarClaveToolStripMenuItem.Name = "cambiarClaveToolStripMenuItem";
-            this.cambiarClaveToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.cambiarClaveToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
             this.cambiarClaveToolStripMenuItem.Text = "Cambiar Clave";
             this.cambiarClaveToolStripMenuItem.Click += new System.EventHandler(this.cambiarClaveToolStripMenuItem_Click);
             // 
@@ -297,6 +299,13 @@
             this.groupBox1.Size = new System.Drawing.Size(198, 24);
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
+            // 
+            // importaDatosToolStripMenuItem
+            // 
+            this.importaDatosToolStripMenuItem.Name = "importaDatosToolStripMenuItem";
+            this.importaDatosToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
+            this.importaDatosToolStripMenuItem.Text = "Importar Datos";
+            this.importaDatosToolStripMenuItem.Click += new System.EventHandler(this.importaDatosToolStripMenuItem_Click);
             // 
             // frmPrincipal
             // 
@@ -352,6 +361,7 @@
         private System.Windows.Forms.ToolStripMenuItem insumosDeImpresorasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem registroConsumoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reportesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem importaDatosToolStripMenuItem;
     }
 }
 

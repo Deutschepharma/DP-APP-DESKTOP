@@ -103,31 +103,5 @@ namespace DP_APP_DESKTOP.view.Utilitarios
             CargaAutoCompletar(cmbEspecialidad, 7, 0);
         }
 
-        private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
-            {
-                e.Handled = true;
-                return;
-            }
-        }
-
-        private void txtPaterno_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
-            {
-                e.Handled = true;
-                return;
-            }
-        }
-
-        private void txtMaterno_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
-            {
-                e.Handled = true;
-                return;
-            }
-        }
     }
 }

@@ -38,6 +38,7 @@ namespace Controller
             {
                 SqlCommand cmd = new SqlCommand("Sp_Registra_Cuaderno_Oralne", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add("@OPCION", SqlDbType.Int).Value = c.Opcion;
                 cmd.Parameters.Add("@CUADERNO_NRO", SqlDbType.Int).Value = int.Parse(c.NRO_CUADERNO);
                 cmd.Parameters.Add("@CLIENTE_NOMBRE", SqlDbType.VarChar).Value = c.CLIENTE_NOMBRE;
                 cmd.Parameters.Add("@CLIENTE_PATERNO", SqlDbType.VarChar).Value = c.CLIENTE_PATERNO;
@@ -53,12 +54,20 @@ namespace Controller
                 cmd.Parameters.Add("@RECETA_OBSERVACION", SqlDbType.VarChar).Value = c.RECETA_OBSERVACION;
                 cmd.Parameters.Add("@PRESCRIPTOR_MEDICO", SqlDbType.VarChar).Value = c.PRESCRIPTOR_MEDICO;
                 cmd.Parameters.Add("@PRESCRIPTOR_CENTRO_MEDICO", SqlDbType.VarChar).Value = c.PRESCRIPTOR_CENTRO_MEDICO;
+                cmd.Parameters.Add("@FECHA_REGISTRO", SqlDbType.Date).Value = c.FECHA_REGISTRO; 
                 cmd.Parameters.Add("@PRESCRIPTOR_FARMACIA", SqlDbType.VarChar).Value = c.PRESCRIPTOR_FARMACIA;
                 cmd.Parameters.Add("@CUADERNO_USUARIO_ID", SqlDbType.Int).Value = c.CUADERNO_USUARIO_ID;
+
+                SqlParameter SqLog = new SqlParameter("@LOG", 0);
+                SqLog.Direction = ParameterDirection.Output;
+                cmd.Parameters.Add(SqLog);
+
                 try
                 {
                     cn.Open();
-                    return cmd.ExecuteNonQuery();
+                    cmd.ExecuteNonQuery();
+                    int log = Int32.Parse(cmd.Parameters["@LOG"].Value.ToString());
+                    return log;
                 }
                 catch (Exception ex)
                 {
@@ -286,12 +295,13 @@ namespace Controller
         }
 
         //reportes de cuaderno oralne
-        public DataTable ListarCuadernos()
+        public DataTable ListarCuadernos(int val)
         {
             DataTable dt = new DataTable();
             try
             {
                 SqlCommand cmd = new SqlCommand("Sp_Marketing_Listar_Registros", cn);
+                cmd.Parameters.Add("@val", SqlDbType.VarChar).Value = val;
                 cmd.CommandType = CommandType.StoredProcedure;
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 da.Fill(dt);
@@ -340,7 +350,7 @@ namespace Controller
 
         }
         public DataTable ListarCuadernos_Medico(int val)
-        {
+        {//lista los cuadernos registrados y quedan en grilla pra poder dar clic por cuaderno y ver su informacion
             DataTable dt = new DataTable();
             try
             {
@@ -356,8 +366,9 @@ namespace Controller
             }
             return dt;
         }
+        
         public DataTable ExportarData_Medico(int val)
-        {
+        {//exporta la data en base a los productos comprador por cuaderno
             DataTable dt = new DataTable();
             try
             {
@@ -374,6 +385,49 @@ namespace Controller
             }
             return dt;
         }
+
+
+        public DataTable ExportarData_Fecha(string fecDesde, string fecHasta)
+        {//exporta la data en base a los rangos de fechas seleccionados.
+            DataTable dt = new DataTable();
+            try
+            {
+                SqlCommand cmd = new SqlCommand("Sp_Marketing_Exportar_Data_Cuaderno_Fecha", cn);
+                cmd.Parameters.Add("@fecDesde", SqlDbType.VarChar).Value = fecDesde;
+                cmd.Parameters.Add("@fecHasta", SqlDbType.VarChar).Value = fecHasta;
+                cmd.CommandType = CommandType.StoredProcedure;
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+            return dt;
+
+        }
+
+        public DataTable ListarCuadernos_Productos(int val)
+        {//lista los cuadernos registrados filtrador por productos
+            DataTable dt = new DataTable();
+            try
+            {
+                SqlCommand cmd = new SqlCommand("Sp_Marketing_Listar_Registros_Productos", cn);
+                cmd.Parameters.Add("@val", SqlDbType.Int).Value = val;
+                cmd.CommandType = CommandType.StoredProcedure;
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+            return dt;
+        }
+
+
+
+
 
 
     }

@@ -123,6 +123,14 @@ namespace DP_APP_DESKTOP
             }
         }
 
+        private void barStatus_Click(object sender, EventArgs e)
+        {
 
+        }
+
+        private void openFileDialog2_FileOk(object sender, CancelEventArgs e)
+        {
+
+        }
     }
 }

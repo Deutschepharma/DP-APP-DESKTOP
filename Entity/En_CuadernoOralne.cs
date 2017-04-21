@@ -8,6 +8,7 @@ namespace Entity
 {
     public class En_CuadernoOralne
     {
+        public int Opcion { get; set; }
         public string NRO_CUADERNO { get; set; }
         public string CLIENTE_NOMBRE { get; set; }
         public string CLIENTE_PATERNO { get; set; }
@@ -26,6 +27,7 @@ namespace Entity
         public int PRESCRIPTOR_FARMACIA { get; set; }
         public string PRESCRIPTOR_MEDICO_DESCRIPCION { get; set; }
         public string PRESCRIPTOR_CENTRO_MEDICO_DESCRIPCION { get; set; }
+        public DateTime FECHA_REGISTRO { get; set; }
         public string PRESCRIPTOR_FARMACIA_DESCRIPCION { get; set; }
         public int CUADERNO_USUARIO_ID { get; set; }
     }

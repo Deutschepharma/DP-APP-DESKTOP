@@ -117,6 +117,7 @@ namespace DP_APP_DESKTOP.view
                 }
                 else
                 {
+                    c.Opcion = 1;
                     c.NRO_CUADERNO = lblNroCuaderno.Text;
                     c.CLIENTE_AUTORIZA_CONTACTO = 'S';
                     c.CLIENTE_NOMBRE = txtNombres.Text.ToUpper();
@@ -190,6 +191,7 @@ namespace DP_APP_DESKTOP.view
                 }
                 else
                 {
+                    c.Opcion = 1;
                     c.NRO_CUADERNO = lblNroCuaderno.Text;
                     c.CLIENTE_AUTORIZA_CONTACTO = 'N';
                     c.CLIENTE_NOMBRE = txtNombres.Text.ToUpper();
@@ -213,6 +215,7 @@ namespace DP_APP_DESKTOP.view
                     c.RECETA_FECHA_COMPRA = fecha_compra;
                     c.RECETA_FUNCIONARIO = txtFuncionario.Text.ToUpper();
                     c.RECETA_OBSERVACION = txtObservaciones.Text.ToUpper();
+
                     c.PRESCRIPTOR_MEDICO = int.Parse(cmbMedico.SelectedValue.ToString());
                     c.PRESCRIPTOR_CENTRO_MEDICO = int.Parse(cmbInstitucion.SelectedValue.ToString());
                     c.PRESCRIPTOR_FARMACIA = int.Parse(cmbFarmacia.SelectedValue.ToString());

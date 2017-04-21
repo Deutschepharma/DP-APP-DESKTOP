@@ -152,8 +152,13 @@ namespace DP_APP_DESKTOP
             frmRegistraNuevoMenu f = new frmRegistraNuevoMenu();
             cheCarForm(f, this);
         }
+        private void importaDatosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmImportarDatos f = new frmImportarDatos();
+            cheCarForm(f, this);
+        }
         //Sistemas //Impresoras
-            private void registroDeImpresoraToolStripMenuItem_Click(object sender, EventArgs e)
+        private void registroDeImpresoraToolStripMenuItem_Click(object sender, EventArgs e)
             {
                 frmImpresoras f = new frmImpresoras();
                 cheCarForm(f, this);
@@ -175,8 +180,6 @@ namespace DP_APP_DESKTOP
             frmCambiaClave f = new frmCambiaClave();
             cheCarForm(f, this);
         }
-
-        
 
         
     }

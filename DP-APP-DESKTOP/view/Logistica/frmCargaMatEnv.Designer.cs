@@ -36,6 +36,7 @@
             this.btnAbrir = new System.Windows.Forms.Button();
             this.txtAbrir = new System.Windows.Forms.TextBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.openFileDialog2 = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.dg)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,6 +56,7 @@
             this.barStatus.Name = "barStatus";
             this.barStatus.Size = new System.Drawing.Size(417, 23);
             this.barStatus.TabIndex = 2;
+            this.barStatus.Click += new System.EventHandler(this.barStatus_Click);
             // 
             // dg
             // 
@@ -99,6 +101,11 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // openFileDialog2
+            // 
+            this.openFileDialog2.FileName = "openFileDialog2";
+            this.openFileDialog2.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog2_FileOk);
+            // 
             // frmCargaMatEnv
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -131,5 +138,6 @@
         private System.Windows.Forms.Button btnAbrir;
         private System.Windows.Forms.TextBox txtAbrir;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.OpenFileDialog openFileDialog2;
     }
 }
