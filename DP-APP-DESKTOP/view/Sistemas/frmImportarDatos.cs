@@ -86,7 +86,7 @@ namespace DP_APP_DESKTOP.view.Sistemas
         private void btnCargar_Click(object sender, EventArgs e)
         {
             Ut_Cargas u = new Ut_Cargas();
-            u.InsertaCuaderno(dataGridView1, cbTablas.SelectedValue.ToString());
+            u.Inserta(dataGridView1, cbTablas.SelectedValue.ToString());
             MessageBox.Show("Data Registrada");
             while (dataGridView1.RowCount >= 1)
             {

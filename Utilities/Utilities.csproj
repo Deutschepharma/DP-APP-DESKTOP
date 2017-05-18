@@ -51,6 +51,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Ut_Cargas.cs" />
+    <Compile Include="Ut_Enviar.cs" />
     <Compile Include="Ut_GeneraExcel.cs" />
     <Compile Include="Ut_GeneraPDF.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

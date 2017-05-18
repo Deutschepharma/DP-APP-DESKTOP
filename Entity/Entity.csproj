@@ -60,11 +60,13 @@
   <ItemGroup>
     <Compile Include="En_CargaMatEnv.cs" />
     <Compile Include="En_CargaMatVta.cs" />
+    <Compile Include="En_Cliente_Correo.cs" />
     <Compile Include="En_CuadernoOralne.cs" />
     <Compile Include="En_CuadernoOralneProducto.cs" />
     <Compile Include="En_CuadernoRegistraMedico.cs" />
     <Compile Include="En_GeneraPDF.cs" />
     <Compile Include="En_ListasDatos.cs" />
+    <Compile Include="En_Mailing.cs" />
     <Compile Include="En_Menus.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="En_Usuarios.cs" />

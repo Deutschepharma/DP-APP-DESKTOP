@@ -37,6 +37,7 @@
             this.muestrasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.utilitariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cuadernoOralneToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.modificarBeneficio11ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logisticaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cargaDeInventarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -51,12 +52,13 @@
             this.registroDeImpresoraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.insumosDeImpresorasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registroConsumoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.importaDatosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.utilidadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cambiarClaveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lblID = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.importaDatosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sistemaMailingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.msPrincipal.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -132,6 +134,7 @@
             // 
             this.utilitariosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cuadernoOralneToolStripMenuItem,
+            this.modificarBeneficio11ToolStripMenuItem,
             this.reportesToolStripMenuItem});
             this.utilitariosToolStripMenuItem.Name = "utilitariosToolStripMenuItem";
             this.utilitariosToolStripMenuItem.Size = new System.Drawing.Size(73, 20);
@@ -140,14 +143,21 @@
             // cuadernoOralneToolStripMenuItem
             // 
             this.cuadernoOralneToolStripMenuItem.Name = "cuadernoOralneToolStripMenuItem";
-            this.cuadernoOralneToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
+            this.cuadernoOralneToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
             this.cuadernoOralneToolStripMenuItem.Text = "Beneficio 1+1";
             this.cuadernoOralneToolStripMenuItem.Click += new System.EventHandler(this.cuadernoOralneToolStripMenuItem_Click);
+            // 
+            // modificarBeneficio11ToolStripMenuItem
+            // 
+            this.modificarBeneficio11ToolStripMenuItem.Name = "modificarBeneficio11ToolStripMenuItem";
+            this.modificarBeneficio11ToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
+            this.modificarBeneficio11ToolStripMenuItem.Text = "Modificar Beneficio 1+1";
+            this.modificarBeneficio11ToolStripMenuItem.Click += new System.EventHandler(this.modificarBeneficio11ToolStripMenuItem_Click);
             // 
             // reportesToolStripMenuItem
             // 
             this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
-            this.reportesToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
+            this.reportesToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
             this.reportesToolStripMenuItem.Text = "Reportes Beneficio 1+1";
             this.reportesToolStripMenuItem.Click += new System.EventHandler(this.reportesToolStripMenuItem_Click);
             // 
@@ -252,10 +262,18 @@
             this.registroConsumoToolStripMenuItem.Text = "Registro Consumo";
             this.registroConsumoToolStripMenuItem.Click += new System.EventHandler(this.registroConsumoToolStripMenuItem_Click);
             // 
+            // importaDatosToolStripMenuItem
+            // 
+            this.importaDatosToolStripMenuItem.Name = "importaDatosToolStripMenuItem";
+            this.importaDatosToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
+            this.importaDatosToolStripMenuItem.Text = "Importar Datos";
+            this.importaDatosToolStripMenuItem.Click += new System.EventHandler(this.importaDatosToolStripMenuItem_Click);
+            // 
             // utilidadesToolStripMenuItem
             // 
             this.utilidadesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.cambiarClaveToolStripMenuItem});
+            this.cambiarClaveToolStripMenuItem,
+            this.sistemaMailingToolStripMenuItem});
             this.utilidadesToolStripMenuItem.Name = "utilidadesToolStripMenuItem";
             this.utilidadesToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
             this.utilidadesToolStripMenuItem.Text = "Utilidades";
@@ -263,7 +281,7 @@
             // cambiarClaveToolStripMenuItem
             // 
             this.cambiarClaveToolStripMenuItem.Name = "cambiarClaveToolStripMenuItem";
-            this.cambiarClaveToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
+            this.cambiarClaveToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
             this.cambiarClaveToolStripMenuItem.Text = "Cambiar Clave";
             this.cambiarClaveToolStripMenuItem.Click += new System.EventHandler(this.cambiarClaveToolStripMenuItem_Click);
             // 
@@ -300,12 +318,12 @@
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
             // 
-            // importaDatosToolStripMenuItem
+            // sistemaMailingToolStripMenuItem
             // 
-            this.importaDatosToolStripMenuItem.Name = "importaDatosToolStripMenuItem";
-            this.importaDatosToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
-            this.importaDatosToolStripMenuItem.Text = "Importar Datos";
-            this.importaDatosToolStripMenuItem.Click += new System.EventHandler(this.importaDatosToolStripMenuItem_Click);
+            this.sistemaMailingToolStripMenuItem.Name = "sistemaMailingToolStripMenuItem";
+            this.sistemaMailingToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
+            this.sistemaMailingToolStripMenuItem.Text = "Sistema Mailing";
+            this.sistemaMailingToolStripMenuItem.Click += new System.EventHandler(this.sistemaMailingToolStripMenuItem_Click);
             // 
             // frmPrincipal
             // 
@@ -362,6 +380,8 @@
         private System.Windows.Forms.ToolStripMenuItem registroConsumoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reportesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem importaDatosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem modificarBeneficio11ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sistemaMailingToolStripMenuItem;
     }
 }
 

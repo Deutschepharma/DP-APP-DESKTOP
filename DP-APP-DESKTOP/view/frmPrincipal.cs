@@ -125,6 +125,11 @@ namespace DP_APP_DESKTOP
             frmVentas venta = new frmVentas();
             cheCarForm(venta, this);
         }
+        private void modificarBeneficio11ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmModificaCuaderno venta = new frmModificaCuaderno();
+            cheCarForm(venta, this);
+        }
         private void muestrasToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmMuestras muestras = new frmMuestras();
@@ -181,6 +186,12 @@ namespace DP_APP_DESKTOP
             cheCarForm(f, this);
         }
 
-        
+        private void sistemaMailingToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmMailing f = new frmMailing();
+            cheCarForm(f, this);
+        }
+
+
     }
 }

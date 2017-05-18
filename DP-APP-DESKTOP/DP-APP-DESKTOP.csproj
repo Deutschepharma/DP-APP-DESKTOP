@@ -120,6 +120,12 @@
     <Compile Include="frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="view\Marketing\frmModificaCuaderno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\Marketing\frmModificaCuaderno.Designer.cs">
+      <DependentUpon>frmModificaCuaderno.cs</DependentUpon>
+    </Compile>
     <Compile Include="view\Marketing\frmReportesCuaderno.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -242,8 +248,17 @@
     <Compile Include="view\Utilidades\frmCambiaClave.Designer.cs">
       <DependentUpon>frmCambiaClave.cs</DependentUpon>
     </Compile>
+    <Compile Include="view\Utilidades\frmMailing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\Utilidades\frmMailing.Designer.cs">
+      <DependentUpon>frmMailing.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\Marketing\frmModificaCuaderno.resx">
+      <DependentUpon>frmModificaCuaderno.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\Marketing\frmReportesCuaderno.resx">
       <DependentUpon>frmReportesCuaderno.cs</DependentUpon>
@@ -308,6 +323,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="view\Utilidades\frmCambiaClave.resx">
       <DependentUpon>frmCambiaClave.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\Utilidades\frmMailing.resx">
+      <DependentUpon>frmMailing.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

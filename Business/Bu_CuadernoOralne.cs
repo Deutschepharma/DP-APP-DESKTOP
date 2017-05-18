@@ -74,9 +74,23 @@ namespace Business
             return new Co_CuadernoOralne().ListarCuadernos_Productos(val);
         }
 
-
-
-
+        //Modificaciones al Cuaderno Beneficio 1+1
+        public DataTable Marketing_Buscar_NroCuaderno(int val)
+        {
+            return new Co_CuadernoOralne().Marketing_Buscar_NroCuaderno(val);
+        }
+        public DataTable Marketing_Buscar_Productos_NroCuaderno(int val)
+        {
+            return new Co_CuadernoOralne().Marketing_Buscar_Productos_NroCuaderno(val);
+        }
+        public int Marketing_Registra_Cuaderno_Producto(En_CuadernoOralneProducto c)
+        {
+            return new Co_CuadernoOralne().Marketing_Registra_Cuaderno_Producto(c);
+        }
+        public int Marketing_Registra_Cuaderno(En_CuadernoOralne c)
+        {
+            return new Co_CuadernoOralne().Marketing_Registra_Cuaderno(c);
+        }
 
     }
 }

@@ -13,5 +13,6 @@ namespace Entity
         public string LOTE { get; set; }
         public int Nro_Cuaderno { get; set; }
         public int Cantidad { get; set; }
+        public int flag { get; set; }
     }
 }

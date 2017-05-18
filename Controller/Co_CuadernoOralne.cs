@@ -426,8 +426,117 @@ namespace Controller
         }
 
 
+        //Modificaciones del Cuaderno Beneficio 1+1 
+        public DataTable Marketing_Buscar_NroCuaderno(int val)
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                SqlCommand cmd = new SqlCommand("Sp_Marketing_Buscar_NroCuaderno", cn);
+                cmd.Parameters.Add("@nro_cuaderno", SqlDbType.VarChar).Value = val;
+                cmd.CommandType = CommandType.StoredProcedure;
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+            return dt;
+        }
+        public DataTable Marketing_Buscar_Productos_NroCuaderno(int val)
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                SqlCommand cmd = new SqlCommand("Sp_Marketing_Buscar_Productos_NroCuaderno", cn);
+                cmd.Parameters.Add("@nro_cuaderno", SqlDbType.VarChar).Value = val;
+                cmd.CommandType = CommandType.StoredProcedure;
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+            return dt;
+        }
 
+        public int Marketing_Registra_Cuaderno_Producto(En_CuadernoOralneProducto c)
+        {
+            try
+            {
+                SqlCommand cmd = new SqlCommand("Sp_Marketing_Registra_Cuaderno_Producto", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add("@codigo", SqlDbType.Int).Value = c.PRODUCTO_MAESTRO_CODIGO;
+                cmd.Parameters.Add("@nro_cuaderno", SqlDbType.Int).Value = c.Nro_Cuaderno;
+                cmd.Parameters.Add("@lote", SqlDbType.VarChar).Value = c.LOTE;
+                cmd.Parameters.Add("@cantidad", SqlDbType.Int).Value = c.Cantidad;
+                cmd.Parameters.Add("@flag", SqlDbType.Int).Value = c.flag;
 
+                try
+                {
+                    cn.Open();
+                    return cmd.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception(ex.Message);
+                }
+                finally
+                {
+                    cn.Close();
+                    cmd.Dispose();
+                }
+            }
+            catch (Exception exx)
+            {
+                throw new Exception(exx.Message);
+            }
+        }
+        public int Marketing_Registra_Cuaderno(En_CuadernoOralne c)
+        {
+            try
+            {
+                SqlCommand cmd = new SqlCommand("Sp_Marketing_Registra_Cuaderno", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add("@nro_cuaderno", SqlDbType.Int).Value = int.Parse(c.NRO_CUADERNO);
+                cmd.Parameters.Add("@nombre", SqlDbType.VarChar).Value = c.CLIENTE_NOMBRE;
+                cmd.Parameters.Add("@paterno", SqlDbType.VarChar).Value = c.CLIENTE_PATERNO;
+                cmd.Parameters.Add("@materno", SqlDbType.VarChar).Value = c.CLIENTE_MATERNO;
+                cmd.Parameters.Add("@nacimiento", SqlDbType.Date).Value = c.CLIENTE_NACIMIENTO;
+                cmd.Parameters.Add("@direccion", SqlDbType.VarChar).Value = c.CLIENTE_DIRECCION;
+                cmd.Parameters.Add("@email", SqlDbType.VarChar).Value = c.CLIENTE_EMAIL;
+                cmd.Parameters.Add("@fono", SqlDbType.VarChar).Value = c.CLIENTE_FONO;
+                cmd.Parameters.Add("@compra", SqlDbType.Date).Value = c.RECETA_FECHA_COMPRA;
+                cmd.Parameters.Add("@observacion", SqlDbType.VarChar).Value = c.RECETA_OBSERVACION;
+
+                SqlParameter SqLog = new SqlParameter("@log", 0);
+                SqLog.Direction = ParameterDirection.Output;
+                cmd.Parameters.Add(SqLog);
+
+                try
+                {
+                    cn.Open();
+                    cmd.ExecuteNonQuery();
+                    int log = Int32.Parse(cmd.Parameters["@log"].Value.ToString());
+                    return log;
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception(ex.Message);
+                }
+                finally
+                {
+                    cn.Close();
+                    cmd.Dispose();
+                }
+            }
+            catch (Exception exx)
+            {
+                throw new Exception(exx.Message);
+            }
+        }
 
 
     }

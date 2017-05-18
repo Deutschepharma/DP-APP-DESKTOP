@@ -35,7 +35,7 @@ namespace Utilities
         }
 
      
-        public void InsertaCuaderno(DataGridView dt, string tabla)
+        public void Inserta(DataGridView dt, string tabla)
         {
             switch (tabla)
             {
@@ -43,7 +43,10 @@ namespace Utilities
                     InsertCuadernos(dt);
                     break;
                 case "CUADERNOS_PRODUCTOS":
-                    InsertCuadernosProductos(dt);
+                    InsertContactosMailing(dt);
+                    break;
+                case "MAILING":
+                    InsertContactosMailing(dt);
                     break;
                 default:
                     break;
@@ -52,8 +55,48 @@ namespace Utilities
             
         }
 
-        private void InsertCuadernosProductos(DataGridView dt)
+        private void InsertContactosMailing(DataGridView dt)
         {
+            En_Mailing m = new En_Mailing();
+
+            foreach (DataGridViewRow i in dt.Rows)
+            {
+                try
+                {
+                    
+                    SqlCommand cmd = new SqlCommand("Sp_Utilidades_Registra_Contactos_Mailing", cn);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add("@EMAIL_RUT", SqlDbType.Int).Value = int.Parse(i.Cells["EMAIL_RUT"].Value.ToString());
+                    cmd.Parameters.Add("@EMAIL_DV", SqlDbType.Char).Value = i.Cells["EMAIL_DV"].Value.ToString();
+                    cmd.Parameters.Add("@EMAIL_NOMBRES", SqlDbType.VarChar).Value = i.Cells["EMAIL_NOMBRES"].Value.ToString();
+                    DateTime nacimiento = DateTime.Parse(i.Cells["EMAIL_NACIMIENTO"].Value.ToString());
+                    cmd.Parameters.Add("@EMAIL_NACIMIENTO", SqlDbType.Date).Value = nacimiento;
+                    cmd.Parameters.Add("@EMAIL_CORREO", SqlDbType.VarChar).Value = i.Cells["EMAIL_CORREO"].Value.ToString();
+                    cmd.Parameters.Add("@EMAIL_USUARIO_ID", SqlDbType.Int).Value = i.Cells["EMAIL_USUARIO_ID"].Value.ToString();
+                    cmd.Parameters.Add("@EMAIL_ESTADO", SqlDbType.Char).Value = i.Cells["EMAIL_ESTADO"].Value.ToString();
+                    cmd.Parameters.Add("@EMAIL_USR_SEND", SqlDbType.VarChar).Value = i.Cells["EMAIL_USR_SEND"].Value.ToString();
+
+
+                    try
+                    {
+                        cn.Open();
+                        cmd.ExecuteNonQuery();
+                    }
+                    catch (Exception ex)
+                    {
+                        throw new Exception(ex.Message);
+                    }
+                    finally
+                    {
+                        cn.Close();
+                        cmd.Dispose();
+                    }
+                }
+                catch (Exception exx)
+                {
+                    throw new Exception(exx.Message);
+                }
+            }
             
         }
 
